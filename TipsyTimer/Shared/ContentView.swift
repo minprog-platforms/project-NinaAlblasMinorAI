@@ -9,51 +9,70 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        NavigationView {
+            ZStack {
+                HomeScreenView()
+//                    .offset(y: -60)
+                // wat gaat hier nou nog verder in???? Moet ik deze uberhaupt nog hebben?
+            }
+        }
+    }
+}
+
+struct HomeScreenView: View {
+    var body: some View {
         ZStack {
-            Color("Tipsy-white").edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"), Color("Nina-sky")]), startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/)
+                .edgesIgnoringSafeArea(.all)
             VStack {
+                
                 Text("TIPSY TIMER")
                     .font(.system(size: 60, weight: .black))
-                    .foregroundColor(Color("Tipsy-blue"))
-                    .frame(width: 500.0, height: 60)
-                Text("Zie in één oogopslag wanneer je weer de weg op mag!")
-                // hit the road, jack
-                // on the road again
-                    .font(.system(size: 25, weight: .heavy))
-                    .foregroundColor(Color("Tipsy-darkpink"))
+                    .foregroundColor(Color("Nina-purple"))
+                    .shadow(color: Color("Nina-dark"), radius: 5)
+                
+                Text("Zie in één oogopslag\nwanneer je weer de weg op mag!")
+                    .font(.system(size: 25, weight: .medium, design: .rounded))
+                    .foregroundColor(Color("Nina-pink"))
                     .multilineTextAlignment(.center)
-                    .frame(width: 400, height: 70)
-                Spacer()
+                    .shadow(color: Color("Nina-dark"), radius: 2)
 
+                Spacer()
+                
                 Button(action: {
                     print("Tipsy Timer!")
                 }) {
                     Text("CHECK JE TIMER")
-                        .font(.system(size: 60, weight: .black))
+                        .font(.system(size: 55, weight: .black))
                         .foregroundColor(Color("Tipsy-white"))
-                        .frame(width: 350, height: 350)
-                        .background(Color("Tipsy-orange"))
+                        .frame(width: 300, height: 300)
+                        .background(Color("Nina-hotpink"))
+//                        .border(/*@START_MENU_TOKEN@*/Color("Nina-sky")/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/3/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        .shadow(color: Color("Nina-dark"), radius: 5)
+
                 }
-                .frame(width: 350, height: 350)
+                .frame(width: 300, height: 300)
                 Spacer()
-                Button(action: {
-                    print("Disclaimer")
-                }) {
+                NavigationLink(destination: DisclaimerView(), label: {
                     Label("DISCLAIMER", systemImage: "exclamationmark.circle")
+                        .frame(width: 350.0, height: 50)
                         .font(.system(size: 25, weight: .bold))
-                        .foregroundColor(Color("Tipsy-darkpink"))
-                }
+                        .foregroundColor(Color("Tipsy-white"))
+                        .background(Color("Nina-sky"))
+                        .cornerRadius(/*@START_MENU_TOKEN@*/6.0/*@END_MENU_TOKEN@*/)
+                        .shadow(color: Color("Nina-dark"), radius: 1)
+
+                })
                 Spacer()
             }
-            
-//            HStack {
-//                Color("Tipsy-1")
-//                Color("Tipsy-2")
-//                Color("Tipsy-3")
-//                Color("Tipsy-4")
-//                Color("Tipsy-5")
-//            }
         }
+    }
+}
+
+struct DisclaimerView: View {
+    var body: some View {
+        Text("DISCLAIMER")
     }
 }
 
@@ -61,5 +80,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .preferredColorScheme(.light)
+//        HomeScreenView()
+//        DisclaimerView()
     }
 }
