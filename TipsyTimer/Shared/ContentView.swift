@@ -16,7 +16,7 @@ struct ContentView: View {
                     .font(.system(size: 60, weight: .black))
                     .foregroundColor(Color("Tipsy-blue"))
                     .frame(width: 500.0, height: 60)
-                Text("HOE LANG NOG VOOR JE WEER DE WEG OP KUNT?")
+                Text("Zie in één oogopslag wanneer je weer de weg op mag!")
                 // hit the road, jack
                 // on the road again
                     .font(.system(size: 25, weight: .heavy))
