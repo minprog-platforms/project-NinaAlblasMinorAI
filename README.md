@@ -33,16 +33,13 @@ De applicatie Tipsy Timer zal het aantal beschonken bestuurders helpen verminder
 * De tijdspanne waarin de drankjes genuttigd werden (in uren)
 * Rij-ervaring (beginnend vs. ervaren)
 
-## Disclaimers (voorbeelden)
-* Deze app mag alleen door mensen van 18 jaar of ouder worden gebruikt
-* Gebruik deze app op eigen risico, wij zijn niet aansprakelijk voor de gevolgen
-* Vertrouw niet volledig op deze applicatie; laat de beslissing over of je de weg op kunt niet volledig afhangen van het resultaat van je Tipsy Timer.
-* Er spelen nog andere factoren mee bij de absorptie en afbraak van alcohol waarmee ook rekening moet worden gehouden, zoals drugs- of medicijngebruik, voeding en fysieke conditie
-* Rijden onder invloed is gevaarlijk voor jezelf en anderen; breng jezelf en anderen niet in gevaar
-* Rijden onder invloed kan fatale gevolgen hebben
-* Drink met mate; alcohol is niet goed voor je gezondheid
-* De Tipsy Timer geeft alleen een schatting en mag niet worden gebruikt om te bepalen of je nog mag autorijden.
-* "No online BAC Calculator should be used to determine an individuals fitness to drive. There are so many variables and factors that can affect a specific individuals BAC level at any given time that the only fail-safe and reliable way to calculate an individuals blood alcohol level at a precise moment in time is by blood analysis or a reliable and type approved breathalyser. This BAC calculator provides reliable estimates based on average biological values and scientific research and should be used for educational, research and information purposes only. If in doubt, use common sense and do not drive." (Bron: https://www.drinkdriving.org/bac-calculator.php)
+## Disclaimers
+* Geen 18, geen alchol
+* Geniet, maar drink met mate
+* Vertrouw niet volledig op deze applicatie; laat de beslissing over of je de weg op kunt niet afhangen van het resultaat van je Tipsy Timer
+* Naast de gegevens die Tipsy Timer van je vraagt, spelen er ook andere factoren mee bij de absorptie en afbraak van alcohol, zoals drugs- of medicijngebruik, voeding en fysieke conditie
+* Rijden onder invloed kan fatale gevolgen hebben; breng jezelf en anderen niet in gevaar
+* De Tipsy Timer geeft alleen een schatting van de wachttijd en mag niet worden gebruikt om te bepalen of je nog mag autorijden
 
 ## Benodigdheden
 ### Databronnen
