@@ -12,6 +12,9 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 HomeScreenView()
+                    // is dit een probleem?:
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
 //                    .offset(y: -60)
                 // wat gaat hier nou nog verder in???? Moet ik deze uberhaupt nog hebben?
             }
@@ -25,7 +28,7 @@ struct HomeScreenView: View {
             LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"), Color("Nina-sky")]), startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/)
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                
+                Spacer()
                 Text("TIPSY TIMER")
                     .font(.system(size: 60, weight: .black))
                     .foregroundColor(Color("Nina-purple"))
@@ -38,7 +41,7 @@ struct HomeScreenView: View {
                     .shadow(color: Color("Nina-dark"), radius: 2)
 
                 Spacer()
-                
+                Spacer()
                 Button(action: {
                     print("Tipsy Timer!")
                 }) {
@@ -53,6 +56,7 @@ struct HomeScreenView: View {
 
                 }
                 .frame(width: 300, height: 300)
+                Spacer()
                 Spacer()
                 NavigationLink(destination: DisclaimerView(), label: {
                     Label("DISCLAIMER", systemImage: "exclamationmark.circle")
