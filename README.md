@@ -18,8 +18,9 @@ De applicatie Tipsy Timer zal het aantal beschonken bestuurders helpen verminder
 4. Scherm 2 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **leeftijd**. Dit wordt aangegeven met een cirkelvormige slider. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt.
 5. Scherm 3 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **lengte en gewicht**. Dit wordt aangegeven met twee sliders. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt.
 6. Scherm 4 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **genuttigde drankjes**. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt.
-7. Scherm 5 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **rij-ervaring**. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt.
-8. Het resultaat van de Tipsy Timer; de hoeveelheid uren die de gebruiker moet wachten voordat hij de BAC-limiet bereikt. De timer wordt gevisualiseerd door een glas dat langzaam leegdrinkt. Onderaan het scherm staat een knop waarmee de Tipsy Timer opnieuw gestart kan worden. Linksonderin kan worden teruggekeerd naar het homescherm.
+7. Scherm 5 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **tijdspanne**. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt. (Deze staat niet op de schets, maar zal dezelfde vormgeving hebben als scherm 2; leeftijd)
+8. Scherm 6 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **rij-ervaring**. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt.
+9. Het resultaat van de Tipsy Timer; de hoeveelheid uren die de gebruiker moet wachten voordat hij de BAC-limiet bereikt. De timer wordt gevisualiseerd door een glas dat langzaam leegdrinkt. Onderaan het scherm staat een knop waarmee de Tipsy Timer opnieuw gestart kan worden. Linksonderin kan worden teruggekeerd naar het homescherm.
 
 
 ## Factoren die meegenomen worden bij de berekening van de wachttijd (in uren)
@@ -29,6 +30,7 @@ De applicatie Tipsy Timer zal het aantal beschonken bestuurders helpen verminder
 * Geslacht (man vs. vrouw) - mogelijk voeg ik hier nog iets aan toe betreffende een derde optie
 * Alcohol percentage van de genuttigde drankjes
 * Hoeveelheid standaardglazen **of** hoeveelheid milliliters
+* De tijdspanne waarin de drankjes genuttigd werden (in uren)
 * Rij-ervaring (beginnend vs. ervaren)
 
 ## Disclaimers (voorbeelden)
@@ -62,3 +64,4 @@ De app [What's Your Buzz?](https://apps.apple.com/nl/app/whats-your-buzz/id93093
 Eerlijk gezegd denk ik dat ik een applicatie heb ontworpen die ik goed zou kunnen programmeren. Toch maak ik me wel een beetje zorgen om het algehele werken met SwiftUI. Hierbij gaat het dan vooral om het efficiënt kunnen inzetten van enumerations, structs, classes en closures. Aangezien deze taal natuurlijk nieuw voor me is, vraag ik me af of dit meteen goed zal gaan. Ik had ook al veel moeite met de calculator en ik had veel YouTube filmpjes nodig om enigszins te begrijpen hoe ik het best kon beginnen en welke datastructuren ik het best kon gebruiken. Hopelijk zal YouTube (en de rest van het internet) mij weer uit de brand kunnen helpen als ik vastloop tijdens het maken van de Tipsy Timer.
 
 *Slagzin: "De Tipsy Timer vertelt je hoe lang het duurt voordat je weer nuchter genoeg bent om de weg op te kunnen."*
+//
