@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct GenderView: View {
+    @State var maleButtonPressed = false
+    @State var femaleButtonPressed = false
+    
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"), Color("Nina-sky")]), startPoint: .leading, endPoint: .trailing)
@@ -21,7 +25,12 @@ struct GenderView: View {
                     .shadow(color: Color("Nina-dark"), radius: 5)
                 Spacer()
                 HStack {
-                    Button(action: {print("Hi")}) {
+                    Button(action: {
+                        if femaleButtonPressed == true {
+                            femaleButtonPressed.toggle()
+                        }
+                        maleButtonPressed.toggle()
+                    }) {
                         Image("male")
                             .renderingMode(.template)
                             .resizable()
@@ -29,7 +38,7 @@ struct GenderView: View {
                             .padding(.all)
                             .frame(width: 150, height: 150)
                             .foregroundColor(Color("Tipsy-white"))
-                            .background(Color("Nina-hotpink"))
+                            .background(maleButtonPressed ? Color("Nina-darkpink") : Color("Nina-hotpink"))
                             .cornerRadius(20)
                             .shadow(color: Color("Nina-dark"), radius: 5)
                     }
@@ -37,7 +46,12 @@ struct GenderView: View {
                         .font(.system(size: 30, weight: .heavy))
                         .foregroundColor(Color("Tipsy-white"))
                         .shadow(color: Color("Nina-dark"), radius: 5)
-                    Button(action: {print("Hi")}) {
+                    Button(action: {
+                        if maleButtonPressed == true {
+                            maleButtonPressed.toggle()
+                        }
+                        femaleButtonPressed.toggle()
+                    }) {
                         Image("female")
                             .renderingMode(.template)
                             .resizable()
@@ -45,7 +59,7 @@ struct GenderView: View {
                             .padding(.all)
                             .frame(width: 150, height: 150)
                             .foregroundColor(Color("Tipsy-white"))
-                            .background(Color("Nina-hotpink"))
+                            .background(femaleButtonPressed ? Color("Nina-darkpink") : Color("Nina-hotpink"))
                             .cornerRadius(20)
                             .shadow(color: Color("Nina-dark"), radius: 5)
                     }
@@ -71,7 +85,7 @@ struct GenderView: View {
                 }
                 Spacer()
                 Spacer()
-                // TODO: geklikt --> donkerder van kleur
+                
             }
         }
     }

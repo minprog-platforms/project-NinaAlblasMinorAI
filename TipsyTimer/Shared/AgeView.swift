@@ -39,26 +39,14 @@ struct AgeView: View {
                         .shadow(color: Color("Nina-dark"), radius: 5)
                     Circle()
                         .frame(width: 45, height: 45)
-                        .foregroundColor(/*@START_MENU_TOKEN@*/Color("Tipsy-white")/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(Color("Tipsy-white"))
                         .offset(x: 150)
                         .rotationEffect(.init(degrees: angle))
-                        .gesture(DragGesture().onChanged(onDrag(value:)))
+                        .gesture(DragGesture().onChanged(ageOnDrag(value:)))
                         .rotationEffect(.init(degrees: -90))
                         .shadow(color: Color("Nina-dark"), radius: 1)
-                    
-                    // TODO: ik wil het graag zo doen, zodat ik age kan gebruiken, maar dan zegt ie 'Type() cannot conform to View' ***
-//                    age = Int(progress * 83 + 18)
-////
-//                    Text(String(age))
-//                    // het heeft mogelijk te maken met observable objects
-                    
-                    // TODO: 1 struct maken van alle data die we willen opslaan
-//                    struct TipsyData {
-//
-//                    }
-                    
-                    Text(String(Int(progress * 83 + 18)))
-                    // progress is fractie van het totaal: je kunt tussen de 18 en de (18 + 83 =) 101 zijn
+                
+                    Text(String(age))
                         .font(.system(size: 60, weight: .heavy))
                         .foregroundColor(Color("Tipsy-white"))
                         .shadow(color: Color("Nina-dark"), radius: 5)
@@ -69,20 +57,17 @@ struct AgeView: View {
             }
         }
     }
-    func onDrag(value: DragGesture.Value) {
+    func ageOnDrag(value: DragGesture.Value) {
         
         // calculating radians...
-        
         let vector = CGVector(dx: value.location.x, dy: value.location.y)
         
         // since atan2 will give from -180 to 180...
         // eliminating drag gesture size
         // size = 55 => Radius = 27.5...
-        
         let radians = atan2(vector.dy - 27.5, vector.dx - 27.5)
         
         // converting to angle...
-        
         var angle = radians * 180 / .pi
         
         // simple technique for 0 to 360...
@@ -93,10 +78,12 @@ struct AgeView: View {
         }
         
         withAnimation(Animation.linear(duration: 0.15)) {
-            // progress...
+            // progress is fractie van het totaal: je kunt tussen de 18 en de (18 + 83 =) 101 zijn
             let progress = angle / 360
             self.progress = progress
             self.angle = Double(angle)
+            self.age = Int(progress * 83 + 18)
+            
         }
     }
 }

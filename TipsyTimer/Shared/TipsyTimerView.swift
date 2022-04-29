@@ -54,21 +54,19 @@ struct TipsyTimerView: View {
                     DrivingExperienceView()
                 }
                 HStack {
-                    Button("VOLGENDE") {
+                    Button(action: {
                         if currentStep.rawValue < 6 {
                             currentStep = userInputSteps(rawValue: currentStep.rawValue + 1) ?? .gender
                         
                             // TODO: als 6 bereikt is, wat dan?
                         }
+                    }) {
+                        Label("VOLGENDE", systemImage: "arrow.right")
+                            .font(.system(size: 25, weight: .heavy))
+                            .foregroundColor(/*@START_MENU_TOKEN@*/Color("Tipsy-white")/*@END_MENU_TOKEN@*/)
+                            .shadow(color: Color("Nina-dark"), radius: 5)
+                            .frame(width: 300, height: 100)
                     }
-                        .font(.system(size: 25, weight: .heavy))
-                        .foregroundColor(/*@START_MENU_TOKEN@*/Color("Tipsy-white")/*@END_MENU_TOKEN@*/)
-                        .shadow(color: Color("Nina-dark"), radius: 5)
-                        .frame(width: 200, height: 100)
-                    Image(systemName: "arrow.right")
-                        .font(.system(size: 25, weight: .heavy))
-                        .foregroundColor(/*@START_MENU_TOKEN@*/Color("Tipsy-white")/*@END_MENU_TOKEN@*/)
-                        .shadow(color: Color("Nina-dark"), radius: 5)
                 }
             }
         }
