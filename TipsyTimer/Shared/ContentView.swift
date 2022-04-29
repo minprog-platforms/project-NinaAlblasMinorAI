@@ -5,7 +5,7 @@
 //  Created by Nina Alblas on 24/04/2022.
 //
 // TODO: Make app (images, text etc.) fit on all screen sizes
-// TODO: Uitleg onder iedere tipsy timer view doen
+// TODO: Uitleg onder iedere tipsy timer view doen (vooral bij driving experience!!)
 // TODO: comments toevoegen?
 // TODO: Timer blijft lopen ook als je app sluit
 // TODO: een notificatie als de timer afgelopen is
@@ -13,6 +13,7 @@
 
 // TODO: Keuzemenu drankjes toevoegen?
 // TODO: widget?
+// TODO: stappen ondernemen om in app store te krijgen (copyrighted plaatjes?)
 
 
 import SwiftUI
