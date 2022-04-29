@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		740892062815E6A7002BFD03 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740892052815E6A7002BFD03 /* DisclaimerView.swift */; };
+		740E967B28153B870089D7E0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E967A28153B870089D7E0 /* Tests_iOS.swift */; };
+		740E967D28153B870089D7E0 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E967C28153B870089D7E0 /* Tests_iOSLaunchTests.swift */; };
+		740E968728153B870089D7E0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E968628153B870089D7E0 /* Tests_macOS.swift */; };
+		740E968928153B870089D7E0 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E968828153B870089D7E0 /* Tests_macOSLaunchTests.swift */; };
+		740E968A28153B870089D7E0 /* TipsyTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E966228153B860089D7E0 /* TipsyTimerApp.swift */; };
+		740E968B28153B870089D7E0 /* TipsyTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E966228153B860089D7E0 /* TipsyTimerApp.swift */; };
+		740E968C28153B870089D7E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E966328153B860089D7E0 /* ContentView.swift */; };
+		740E968D28153B870089D7E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E966328153B860089D7E0 /* ContentView.swift */; };
+		740E968E28153B870089D7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E966428153B870089D7E0 /* Assets.xcassets */; };
+		740E968F28153B870089D7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E966428153B870089D7E0 /* Assets.xcassets */; };
+		747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
+		747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
+		747C76272817367500852DFB /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C76262817367500852DFB /* HomeScreenView.swift */; };
+		747C76282817367500852DFB /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C76262817367500852DFB /* HomeScreenView.swift */; };
+		747C762A281738A300852DFB /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7629281738A300852DFB /* GenderView.swift */; };
+		747C762B281738A300852DFB /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7629281738A300852DFB /* GenderView.swift */; };
+		747C762D2817F5B700852DFB /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C762C2817F5B700852DFB /* AgeView.swift */; };
+		747C762E2817F5B700852DFB /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C762C2817F5B700852DFB /* AgeView.swift */; };
+		747C763028180DDA00852DFB /* WeightAndHeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C762F28180DDA00852DFB /* WeightAndHeightView.swift */; };
+		747C763128180DDA00852DFB /* WeightAndHeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C762F28180DDA00852DFB /* WeightAndHeightView.swift */; };
+		747C763328180E1B00852DFB /* ConsumedDrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763228180E1B00852DFB /* ConsumedDrinksView.swift */; };
+		747C763428180E1B00852DFB /* ConsumedDrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763228180E1B00852DFB /* ConsumedDrinksView.swift */; };
+		747C763628180E3500852DFB /* DrinkingTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763528180E3500852DFB /* DrinkingTimeView.swift */; };
+		747C763728180E3500852DFB /* DrinkingTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763528180E3500852DFB /* DrinkingTimeView.swift */; };
+		747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763828180E4F00852DFB /* DrivingExperienceView.swift */; };
+		747C763A28180E4F00852DFB /* DrivingExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763828180E4F00852DFB /* DrivingExperienceView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		740E967728153B870089D7E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 740E965D28153B860089D7E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 740E966828153B870089D7E0;
+			remoteInfo = "TipsyTimer (iOS)";
+		};
+		740E968328153B870089D7E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 740E965D28153B860089D7E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 740E966E28153B870089D7E0;
+			remoteInfo = "TipsyTimer (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		740892052815E6A7002BFD03 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		740E966228153B860089D7E0 /* TipsyTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTimerApp.swift; sourceTree = "<group>"; };
+		740E966328153B860089D7E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		740E966428153B870089D7E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		740E966928153B870089D7E0 /* TipsyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipsyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		740E966F28153B870089D7E0 /* TipsyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipsyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		740E967128153B870089D7E0 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		740E967628153B870089D7E0 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		740E967A28153B870089D7E0 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		740E967C28153B870089D7E0 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		740E968228153B870089D7E0 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		740E968628153B870089D7E0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		740E968828153B870089D7E0 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		747C7623281731F300852DFB /* TipsyTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTimerView.swift; sourceTree = "<group>"; };
+		747C76262817367500852DFB /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		747C7629281738A300852DFB /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
+		747C762C2817F5B700852DFB /* AgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
+		747C762F28180DDA00852DFB /* WeightAndHeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightAndHeightView.swift; sourceTree = "<group>"; };
+		747C763228180E1B00852DFB /* ConsumedDrinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumedDrinksView.swift; sourceTree = "<group>"; };
+		747C763528180E3500852DFB /* DrinkingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingTimeView.swift; sourceTree = "<group>"; };
+		747C763828180E4F00852DFB /* DrivingExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingExperienceView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		740E966628153B870089D7E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740E966C28153B870089D7E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740E967328153B870089D7E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740E967F28153B870089D7E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		740E965C28153B860089D7E0 = {
+			isa = PBXGroup;
+			children = (
+				740E966128153B860089D7E0 /* Shared */,
+				740E967028153B870089D7E0 /* macOS */,
+				740E967928153B870089D7E0 /* Tests iOS */,
+				740E968528153B870089D7E0 /* Tests macOS */,
+				740E966A28153B870089D7E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		740E966128153B860089D7E0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				740E966228153B860089D7E0 /* TipsyTimerApp.swift */,
+				740E966328153B860089D7E0 /* ContentView.swift */,
+				747C76262817367500852DFB /* HomeScreenView.swift */,
+				747C7623281731F300852DFB /* TipsyTimerView.swift */,
+				747C763828180E4F00852DFB /* DrivingExperienceView.swift */,
+				747C763528180E3500852DFB /* DrinkingTimeView.swift */,
+				747C763228180E1B00852DFB /* ConsumedDrinksView.swift */,
+				747C762F28180DDA00852DFB /* WeightAndHeightView.swift */,
+				747C7629281738A300852DFB /* GenderView.swift */,
+				747C762C2817F5B700852DFB /* AgeView.swift */,
+				740892052815E6A7002BFD03 /* DisclaimerView.swift */,
+				740E966428153B870089D7E0 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		740E966A28153B870089D7E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				740E966928153B870089D7E0 /* TipsyTimer.app */,
+				740E966F28153B870089D7E0 /* TipsyTimer.app */,
+				740E967628153B870089D7E0 /* Tests iOS.xctest */,
+				740E968228153B870089D7E0 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		740E967028153B870089D7E0 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				740E967128153B870089D7E0 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		740E967928153B870089D7E0 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				740E967A28153B870089D7E0 /* Tests_iOS.swift */,
+				740E967C28153B870089D7E0 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		740E968528153B870089D7E0 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				740E968628153B870089D7E0 /* Tests_macOS.swift */,
+				740E968828153B870089D7E0 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		740E966828153B870089D7E0 /* TipsyTimer (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 740E969228153B870089D7E0 /* Build configuration list for PBXNativeTarget "TipsyTimer (iOS)" */;
+			buildPhases = (
+				740E966528153B870089D7E0 /* Sources */,
+				740E966628153B870089D7E0 /* Frameworks */,
+				740E966728153B870089D7E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TipsyTimer (iOS)";
+			productName = "TipsyTimer (iOS)";
+			productReference = 740E966928153B870089D7E0 /* TipsyTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		740E966E28153B870089D7E0 /* TipsyTimer (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 740E969528153B870089D7E0 /* Build configuration list for PBXNativeTarget "TipsyTimer (macOS)" */;
+			buildPhases = (
+				740E966B28153B870089D7E0 /* Sources */,
+				740E966C28153B870089D7E0 /* Frameworks */,
+				740E966D28153B870089D7E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TipsyTimer (macOS)";
+			productName = "TipsyTimer (macOS)";
+			productReference = 740E966F28153B870089D7E0 /* TipsyTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		740E967528153B870089D7E0 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 740E969828153B870089D7E0 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				740E967228153B870089D7E0 /* Sources */,
+				740E967328153B870089D7E0 /* Frameworks */,
+				740E967428153B870089D7E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				740E967828153B870089D7E0 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 740E967628153B870089D7E0 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		740E968128153B870089D7E0 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 740E969B28153B870089D7E0 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				740E967E28153B870089D7E0 /* Sources */,
+				740E967F28153B870089D7E0 /* Frameworks */,
+				740E968028153B870089D7E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				740E968428153B870089D7E0 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 740E968228153B870089D7E0 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		740E965D28153B860089D7E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					740E966828153B870089D7E0 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					740E966E28153B870089D7E0 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					740E967528153B870089D7E0 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 740E966828153B870089D7E0;
+					};
+					740E968128153B870089D7E0 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 740E966E28153B870089D7E0;
+					};
+				};
+			};
+			buildConfigurationList = 740E966028153B860089D7E0 /* Build configuration list for PBXProject "TipsyTimer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 740E965C28153B860089D7E0;
+			productRefGroup = 740E966A28153B870089D7E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				740E966828153B870089D7E0 /* TipsyTimer (iOS) */,
+				740E966E28153B870089D7E0 /* TipsyTimer (macOS) */,
+				740E967528153B870089D7E0 /* Tests iOS */,
+				740E968128153B870089D7E0 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		740E966728153B870089D7E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				740E968E28153B870089D7E0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740E966D28153B870089D7E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				740E968F28153B870089D7E0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740E967428153B870089D7E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740E968028153B870089D7E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		740E966528153B870089D7E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */,
+				747C763628180E3500852DFB /* DrinkingTimeView.swift in Sources */,
+				740E968C28153B870089D7E0 /* ContentView.swift in Sources */,
+				747C76272817367500852DFB /* HomeScreenView.swift in Sources */,
+				747C763028180DDA00852DFB /* WeightAndHeightView.swift in Sources */,
+				740892062815E6A7002BFD03 /* DisclaimerView.swift in Sources */,
+				747C762A281738A300852DFB /* GenderView.swift in Sources */,
+				740E968A28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
+				747C762D2817F5B700852DFB /* AgeView.swift in Sources */,
+				747C763328180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
+				747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740E966B28153B870089D7E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				747C763A28180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
+				740E968D28153B870089D7E0 /* ContentView.swift in Sources */,
+				747C762B281738A300852DFB /* GenderView.swift in Sources */,
+				747C763128180DDA00852DFB /* WeightAndHeightView.swift in Sources */,
+				747C762E2817F5B700852DFB /* AgeView.swift in Sources */,
+				747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */,
+				740E968B28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
+				747C76282817367500852DFB /* HomeScreenView.swift in Sources */,
+				747C763428180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
+				747C763728180E3500852DFB /* DrinkingTimeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740E967228153B870089D7E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				740E967D28153B870089D7E0 /* Tests_iOSLaunchTests.swift in Sources */,
+				740E967B28153B870089D7E0 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740E967E28153B870089D7E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				740E968928153B870089D7E0 /* Tests_macOSLaunchTests.swift in Sources */,
+				740E968728153B870089D7E0 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		740E967828153B870089D7E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 740E966828153B870089D7E0 /* TipsyTimer (iOS) */;
+			targetProxy = 740E967728153B870089D7E0 /* PBXContainerItemProxy */;
+		};
+		740E968428153B870089D7E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 740E966E28153B870089D7E0 /* TipsyTimer (macOS) */;
+			targetProxy = 740E968328153B870089D7E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		740E969028153B870089D7E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		740E969128153B870089D7E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		740E969328153B870089D7E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42JW26X7WF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NinaAlblas.TipsyTimer;
+				PRODUCT_NAME = TipsyTimer;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		740E969428153B870089D7E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42JW26X7WF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NinaAlblas.TipsyTimer;
+				PRODUCT_NAME = TipsyTimer;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		740E969628153B870089D7E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NinaAlblas.TipsyTimer;
+				PRODUCT_NAME = TipsyTimer;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		740E969728153B870089D7E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NinaAlblas.TipsyTimer;
+				PRODUCT_NAME = TipsyTimer;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		740E969928153B870089D7E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NinaAlblas.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TipsyTimer (iOS)";
+			};
+			name = Debug;
+		};
+		740E969A28153B870089D7E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NinaAlblas.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TipsyTimer (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		740E969C28153B870089D7E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NinaAlblas.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "TipsyTimer (macOS)";
+			};
+			name = Debug;
+		};
+		740E969D28153B870089D7E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NinaAlblas.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "TipsyTimer (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		740E966028153B860089D7E0 /* Build configuration list for PBXProject "TipsyTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				740E969028153B870089D7E0 /* Debug */,
+				740E969128153B870089D7E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		740E969228153B870089D7E0 /* Build configuration list for PBXNativeTarget "TipsyTimer (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				740E969328153B870089D7E0 /* Debug */,
+				740E969428153B870089D7E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		740E969528153B870089D7E0 /* Build configuration list for PBXNativeTarget "TipsyTimer (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				740E969628153B870089D7E0 /* Debug */,
+				740E969728153B870089D7E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		740E969828153B870089D7E0 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				740E969928153B870089D7E0 /* Debug */,
+				740E969A28153B870089D7E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		740E969B28153B870089D7E0 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				740E969C28153B870089D7E0 /* Debug */,
+				740E969D28153B870089D7E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 740E965D28153B860089D7E0 /* Project object */;
+}
