@@ -21,6 +21,8 @@ struct TipsyTimerView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    @State var stepsCompleted = false
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"), Color("Nina-sky")]), startPoint: .leading, endPoint: .trailing)
@@ -55,18 +57,51 @@ struct TipsyTimerView: View {
                 }
                 HStack {
                     Button(action: {
-                        if currentStep.rawValue < 6 {
-                            currentStep = userInputSteps(rawValue: currentStep.rawValue + 1) ?? .gender
+                        let newStepValue = currentStep.rawValue + 1
                         
-                            // TODO: als 6 bereikt is, wat dan?
+                        // als de eerstvolgende slide 6 zou zijn (die bestaat niet)
+                        if newStepValue == 6 {
+                            self.stepsCompleted = true
+                        }
+                        
+                        else if newStepValue < 6 {
+                            currentStep = userInputSteps(rawValue: newStepValue) ?? .gender
                         }
                     }) {
                         Label("VOLGENDE", systemImage: "arrow.right")
                             .font(.system(size: 25, weight: .heavy))
-                            .foregroundColor(/*@START_MENU_TOKEN@*/Color("Tipsy-white")/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(Color("Tipsy-white"))
                             .shadow(color: Color("Nina-dark"), radius: 5)
                             .frame(width: 300, height: 100)
                     }
+                    NavigationLink("", destination: ResultView(), isActive: $stepsCompleted)
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+//                    Button(action: {
+//                        if currentStep.rawValue < 6 {
+//                            currentStep = userInputSteps(rawValue: currentStep.rawValue + 1) ?? .gender
+//                                // deze default naar gender is nie goe
+//
+//                            // TODO: als 6 bereikt is, wat dan?
+//                        } else {
+//                            stepsCompleted.toggle()
+//                        }
+//                    }) {
+//                        Label("VOLGENDE", systemImage: "arrow.right")
+//                            .font(.system(size: 25, weight: .heavy))
+//                            .foregroundColor(/*@START_MENU_TOKEN@*/Color("Tipsy-white")/*@END_MENU_TOKEN@*/)
+//                            .shadow(color: Color("Nina-dark"), radius: 5)
+//                            .frame(width: 300, height: 100)
+//                    }
+//                    NavigationLink("", destination: ResultView(), isActive: $stepsCompleted)
                 }
             }
         }

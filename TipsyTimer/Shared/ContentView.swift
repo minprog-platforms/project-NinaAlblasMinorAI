@@ -9,7 +9,7 @@
 // TODO: comments toevoegen?
 // TODO: Timer blijft lopen ook als je app sluit
 // TODO: een notificatie als de timer afgelopen is
-// TODO: ConsumedDrinksView, ResultaatView
+// TODO: ResultaatView
 
 // TODO: Keuzemenu drankjes toevoegen?
 // TODO: widget?

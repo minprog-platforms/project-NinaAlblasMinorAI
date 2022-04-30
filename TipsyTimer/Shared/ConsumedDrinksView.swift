@@ -4,9 +4,11 @@
 //
 //  Created by Nina Alblas on 26/04/2022.
 //
-// TODO: ML VS STANDAARDGLAZEN TOGGLE
-// TODO: % ALCOHOL
+// TODO: (misschien) ML VS STANDAARDGLAZEN TOGGLE (of alleen std glazen, want makkelijker berekenen? dan hoeft % ook niet)
+// TODO: (misschien) % ALCOHOL (of van standaardpercentages uitgaan?)
+
 // TODO: NAAM (BIER, WIJN ETC.)
+// TODO: eigen stijl definieren (een struct View?) die ik op iedere rechthoek kan toepassen?
 
 
 import SwiftUI
@@ -27,9 +29,16 @@ struct ConsumedDrinksView: View {
                     .foregroundColor(Color("Tipsy-white"))
                     .multilineTextAlignment(.center)
                     .shadow(color: Color("Nina-dark"), radius: 5)
-                VStack {
-                    
-                    // bier
+                
+                // bier
+                VStack(spacing: -10) {
+                    Text("BIER")
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color("Nina-dark"))
+                        .padding()
+                        .frame(width: 340.0, height: 30.0)
+                        .background(Color("Nina-lightpink"))
+                        .cornerRadius(20)
                     HStack {
                         Image("beer")
                             .renderingMode(.template)
@@ -55,9 +64,14 @@ struct ConsumedDrinksView: View {
                 .shadow(color: Color("Nina-dark"), radius: 5)
                 
                 // wijn
-                VStack {
-                    
-                    // bier
+                VStack(spacing: -10) {
+                    Text("WIJN")
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color("Nina-dark"))
+                        .padding()
+                        .frame(width: 340.0, height: 30.0)
+                        .background(Color("Nina-lightpink"))
+                        .cornerRadius(20)
                     HStack {
                         Image("wine")
                             .renderingMode(.template)
@@ -84,9 +98,14 @@ struct ConsumedDrinksView: View {
                 
                 
                 // cocktail
-                VStack {
-                    
-                    // bier
+                VStack(spacing: -10) {
+                    Text("COCKTAILS")
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color("Nina-dark"))
+                        .padding()
+                        .frame(width: 340.0, height: 30.0)
+                        .background(Color("Nina-lightpink"))
+                        .cornerRadius(20)
                     HStack {
                         Image("cocktail")
                             .renderingMode(.template)
@@ -111,10 +130,15 @@ struct ConsumedDrinksView: View {
                 .cornerRadius(20)
                 .shadow(color: Color("Nina-dark"), radius: 5)
                 
-                // sterke drank
-                VStack {
-                    
-                    // bier
+                // shots
+                VStack(spacing: -10) {
+                    Text("SHOTS")
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color("Nina-dark"))
+                        .padding()
+                        .frame(width: 340.0, height: 30.0)
+                        .background(Color("Nina-lightpink"))
+                        .cornerRadius(20)
                     HStack {
                         Image("liquor")
                             .renderingMode(.template)
