@@ -7,7 +7,6 @@
 // TODO: (misschien) ML VS STANDAARDGLAZEN TOGGLE (of alleen std glazen, want makkelijker berekenen? dan hoeft % ook niet)
 // TODO: (misschien) % ALCOHOL (of van standaardpercentages uitgaan?)
 
-// TODO: NAAM (BIER, WIJN ETC.)
 // TODO: eigen stijl definieren (een struct View?) die ik op iedere rechthoek kan toepassen?
 
 

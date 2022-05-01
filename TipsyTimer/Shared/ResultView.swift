@@ -15,7 +15,7 @@ struct ResultView: View {
 
     var body: some View {
         ZStack {
-            Color("Nina-lightpink")
+            Color("Nina-purtypink")
                 .edgesIgnoringSafeArea(.all)
 //            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"),
 //                                                       Color("Nina-sky")]),
@@ -53,13 +53,12 @@ struct ResultView: View {
 //                    .shadow(color: Color("Nina-sky"), radius: 1)
                 
                 
-                
                 Spacer()
                 Text("WACHT NOG")
                     .font(.system(size: 50, weight: .black))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 1)
-                Text("59")
+                Text("\(tipsyDataStruct.userAge)")
                     .font(.system(size: 60, weight: .black))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 1)
@@ -82,7 +81,8 @@ struct ResultView: View {
     }
 }
 
-
+// hier de functie berekenen
+// gender = female of male
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {

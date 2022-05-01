@@ -31,7 +31,7 @@ struct HomeScreenView: View {
                         )
                         .mask(
                             Text("TIPSY TIMER")
-                                .font(Font.system(size: 60, weight: .black))
+                                .font(.system(size: 60, weight: .black))
                         )
                     }
                     .shadow(color: Color("Nina-dark"), radius: 5)
@@ -90,7 +90,6 @@ struct HomeScreenView: View {
         }
     }
 }
-
 
 struct HomeScreenView_Previews: PreviewProvider {
     static var previews: some View {

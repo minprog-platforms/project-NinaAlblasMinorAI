@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+var tipsyDataStruct = TipsyData()
+
 enum userInputSteps: CGFloat {
     case gender
     case age
@@ -74,11 +76,8 @@ struct TipsyTimerView: View {
                             .labelStyle(.iconOnly)
                             .frame(width: 125, height: 100)
                     }
-                    Text("VOLGENDE")
-                        .font(.system(size: 25, weight: .heavy))
-                        .foregroundColor(Color("Tipsy-white"))
-                        .shadow(color: Color("Nina-dark"), radius: 5)
-//                        .frame(width: 300, height: 100)
+
+                    
                     Button(action: {
                         let newStepValue = currentStep.rawValue + 1
                         
@@ -88,12 +87,20 @@ struct TipsyTimerView: View {
                         }
                         currentStep = userInputSteps(rawValue: newStepValue) ?? .gender
                     }) {
-                        Label("", systemImage: "arrow.right")
-                            .font(.system(size: 25, weight: .heavy))
-                            .foregroundColor(Color("Tipsy-white"))
-                            .shadow(color: Color("Nina-dark"), radius: 5)
-                            .labelStyle(.iconOnly)
-                            .frame(width: 125, height: 100)
+                        HStack {
+                            Text("VOLGENDE")
+                                .font(.system(size: 25, weight: .heavy))
+                                .foregroundColor(Color("Tipsy-white"))
+                                .shadow(color: Color("Nina-dark"), radius: 5)
+        //                        .frame(width: 300, height: 100)
+                                // TODO: "VOLGENDE" moet ook klikbaar zijn
+                            Label("", systemImage: "arrow.right")
+                                .font(.system(size: 25, weight: .heavy))
+                                .foregroundColor(Color("Tipsy-white"))
+                                .shadow(color: Color("Nina-dark"), radius: 5)
+                                .labelStyle(.iconOnly)
+                                .frame(width: 125, height: 100)
+                        }
                     }
                     
                     
@@ -104,6 +111,16 @@ struct TipsyTimerView: View {
             }
         }
     }
+}
+
+struct TipsyData {
+    var userGender = ""
+    var userAge = 0
+    var userWeight = 0
+    var userHeight = 0
+//    var userConsumedAlcohol: String // moet ook berekend worden adhv verschillende drankjes; in grams
+//    var userDrinkingTime: String
+//    var userDrivingExperience: String
 }
 
 

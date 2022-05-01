@@ -26,10 +26,12 @@ struct GenderView: View {
                 Spacer()
                 HStack {
                     Button(action: {
+                        // TODO: Dit in een functie?
                         if femaleButtonPressed == true {
-                            femaleButtonPressed.toggle()
+                            femaleButtonPressed = false
                         }
-                        maleButtonPressed.toggle()
+                        maleButtonPressed = true
+                        tipsyDataStruct.userGender = "male"
                     }) {
                         Image("male")
                             .renderingMode(.template)
@@ -47,10 +49,13 @@ struct GenderView: View {
                         .foregroundColor(Color("Tipsy-white"))
                         .shadow(color: Color("Nina-dark"), radius: 5)
                     Button(action: {
+                        // TODO: Dit in een functie?
                         if maleButtonPressed == true {
-                            maleButtonPressed.toggle()
+                            maleButtonPressed = false
                         }
-                        femaleButtonPressed.toggle()
+                        femaleButtonPressed = true
+                        
+                        tipsyDataStruct.userGender = "female"
                     }) {
                         Image("female")
                             .renderingMode(.template)

@@ -44,13 +44,20 @@ struct WeightAndHeightView: View {
                 
                 Spacer()
                 
-                // Ik moet de data dus opslaan in een nieuwe struct, niet als losse state variables, want dat is alles opslaan in de View ipv op je harde schijf
-                // * 100 doen --> in centimeters
+                tipsyDataStruct.userHeight = Int(bodyHeight * 100)
+                tipsyDataStruct.userWeight = Int(bodyWeight)
+                
+//                storeHeightAndWeight(height: bodyHeight, weight: bodyWeight)
 
             }
         }
     }
 }
+
+//func storeHeightAndWeight(height: Double, weight: Double) {
+//    tipsyDataStruct.userHeight = Int(height * 100)
+//    tipsyDataStruct.userWeight = Int(weight)
+//}
 
 struct WeightAndHeightView_Previews: PreviewProvider {
     static var previews: some View {
