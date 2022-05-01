@@ -98,7 +98,7 @@ struct TipsyTimerView: View {
                     
                     
                     
-                    NavigationLink("", destination: OldResultView()      .navigationBarTitle("")
+                    NavigationLink("", destination: ResultView()      .navigationBarTitle("")
                         .navigationBarHidden(true), isActive: $stepsCompleted)
                 }
             }

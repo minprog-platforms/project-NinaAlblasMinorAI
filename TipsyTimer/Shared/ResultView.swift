@@ -17,18 +17,43 @@ struct ResultView: View {
         ZStack {
             Color("Nina-lightpink")
                 .edgesIgnoringSafeArea(.all)
+//            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"),
+//                                                       Color("Nina-sky")]),
+//                           startPoint: .leading,
+//                           endPoint: .trailing)
+//                .edgesIgnoringSafeArea(.all)
             Image("beer-1")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 700, height: 1300)
-                .offset(y: 250)
+                .offset(y: 260)
                 // dit verhogen
             
             VStack {
                 Text("TIPSY TIMER")
-                    .font(.system(size: 60, weight: .black))
-                    .foregroundColor(Color("Nina-hotpink"))
-                    .shadow(color: Color("Nina-dark"), radius: 1)
+                    .font(Font.system(size: 60, weight: .black))
+                    .overlay {
+                        LinearGradient(
+                            colors: [Color("Nina-hotpink"),
+                                     Color("Nina-pinkpurple"),
+                                     Color("Nina-pink"),
+                                     Color("Nina-prettypink")],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                        .mask(
+                            Text("TIPSY TIMER")
+                                .font(Font.system(size: 60, weight: .black))
+                        )
+                    }
+                    .shadow(color: Color("Nina-pink"), radius: 1)
+//                Text("TIPSY TIMER")
+//                    .font(.system(size: 60, weight: .black))
+//                    .foregroundColor(Color("Nina-hotpink"))
+//                    .shadow(color: Color("Nina-sky"), radius: 1)
+                
+                
+                
                 Spacer()
                 Text("WACHT NOG")
                     .font(.system(size: 50, weight: .black))
