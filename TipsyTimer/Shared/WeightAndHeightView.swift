@@ -44,8 +44,9 @@ struct WeightAndHeightView: View {
                 
                 Spacer()
                 
-                tipsyDataStruct.userHeight = Int(bodyHeight * 100)
-                tipsyDataStruct.userWeight = Int(bodyWeight)
+                // TODO: Waar moet dit in?
+//                tipsyDataStruct.userHeight = Int(bodyHeight * 100)
+//                tipsyDataStruct.userWeight = Int(bodyWeight)
                 
 //                storeHeightAndWeight(height: bodyHeight, weight: bodyWeight)
 

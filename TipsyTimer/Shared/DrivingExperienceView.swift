@@ -26,10 +26,12 @@ struct DrivingExperienceView: View {
                 Spacer()
                 HStack {
                     Button(action: {
+                        // TODO: functie?
                         if experiencedDriverButtonPressed == true {
-                            experiencedDriverButtonPressed.toggle()
+                            experiencedDriverButtonPressed = false
                         }
-                        startingDriverButtonPressed.toggle()
+                        startingDriverButtonPressed = true
+                        tipsyDataStruct.userDrivingExperience = "beginnend"
                     }) {
                         Image("scared")
                             .renderingMode(.template)
@@ -47,10 +49,13 @@ struct DrivingExperienceView: View {
                         .foregroundColor(Color("Tipsy-white"))
                         .shadow(color: Color("Nina-dark"), radius: 5)
                     Button(action: {
+                        // TODO: functie?
                         if startingDriverButtonPressed == true {
-                            startingDriverButtonPressed.toggle()
+                            startingDriverButtonPressed = false
                         }
-                        experiencedDriverButtonPressed.toggle()
+                        experiencedDriverButtonPressed = true
+                        tipsyDataStruct.userDrivingExperience = "ervaren"
+
                     }) {
                         Image("confident")
                             .renderingMode(.template)
@@ -93,7 +98,6 @@ struct DrivingExperienceView: View {
                     .cornerRadius(20)
                 Spacer()
                 Spacer()
-                
             }
         }
     }

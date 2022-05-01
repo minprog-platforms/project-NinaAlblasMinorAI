@@ -58,7 +58,7 @@ struct ResultView: View {
                     .font(.system(size: 50, weight: .black))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 1)
-                Text("\(tipsyDataStruct.userAge)")
+                Text("60")
                     .font(.system(size: 60, weight: .black))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 1)
@@ -66,6 +66,11 @@ struct ResultView: View {
                     .font(.system(size: 50, weight: .black))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 1)
+                
+                // SAMENVATTING VAN DE OPGESLAGEN DATA, KLOPT!!!
+                // ALLEEN HEIGHT, WEIGHT EN CONSUMED DRINKS MOETEN NOG 
+                Text("Gender = \(tipsyDataStruct.userGender)\nAge = \(tipsyDataStruct.userAge)\nExperience = \(tipsyDataStruct.userDrivingExperience)\nDrinking time = \(tipsyDataStruct.userDrinkingTime)\nAlcohol grams = ?\nWeight and height = ?")
+                    .foregroundColor(.white)
                 Spacer()
                 NavigationLink(destination: HomeScreenView()
                     .navigationBarTitle("")
@@ -81,8 +86,14 @@ struct ResultView: View {
     }
 }
 
-// hier de functie berekenen
-// gender = female of male
+// hier de functie berekenen:
+
+// gender = vrouw of man
+// age = int
+// TODO: weight / height = int
+// ervaring = beginnnend vs ervaren
+// tijd = int
+// TODO: alcohol = grams = Double?
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {

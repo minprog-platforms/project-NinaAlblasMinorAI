@@ -93,7 +93,6 @@ struct TipsyTimerView: View {
                                 .foregroundColor(Color("Tipsy-white"))
                                 .shadow(color: Color("Nina-dark"), radius: 5)
         //                        .frame(width: 300, height: 100)
-                                // TODO: "VOLGENDE" moet ook klikbaar zijn
                             Label("", systemImage: "arrow.right")
                                 .font(.system(size: 25, weight: .heavy))
                                 .foregroundColor(Color("Tipsy-white"))
@@ -118,11 +117,10 @@ struct TipsyData {
     var userAge = 0
     var userWeight = 0
     var userHeight = 0
-//    var userConsumedAlcohol: String // moet ook berekend worden adhv verschillende drankjes; in grams
-//    var userDrinkingTime: String
-//    var userDrivingExperience: String
+//    var userConsumedAlcohol = 0.0 // moet ook berekend worden adhv verschillende drankjes; in grams
+    var userDrinkingTime = 0.0
+    var userDrivingExperience = ""
 }
-
 
 struct TipsyTimerView_Previews: PreviewProvider {
     static var previews: some View {

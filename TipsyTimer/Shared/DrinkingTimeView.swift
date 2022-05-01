@@ -92,7 +92,7 @@ struct DrinkingTimeView: View {
             self.drinkingTime = Int(progress * 60 * 12)
             // ook in uren weergeven?
             self.drinkingTimeInHours = Double(self.drinkingTime) / 60
-            
+            tipsyDataStruct.userDrinkingTime = self.drinkingTimeInHours
         }
     }
 }
