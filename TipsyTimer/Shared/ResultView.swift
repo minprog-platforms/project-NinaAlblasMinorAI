@@ -5,39 +5,59 @@
 //  Created by Nina Alblas on 30/04/2022.
 //
 // TODO: animatie glaasje zakt in niveau
-// TODO: alles
-// TODO: terugknop
+// TODO: timer in het getal
+// 2 TODO'S HIERONDER
 
 import SwiftUI
 
 struct ResultView: View {
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         ZStack {
             Color("Nina-lightpink")
                 .edgesIgnoringSafeArea(.all)
-            pinkFluid()
-//                .offset(y: 30)
+            Image("beer-1")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 700, height: 1300)
+                .offset(y: 250)
+                // dit verhogen
+            
+            VStack {
+                Text("TIPSY TIMER")
+                    .font(.system(size: 60, weight: .black))
+                    .foregroundColor(Color("Nina-hotpink"))
+                    .shadow(color: Color("Nina-dark"), radius: 1)
+                Spacer()
+                Text("WACHT NOG")
+                    .font(.system(size: 50, weight: .black))
+                    .foregroundColor(Color("Tipsy-white"))
+                    .shadow(color: Color("Nina-dark"), radius: 1)
+                Text("59")
+                    .font(.system(size: 60, weight: .black))
+                    .foregroundColor(Color("Tipsy-white"))
+                    .shadow(color: Color("Nina-dark"), radius: 1)
+                Text("MINUTEN")
+                    .font(.system(size: 50, weight: .black))
+                    .foregroundColor(Color("Tipsy-white"))
+                    .shadow(color: Color("Nina-dark"), radius: 1)
+                Spacer()
+                NavigationLink(destination: HomeScreenView()
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)) {
+                        Label("OPNIEUW", systemImage: "arrow.triangle.2.circlepath")
+                            .foregroundColor(Color(.white))
+                            .font(.system(size: 25, weight: .heavy))
+                            .shadow(color: Color("Nina-dark"), radius: 1)
+                    }
+            }
+            .frame(width: 400, height: 850)
         }
     }
 }
 
-struct pinkFluid: View {
-    var body: some View {
-        LinearGradient(gradient: Gradient(colors: [Color("Nina-prettypink"), Color("Nina-hotpink")]), startPoint: .leading, endPoint: .trailing)
-            .mask(
-                VStack(spacing: 0) {
-                    Image("water")
-                        .renderingMode(.template)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 400)
-                        .edgesIgnoringSafeArea(.horizontal)
-                    Rectangle()
-                        .frame(width: 400)
-                })
-            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-    }
-}
+
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {

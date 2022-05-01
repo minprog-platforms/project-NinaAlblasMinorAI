@@ -4,6 +4,7 @@
 //
 //  Created by Nina Alblas on 25/04/2022.
 //
+// TODO: laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
 
 import SwiftUI
 
@@ -29,11 +30,13 @@ struct TipsyTimerView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 HStack {
-                    Button(action: {presentationMode.wrappedValue.dismiss()}, label: {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
                         Label("TERUG", systemImage: "arrow.left")
                             .font(.system(size: 20))
                             .foregroundColor(Color("Tipsy-white"))
-                    })
+                    }
                     .padding(.leading)
                     Spacer()
                 }
@@ -55,7 +58,27 @@ struct TipsyTimerView: View {
                 case .drivingExperience:
                     DrivingExperienceView()
                 }
+                
                 HStack {
+                    
+                    // een stapje terug
+                    Button(action: {
+                        let newStepValue = currentStep.rawValue - 1
+                        
+                        currentStep = userInputSteps(rawValue: newStepValue) ?? .gender
+                    }) {
+                        Label("", systemImage: "arrow.left")
+                            .font(.system(size: 25, weight: .heavy))
+                            .foregroundColor(Color("Tipsy-white"))
+                            .shadow(color: Color("Nina-dark"), radius: 5)
+                            .labelStyle(.iconOnly)
+                            .frame(width: 125, height: 100)
+                    }
+                    Text("VOLGENDE")
+                        .font(.system(size: 25, weight: .heavy))
+                        .foregroundColor(Color("Tipsy-white"))
+                        .shadow(color: Color("Nina-dark"), radius: 5)
+//                        .frame(width: 300, height: 100)
                     Button(action: {
                         let newStepValue = currentStep.rawValue + 1
                         
@@ -65,13 +88,18 @@ struct TipsyTimerView: View {
                         }
                         currentStep = userInputSteps(rawValue: newStepValue) ?? .gender
                     }) {
-                        Label("VOLGENDE", systemImage: "arrow.right")
+                        Label("", systemImage: "arrow.right")
                             .font(.system(size: 25, weight: .heavy))
                             .foregroundColor(Color("Tipsy-white"))
                             .shadow(color: Color("Nina-dark"), radius: 5)
-                            .frame(width: 300, height: 100)
+                            .labelStyle(.iconOnly)
+                            .frame(width: 125, height: 100)
                     }
-                    NavigationLink("", destination: ResultView(), isActive: $stepsCompleted)
+                    
+                    
+                    
+                    NavigationLink("", destination: OldResultView()      .navigationBarTitle("")
+                        .navigationBarHidden(true), isActive: $stepsCompleted)
                 }
             }
         }

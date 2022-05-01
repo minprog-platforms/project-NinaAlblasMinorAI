@@ -9,7 +9,7 @@
 // TODO: comments toevoegen?
 // TODO: Timer blijft lopen ook als je app sluit
 // TODO: een notificatie als de timer afgelopen is
-// TODO: ResultaatView
+// TODO: Uber
 
 // TODO: Keuzemenu drankjes toevoegen?
 // TODO: widget?
