@@ -13,6 +13,8 @@
 
 // TODO: Keuzemenu drankjes toevoegen?
 // TODO: widget?
+// TODO: app cover op homescreen
+// TODO: app op eigen telefoon?
 // TODO: stappen ondernemen om in app store te krijgen (copyrighted plaatjes?)
 
 

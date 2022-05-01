@@ -13,11 +13,29 @@ import SwiftUI
 struct ResultView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"), Color("Nina-sky")]), startPoint: .leading, endPoint: .trailing)
+            Color("Nina-lightpink")
                 .edgesIgnoringSafeArea(.all)
-            Text("RESULTS")
-                .foregroundColor(.white)
+            pinkFluid()
+//                .offset(y: 30)
         }
+    }
+}
+
+struct pinkFluid: View {
+    var body: some View {
+        LinearGradient(gradient: Gradient(colors: [Color("Nina-prettypink"), Color("Nina-hotpink")]), startPoint: .leading, endPoint: .trailing)
+            .mask(
+                VStack(spacing: 0) {
+                    Image("water")
+                        .renderingMode(.template)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 400)
+                        .edgesIgnoringSafeArea(.horizontal)
+                    Rectangle()
+                        .frame(width: 400)
+                })
+            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
 
