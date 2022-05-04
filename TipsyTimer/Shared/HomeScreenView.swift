@@ -4,7 +4,6 @@
 //
 //  Created by Nina Alblas on 25/04/2022.
 //
-// TODO: cocktailglas plaatje
 
 import SwiftUI
 

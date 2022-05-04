@@ -4,9 +4,6 @@
 //
 //  Created by Nina Alblas on 30/04/2022.
 //
-// TODO: animatie glaasje zakt in niveau
-// TODO: timer in het getal
-// 2 TODO'S HIERONDER
 
 import SwiftUI
 
@@ -30,7 +27,6 @@ struct ResultView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 700, height: 1300)
                 .offset(y: 260)
-                // dit verhogen
             
             VStack {
                 Text("TIPSY TIMER")

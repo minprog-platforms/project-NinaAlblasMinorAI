@@ -4,7 +4,6 @@
 //
 //  Created by Nina Alblas on 25/04/2022.
 //
-// TODO: laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
 
 import SwiftUI
 
@@ -117,7 +116,7 @@ struct TipsyData {
     var userAge = 0
     var userWeight = 0.0
     var userHeight = 0.0
-    var userConsumedAlcoholGrams = 0 // moet ook berekend worden adhv verschillende drankjes; in grams
+    var userConsumedAlcoholGrams = 0 
     var userDrinkingTime = 0.0
     var userDrivingExperience = ""
 }
