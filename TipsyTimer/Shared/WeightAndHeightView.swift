@@ -26,7 +26,7 @@ struct WeightAndHeightView: View {
                     .padding(.horizontal)
                     .tint(Color("Nina-hotpink"))
                     .onChange(of: bodyHeight) { height in
-                        tipsyDataStruct.userHeight = Int(height * 100)
+                        tipsyDataStruct.userHeight = height * 100
                     }
                 Text(String(format: "Lengte: %.2f m", bodyHeight))
                     .foregroundColor(Color("Tipsy-white"))
@@ -42,7 +42,7 @@ struct WeightAndHeightView: View {
                     .padding(.horizontal)
                     .tint(Color("Nina-hotpink"))
                     .onChange(of: bodyWeight) { weight in
-                        tipsyDataStruct.userWeight = Int(weight)
+                        tipsyDataStruct.userWeight = weight
                     }
                 Text(String(format: "Gewicht: %.0f kg", bodyWeight))
                     .foregroundColor(Color("Tipsy-white"))

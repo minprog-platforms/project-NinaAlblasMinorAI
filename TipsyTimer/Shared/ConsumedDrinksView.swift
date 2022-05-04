@@ -8,6 +8,7 @@
 // TODO: (misschien) % ALCOHOL (of van standaardpercentages uitgaan?)
 
 // TODO: eigen stijl definieren (een struct View?) die ik op iedere rechthoek kan toepassen?
+// TODO: functie maken van alcohol som?
 
 
 import SwiftUI
@@ -58,7 +59,7 @@ struct ConsumedDrinksView: View {
                                 let cocktailAmount = (Int(amountOfCocktails) ?? 0)
                                 let liquorAmount = (Int(amountOfLiquor) ?? 0)
                                 
-                                tipsyDataStruct.userConsumedAlcohol = beerAmount + wineAmount + cocktailAmount + liquorAmount
+                                tipsyDataStruct.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                                 
                                  // done button -> on change kan weg
                                  // on change closure inclusief de andere drankjes krijgen
@@ -104,7 +105,7 @@ struct ConsumedDrinksView: View {
                                 let cocktailAmount = (Int(amountOfCocktails) ?? 0)
                                 let liquorAmount = (Int(amountOfLiquor) ?? 0)
                                 
-                                tipsyDataStruct.userConsumedAlcohol = beerAmount + wineAmount + cocktailAmount + liquorAmount
+                                tipsyDataStruct.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -147,7 +148,7 @@ struct ConsumedDrinksView: View {
                                 let cocktailAmount = (Int(cocktails) ?? 0)
                                 let liquorAmount = (Int(amountOfLiquor) ?? 0)
                                 
-                                tipsyDataStruct.userConsumedAlcohol = beerAmount + wineAmount + cocktailAmount + liquorAmount
+                                tipsyDataStruct.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -189,7 +190,7 @@ struct ConsumedDrinksView: View {
                                 let cocktailAmount = (Int(amountOfCocktails) ?? 0)
                                 let liquorAmount = (Int(liquor) ?? 0)
                                 
-                                tipsyDataStruct.userConsumedAlcohol = beerAmount + wineAmount + cocktailAmount + liquorAmount
+                                tipsyDataStruct.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))

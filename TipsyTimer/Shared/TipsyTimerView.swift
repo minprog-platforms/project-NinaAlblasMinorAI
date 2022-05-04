@@ -115,9 +115,9 @@ struct TipsyTimerView: View {
 struct TipsyData {
     var userGender = ""
     var userAge = 0
-    var userWeight = 0
-    var userHeight = 0
-    var userConsumedAlcohol = 0 // moet ook berekend worden adhv verschillende drankjes; in grams
+    var userWeight = 0.0
+    var userHeight = 0.0
+    var userConsumedAlcoholGrams = 0 // moet ook berekend worden adhv verschillende drankjes; in grams
     var userDrinkingTime = 0.0
     var userDrivingExperience = ""
 }

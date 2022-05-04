@@ -12,6 +12,9 @@ import SwiftUI
 
 struct ResultView: View {
     @Environment(\.presentationMode) var presentationMode
+    
+    let user = currentUser()
+
 
     var body: some View {
         ZStack {
@@ -58,7 +61,7 @@ struct ResultView: View {
                     .font(.system(size: 50, weight: .black))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 1)
-                Text("60")
+                Text(String(format:"%.0f", user.waitingTime))
                     .font(.system(size: 60, weight: .black))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 1)
@@ -67,10 +70,6 @@ struct ResultView: View {
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 1)
                 
-                // SAMENVATTING VAN DE OPGESLAGEN DATA, KLOPT!!!
-                // ALLEEN CONSUMED DRINKS MOETEN NOG 
-                Text("Gender = \(tipsyDataStruct.userGender)\nAge = \(tipsyDataStruct.userAge)\nExperience = \(tipsyDataStruct.userDrivingExperience)\nDrinking time = \(tipsyDataStruct.userDrinkingTime)\nAlcohol grams = \(tipsyDataStruct.userConsumedAlcohol)\nWeight = \(tipsyDataStruct.userWeight)\nHeight = \(tipsyDataStruct.userHeight)")
-                    .foregroundColor(.white)
                 
                 Spacer()
                 NavigationLink(destination: HomeScreenView()
@@ -86,15 +85,6 @@ struct ResultView: View {
         }
     }
 }
-
-// hier de functie berekenen:
-
-// gender = vrouw of man
-// age = int
-// TODO: weight / height = int
-// ervaring = beginnnend vs ervaren
-// tijd = int
-// TODO: alcohol = grams = Double?
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {

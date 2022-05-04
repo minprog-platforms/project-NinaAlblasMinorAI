@@ -36,6 +36,8 @@
 		747C763A28180E4F00852DFB /* DrivingExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763828180E4F00852DFB /* DrivingExperienceView.swift */; };
 		74CB2D03281EDDA2001CC294 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB2D02281EDDA2001CC294 /* ResultView.swift */; };
 		74CB2D04281EDDA2001CC294 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB2D02281EDDA2001CC294 /* ResultView.swift */; };
+		74FB89542822D03600768368 /* WaitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB89532822D03600768368 /* WaitingTime.swift */; };
+		74FB89552822D03700768368 /* WaitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB89532822D03600768368 /* WaitingTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,7 @@
 		747C763528180E3500852DFB /* DrinkingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingTimeView.swift; sourceTree = "<group>"; };
 		747C763828180E4F00852DFB /* DrivingExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingExperienceView.swift; sourceTree = "<group>"; };
 		74CB2D02281EDDA2001CC294 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		74FB89532822D03600768368 /* WaitingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,7 @@
 				740E966228153B860089D7E0 /* TipsyTimerApp.swift */,
 				740E966328153B860089D7E0 /* ContentView.swift */,
 				74CB2D02281EDDA2001CC294 /* ResultView.swift */,
+				74FB89532822D03600768368 /* WaitingTime.swift */,
 				747C76262817367500852DFB /* HomeScreenView.swift */,
 				747C7623281731F300852DFB /* TipsyTimerView.swift */,
 				747C763828180E4F00852DFB /* DrivingExperienceView.swift */,
@@ -349,6 +353,7 @@
 				740E968A28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
 				747C762D2817F5B700852DFB /* AgeView.swift in Sources */,
 				747C763328180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
+				74FB89542822D03600768368 /* WaitingTime.swift in Sources */,
 				747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +364,7 @@
 			files = (
 				747C763A28180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
 				740E968D28153B870089D7E0 /* ContentView.swift in Sources */,
+				74FB89552822D03700768368 /* WaitingTime.swift in Sources */,
 				747C762B281738A300852DFB /* GenderView.swift in Sources */,
 				747C763128180DDA00852DFB /* WeightAndHeightView.swift in Sources */,
 				74CB2D04281EDDA2001CC294 /* ResultView.swift in Sources */,
