@@ -25,6 +25,9 @@ struct WeightAndHeightView: View {
                 Slider(value: $bodyHeight, in: 1.30...2.20, step: 0.01)
                     .padding(.horizontal)
                     .tint(Color("Nina-hotpink"))
+                    .onChange(of: bodyHeight) { height in
+                        tipsyDataStruct.userHeight = Int(height * 100)
+                    }
                 Text(String(format: "Lengte: %.2f m", bodyHeight))
                     .foregroundColor(Color("Tipsy-white"))
                     .font(.system(size: 20))
@@ -38,27 +41,20 @@ struct WeightAndHeightView: View {
                 Slider(value: $bodyWeight, in: 40...200, step: 1.0)
                     .padding(.horizontal)
                     .tint(Color("Nina-hotpink"))
+                    .onChange(of: bodyWeight) { weight in
+                        tipsyDataStruct.userWeight = Int(weight)
+                    }
                 Text(String(format: "Gewicht: %.0f kg", bodyWeight))
                     .foregroundColor(Color("Tipsy-white"))
                     .font(.system(size: 20))
                 
                 Spacer()
-                
-                // TODO: Waar moet dit in?
-//                tipsyDataStruct.userHeight = Int(bodyHeight * 100)
-//                tipsyDataStruct.userWeight = Int(bodyWeight)
-                
-//                storeHeightAndWeight(height: bodyHeight, weight: bodyWeight)
+            
 
             }
         }
     }
 }
-
-//func storeHeightAndWeight(height: Double, weight: Double) {
-//    tipsyDataStruct.userHeight = Int(height * 100)
-//    tipsyDataStruct.userWeight = Int(weight)
-//}
 
 struct WeightAndHeightView_Previews: PreviewProvider {
     static var previews: some View {

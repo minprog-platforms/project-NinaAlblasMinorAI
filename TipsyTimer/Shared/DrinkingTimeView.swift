@@ -84,14 +84,13 @@ struct DrinkingTimeView: View {
         }
         
         withAnimation(Animation.linear(duration: 0.15)) {
-            // progress is fractie van het totaal: je kunt tussen de 18 en de (18 + 83 =) 101 zijn
             let progress = angle / 360
             self.progress = progress
             self.angle = Double(angle)
+            
             // time span of 12 hours
-            self.drinkingTime = Int(progress * 60 * 12)
-            // ook in uren weergeven?
-            self.drinkingTimeInHours = Double(self.drinkingTime) / 60
+            self.drinkingTimeInHours = progress * 12
+            self.drinkingTime = Int(self.drinkingTimeInHours * 60)
             tipsyDataStruct.userDrinkingTime = self.drinkingTimeInHours
         }
     }

@@ -46,7 +46,7 @@ struct ResultView: View {
                                 .font(Font.system(size: 60, weight: .black))
                         )
                     }
-                    .shadow(color: Color("Nina-pink"), radius: 1)
+                    .shadow(color: Color("Nina-dark"), radius: 1)
 //                Text("TIPSY TIMER")
 //                    .font(.system(size: 60, weight: .black))
 //                    .foregroundColor(Color("Nina-hotpink"))
@@ -68,9 +68,10 @@ struct ResultView: View {
                     .shadow(color: Color("Nina-dark"), radius: 1)
                 
                 // SAMENVATTING VAN DE OPGESLAGEN DATA, KLOPT!!!
-                // ALLEEN HEIGHT, WEIGHT EN CONSUMED DRINKS MOETEN NOG 
-                Text("Gender = \(tipsyDataStruct.userGender)\nAge = \(tipsyDataStruct.userAge)\nExperience = \(tipsyDataStruct.userDrivingExperience)\nDrinking time = \(tipsyDataStruct.userDrinkingTime)\nAlcohol grams = ?\nWeight and height = ?")
+                // ALLEEN CONSUMED DRINKS MOETEN NOG 
+                Text("Gender = \(tipsyDataStruct.userGender)\nAge = \(tipsyDataStruct.userAge)\nExperience = \(tipsyDataStruct.userDrivingExperience)\nDrinking time = \(tipsyDataStruct.userDrinkingTime)\nAlcohol grams = \(tipsyDataStruct.userConsumedAlcohol)\nWeight = \(tipsyDataStruct.userWeight)\nHeight = \(tipsyDataStruct.userHeight)")
                     .foregroundColor(.white)
+                
                 Spacer()
                 NavigationLink(destination: HomeScreenView()
                     .navigationBarTitle("")
