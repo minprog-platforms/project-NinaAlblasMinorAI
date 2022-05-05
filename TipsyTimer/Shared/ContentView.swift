@@ -20,8 +20,12 @@
 // TODO: ConsumedDrinksView - eigen stijl definieren (een struct View?) die ik op iedere rechthoek kan toepassen?
 // TODO: ConsumedDrinksView - functie maken van alcohol som?
 
+// TODO: DrinkingTimeView - in stapjes van 5 minuten?
+
 // TODO: ResultView - Timer die afloopt
 // TODO: ResultView - animatie glaasje zakt in niveau
+// TODO: ResultView - Timer blijft lopen ook als je app sluit
+// TODO: ResultView - een notificatie als de timer afgelopen is
 
 // TODO: maak alle @States private?
 
@@ -31,8 +35,6 @@
 // TODO: app cover op homescreen
 // TODO: app op eigen telefoon?
 // TODO: stappen ondernemen om in app store te krijgen (copyrighted plaatjes?)
-// TODO: Timer blijft lopen ook als je app sluit
-// TODO: een notificatie als de timer afgelopen is
 // TODO: Uber
 
 

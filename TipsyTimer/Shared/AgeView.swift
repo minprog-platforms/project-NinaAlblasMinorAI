@@ -11,7 +11,7 @@ import SwiftUI
 struct AgeView: View {
     @State var progress: CGFloat = 0
     @State var angle: Double = 0
-    @State var age: Int = 0
+    @State var age: Int = 18
     
     
     var body: some View {

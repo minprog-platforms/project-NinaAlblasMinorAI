@@ -16,8 +16,11 @@ struct currentUser {
         }
     }
 
-    var waitingTime: Double {
-        // returns waiting time in hours to wait after last drink before BAC reaches target value
+//    var waitingTime: (Int, Int) {
+//        // returns waiting time in (hours, mins) to wait after last drink before BAC reaches target value
+        
+    var waitingTime: Int {
+        // returns waiting time in minutes to wait after last drink before BAC reaches target value
         
         // beginnend: BAC = 0.02
         // ervaren: BAC = 0.05
@@ -27,11 +30,23 @@ struct currentUser {
         let bloodWaterPercentage = 80.65
         let passedTime = 1.5
         
-        let waitingTimeHours = ((-(targetBAC * 1000) + ((Double(tipsyDataStruct.userConsumedAlcoholGrams) / TBW) * bloodWaterPercentage)) / metabolicRate) - (tipsyDataStruct.userDrinkingTime + passedTime)
+        // waiting time in hours (1.89 hours)
+        var waitingTimeInHours: Double = (((-(targetBAC * 1000) + ((Double(tipsyDataStruct.userConsumedAlcoholGrams) / TBW) * bloodWaterPercentage)) / metabolicRate) - (tipsyDataStruct.userDrinkingTime + passedTime))
+        waitingTimeInHours = waitingTimeInHours > 0.0 ? waitingTimeInHours : 0.0
         
-        let waitingTime = waitingTimeHours * 60
+        // waiting time in minutes (1.89 hours * 60 mins = 113 mins)
+        let waitingTimeInMinutes = Int(waitingTimeInHours * 60)
+        
+//        // waiting time in hours (1.89 --> 1)
+//        let waitingTimeHours = floor(waitingTimeInHours)
+//        
+//        // waiting time in mins (1.89 --> 0.89)
+//        let waitingTimeMinutes = (waitingTimeInHours - waitingTimeHours) * 60
+        
+//        return (Int(waitingTimeHours), Int(waitingTimeMinutes))
+        
+        return waitingTimeInMinutes
 
-        return waitingTime > 0.0 ? waitingTime : 0.0
     }
    
 }

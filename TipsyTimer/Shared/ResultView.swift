@@ -11,17 +11,33 @@ struct ResultView: View {
     @Environment(\.presentationMode) var presentationMode
     
     let user = currentUser()
-
-
+    
+    let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
+    
+    @State var timeRemaining = ""
+    
+    // 30 minutes from now
+    // TODO: juiste tijd ipv 30 min
+    let futureDate: Date = Calendar.current.date(byAdding: .minute, value: 30, to: Date()) ?? Date()
+    
+    func updateTimeRemaining() {
+        // TODO: als hours == 0 --> niet de uren opvragen?
+        
+        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate)
+        let hoursRemaining = remaining.hour ?? 0
+        let minutesRemaining = remaining.minute ?? 0
+        let secondsRemaining = remaining.second ?? 0
+        timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
+    }
+    
     var body: some View {
         ZStack {
-            Color("Nina-purtypink")
-                .edgesIgnoringSafeArea(.all)
-//            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"),
-//                                                       Color("Nina-sky")]),
-//                           startPoint: .leading,
-//                           endPoint: .trailing)
-//                .edgesIgnoringSafeArea(.all)
+            
+            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"),
+                                                       Color("Nina-sky")]),
+                           startPoint: .leading,
+                           endPoint: .trailing)
+            .edgesIgnoringSafeArea(.all)
             Image("beer-1")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -45,26 +61,16 @@ struct ResultView: View {
                                 .font(Font.system(size: 60, weight: .black))
                         )
                     }
-                    .shadow(color: Color("Nina-dark"), radius: 1)
-//                Text("TIPSY TIMER")
-//                    .font(.system(size: 60, weight: .black))
-//                    .foregroundColor(Color("Nina-hotpink"))
-//                    .shadow(color: Color("Nina-sky"), radius: 1)
+                    .shadow(color: Color("Nina-dark"), radius: 5)
+                
                 
                 
                 Spacer()
-                Text("WACHT NOG")
+                
+                Text(timeRemaining)
                     .font(.system(size: 50, weight: .black))
                     .foregroundColor(Color("Tipsy-white"))
-                    .shadow(color: Color("Nina-dark"), radius: 1)
-                Text(String(format:"%.0f", user.waitingTime))
-                    .font(.system(size: 60, weight: .black))
-                    .foregroundColor(Color("Tipsy-white"))
-                    .shadow(color: Color("Nina-dark"), radius: 1)
-                Text("MINUTEN")
-                    .font(.system(size: 50, weight: .black))
-                    .foregroundColor(Color("Tipsy-white"))
-                    .shadow(color: Color("Nina-dark"), radius: 1)
+                    .shadow(color: Color("Nina-dark"), radius: 5)
                 
                 
                 Spacer()
@@ -74,14 +80,18 @@ struct ResultView: View {
                         Label("OPNIEUW", systemImage: "arrow.triangle.2.circlepath")
                             .foregroundColor(Color(.white))
                             .font(.system(size: 25, weight: .heavy))
-                            .shadow(color: Color("Nina-dark"), radius: 1)
+                            .shadow(color: Color("Nina-dark"), radius: 5)
                     }
             }
             .frame(width: 400, height: 850)
+            
+            .onReceive(timer) { _ in
+                updateTimeRemaining()
+            }
         }
+        
     }
 }
-
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
         ResultView()

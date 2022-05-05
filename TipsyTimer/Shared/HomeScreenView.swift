@@ -43,6 +43,7 @@ struct HomeScreenView: View {
                 
                 Spacer()
                 Spacer()
+
                 NavigationLink(destination: TipsyTimerView()
                     .navigationBarTitle("")
                     .navigationBarHidden(true)) {
