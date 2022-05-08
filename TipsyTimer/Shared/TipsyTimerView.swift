@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-var tipsyDataStruct = TipsyData()
+var tipsyDataClass = TipsyData()
 
 enum userInputSteps: CGFloat {
     case gender
@@ -111,14 +111,14 @@ struct TipsyTimerView: View {
     }
 }
 
-struct TipsyData {
-    var userGender = ""
-    var userAge = 0
-    var userWeight = 0.0
-    var userHeight = 0.0
-    var userConsumedAlcoholGrams = 0 
+class TipsyData {
+    var userGender = "female"
+    var userAge = 18
+    var userWeight = 75.0
+    var userHeight = 180.0
+    var userConsumedAlcoholGrams = 0
     var userDrinkingTime = 0.0
-    var userDrivingExperience = ""
+    var userDrivingExperience = "beginnend"
 }
 
 struct TipsyTimerView_Previews: PreviewProvider {

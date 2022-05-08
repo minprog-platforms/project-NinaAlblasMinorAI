@@ -7,29 +7,32 @@
 
 import SwiftUI
 
+let user = currentUser()
+var waitingMinutes: Int = user.waitingTime
+// TODO: = 0 ??
+
 struct ResultView: View {
     @Environment(\.presentationMode) var presentationMode
-    
-    let user = currentUser()
-    
-    let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
+
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State var timeRemaining = ""
-    
-    // 30 minutes from now
-    // TODO: juiste tijd ipv 30 min
-    let futureDate: Date = Calendar.current.date(byAdding: .minute, value: 30, to: Date()) ?? Date()
+
+    let futureDate: Date = Calendar.current.date(byAdding: .minute, value: waitingMinutes, to: Date()) ?? Date()
     
     func updateTimeRemaining() {
-        // TODO: als hours == 0 --> niet de uren opvragen?
-        
         let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate)
         let hoursRemaining = remaining.hour ?? 0
         let minutesRemaining = remaining.minute ?? 0
         let secondsRemaining = remaining.second ?? 0
-        timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
+        
+        if (hoursRemaining + minutesRemaining + secondsRemaining) >= 0 {
+            timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
+        } else {
+            timeRemaining = "00:00:00"
+        }
     }
-    
+      
     var body: some View {
         ZStack {
             
@@ -72,6 +75,7 @@ struct ResultView: View {
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 5)
                 
+//                Text("Gender = \(tipsyDataClass.userGender)\nAge = \(tipsyDataClass.userAge)\nExperience = \(tipsyDataClass.userDrivingExperience)\nDrinking time = \(tipsyDataClass.userDrinkingTime)\nAlcohol grams = \(tipsyDataClass.userConsumedAlcoholGrams)\nWeight = \(tipsyDataClass.userWeight)\nHeight = \(tipsyDataClass.userHeight)")
                 
                 Spacer()
                 NavigationLink(destination: HomeScreenView()

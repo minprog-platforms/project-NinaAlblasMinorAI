@@ -83,7 +83,7 @@ struct AgeView: View {
             self.progress = progress
             self.angle = Double(angle)
             self.age = Int(progress * 83 + 18)
-            tipsyDataStruct.userAge = self.age
+            tipsyDataClass.userAge = self.age
             
         }
         

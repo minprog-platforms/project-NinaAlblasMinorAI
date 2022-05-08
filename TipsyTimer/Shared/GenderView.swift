@@ -31,7 +31,7 @@ struct GenderView: View {
                             femaleButtonPressed = false
                         }
                         maleButtonPressed = true
-                        tipsyDataStruct.userGender = "man"
+                        tipsyDataClass.userGender = "man"
                     }) {
                         Image("male")
                             .renderingMode(.template)
@@ -55,7 +55,7 @@ struct GenderView: View {
                         }
                         femaleButtonPressed = true
                         
-                        tipsyDataStruct.userGender = "vrouw"
+                        tipsyDataClass.userGender = "vrouw"
                     }) {
                         Image("female")
                             .renderingMode(.template)

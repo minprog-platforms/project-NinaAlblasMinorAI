@@ -31,7 +31,7 @@ struct DrivingExperienceView: View {
                             experiencedDriverButtonPressed = false
                         }
                         startingDriverButtonPressed = true
-                        tipsyDataStruct.userDrivingExperience = "beginnend"
+                        tipsyDataClass.userDrivingExperience = "beginnend"
                     }) {
                         Image("scared")
                             .renderingMode(.template)
@@ -54,7 +54,7 @@ struct DrivingExperienceView: View {
                             startingDriverButtonPressed = false
                         }
                         experiencedDriverButtonPressed = true
-                        tipsyDataStruct.userDrivingExperience = "ervaren"
+                        tipsyDataClass.userDrivingExperience = "ervaren"
 
                     }) {
                         Image("confident")
