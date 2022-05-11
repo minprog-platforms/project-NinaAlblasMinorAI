@@ -14,6 +14,7 @@ struct ResultView: View {
     
     @Environment(\.presentationMode) var presentationMode
         
+    
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     
     @State var timeRemaining = ""
@@ -25,7 +26,6 @@ struct ResultView: View {
         // _user bevat daadwerkleijke binding, @binding maakt automatisch een binding object die hoort bij user variabele
 
         // ff voor de test of notificaties werken
-        // TODO: deze komt nu iedere seconde ofzo? dus hij repeat wel
         futureDate = Calendar.current.date(byAdding: .second, value: 12, to: Date())!
 //        futureDate = Calendar.current.date(byAdding: .minute, value: self.user.waitingTime, to: Date())!
         // force unwrappen zodat ie crasht
@@ -112,8 +112,11 @@ struct ResultView: View {
                 if dateDiff > 0 {
                     self.updateTimeRemaining()
                 } else {
-                    // TODO: andere tekst weergeven & stop de timer
+                    // TODO: andere tekst weergeven
                     self.Notify()
+                    
+                    self.timer.upstream.connect().cancel()
+
                 }
             }
         }

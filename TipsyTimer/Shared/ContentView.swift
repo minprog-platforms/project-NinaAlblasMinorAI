@@ -30,7 +30,6 @@
 // TODO: ResultView - Als timer = 0 --> andere tekst
 // TODO: ResultView - Formatting (als hours == 0 --> niet de uren opvragen; 4 minuten --> 04)
 // TODO: ResultView - future date error handling
-// TODO: ResultView - timer stoppen als de tijd op is, want nu komt notificatie nog iedere seconde
 // TODO: ResultView - we willen ook notificatie als we in de app zijn
 
 
