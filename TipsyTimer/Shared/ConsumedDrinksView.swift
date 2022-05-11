@@ -54,7 +54,7 @@ struct ConsumedDrinksView: View {
                                 let cocktailAmount = (Int(amountOfCocktails) ?? 0)
                                 let liquorAmount = (Int(amountOfLiquor) ?? 0)
                                 
-                                tipsyDataClass.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
+                                tipsyDataStruct.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                                 
                                 // als hij het toch niet blijkt te doen:
                                 // done button -> on change kan weg
@@ -101,7 +101,7 @@ struct ConsumedDrinksView: View {
                                 let cocktailAmount = (Int(amountOfCocktails) ?? 0)
                                 let liquorAmount = (Int(amountOfLiquor) ?? 0)
                                 
-                                tipsyDataClass.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
+                                tipsyDataStruct.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -144,7 +144,7 @@ struct ConsumedDrinksView: View {
                                 let cocktailAmount = (Int(cocktails) ?? 0)
                                 let liquorAmount = (Int(amountOfLiquor) ?? 0)
                                 
-                                tipsyDataClass.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
+                                tipsyDataStruct.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -186,7 +186,7 @@ struct ConsumedDrinksView: View {
                                 let cocktailAmount = (Int(amountOfCocktails) ?? 0)
                                 let liquorAmount = (Int(liquor) ?? 0)
                                 
-                                tipsyDataClass.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
+                                tipsyDataStruct.userConsumedAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))

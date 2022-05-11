@@ -6,13 +6,10 @@
 //
 // TODO: Make app (images, text etc.) fit on all screen sizes
 // TODO: comments toevoegen?
-// TODO: Debuggen, wat als mensen stap(pen) overslaan? Of komma getal invullen.
 
 // TODO: HomeScreenView - cocktailglas plaatje
 
 // TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
-// TODO: TipsyTimerView - Nu data een class is, nog wel op deze manier initializeren?
-
 
 // TODO: GenderView - functie verkleuring buttons?
 

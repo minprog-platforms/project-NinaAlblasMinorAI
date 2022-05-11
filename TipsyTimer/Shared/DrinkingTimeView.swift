@@ -91,7 +91,7 @@ struct DrinkingTimeView: View {
             // time span of 12 hours
             self.drinkingTimeInHours = progress * 12
             self.drinkingTime = Int(self.drinkingTimeInHours * 60)
-            tipsyDataClass.userDrinkingTime = self.drinkingTimeInHours
+            tipsyDataStruct.userDrinkingTime = self.drinkingTimeInHours
         }
     }
 }
