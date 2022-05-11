@@ -40,6 +40,11 @@ struct ResultView: View {
         let hoursRemaining = remaining.hour ?? 0
         let minutesRemaining = remaining.minute ?? 0
         let secondsRemaining = remaining.second ?? 0
+//        if hoursRemaining + minutesRemaining + secondsRemaining  <= 0 {
+//            timeRemaining = "Time's up!"
+//        } else {
+//            timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
+//        }
         timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
     }
     

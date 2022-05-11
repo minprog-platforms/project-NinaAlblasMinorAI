@@ -29,24 +29,25 @@ struct CurrentUser {
     
     var waitingTime: Int {
         // returns waiting time in minutes to wait after last drink before BAC reaches target value
+        // IGNORES PASSED TIME (TIME TO REACH PEAK), SO IT'S THE WAITING TIME AFTER CONSUMING THE LAST DRINK!
         
         // beginnend: BAC = 0.02
         // ervaren: BAC = 0.05
-        let targetBAC = (drivingExperience == "beginnend") ? 0.02 : 0.05
+        let targetBAC = (drivingExperience == "beginnend") ? 20.0 : 50.0
         
         let metabolicRate = 15.0
         let bloodWaterPercentage = 80.65
-        let passedTime = 1.5
+//        let passedTime = 1.5
         
-        // Ik kan alleen printen als het een class is??
-        // IK BEN ER HIERDOOR WEL ACHTER GEKOMEN DAT DE TIPSY DATA STRUCT DINGEN NIET AANGEPAST WORDEN HIER, MAAR WEL IN RESULTVIEW
-        print("Gender = \(gender)\nAge = \(age)\nExperience = \(drivingExperience)\nDrinking time = \(drinkingTime)\nAlcohol grams = \(alcoholConsumption)\nWeight = \(weight)\nHeight = \(height)")
+        print("Target BAC: \(targetBAC)\nTBW: \(TBW)\nDrinking time: \(drinkingTime)\nAlcohol grams = \(alcoholConsumption)\nWeight = \(weight)\nHeight = \(height)\nbloodWaterPercentage: \(bloodWaterPercentage)\nmetabolicRate: \(metabolicRate)")
         
         // waiting time in hours (1.89 hours)
-        let waitingTimeInHours: Double = (((-(targetBAC * 1000) + ((Double(alcoholConsumption) / TBW) * bloodWaterPercentage)) / metabolicRate) - (drinkingTime + passedTime))
+        let waitingTimeInHours: Double = (((-targetBAC + ((Double(alcoholConsumption) / TBW) * bloodWaterPercentage)) / metabolicRate) - drinkingTime)
         
         // waiting time in minutes (1.89 hours * 60 mins = 113 mins)
         let waitingTimeInMinutes = Int(waitingTimeInHours * 60)
+        
+        print("Hours: \(waitingTimeInHours)\nMinutes: \(waitingTimeInMinutes)")
         
         return waitingTimeInMinutes
 
