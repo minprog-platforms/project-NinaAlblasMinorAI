@@ -17,24 +17,22 @@ struct ResultView: View {
     
     @State var timeRemaining = ""
     
-//    var waitingMinutes: Int
     var futureDate: Date = Date()
     
-    // TODO: DEZE DINGEN BUITEN INIT GEEFT FOUTMELDING
     init(user: Binding<CurrentUser>) {
         self._user = user
         // _user bevat daadwerkleijke binding, @binding maakt automatisch een binding object die hoort bij user variabele
-//        self.waitingMinutes = 10
-//        self.waitingMinutes =
+
         
         futureDate = Calendar.current.date(byAdding: .minute, value: self.user.waitingTime, to: Date())!
         // force unwrappen zodat ie crasht
-            // beter: if let -->handelen als het misgaat
+            // TODO: beter: if let -->handelen als het misgaat
         
     }
     
     func updateTimeRemaining() {
         // TODO: als hours == 0 --> niet de uren opvragen?
+        // TODO: 4 minuten --> 04, formatting dus
         
         let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: self.futureDate)
         let hoursRemaining = remaining.hour ?? 0
