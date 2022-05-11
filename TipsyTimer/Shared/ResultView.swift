@@ -31,18 +31,19 @@ struct ResultView: View {
     }
     
     func updateTimeRemaining() {
-        // TODO: als hours == 0 --> niet de uren opvragen?
-        // TODO: 4 minuten --> 04, formatting dus
+
         
         let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: self.futureDate)
         let hoursRemaining = remaining.hour ?? 0
         let minutesRemaining = remaining.minute ?? 0
         let secondsRemaining = remaining.second ?? 0
+        // TODO: .
 //        if hoursRemaining + minutesRemaining + secondsRemaining  <= 0 {
 //            timeRemaining = "Time's up!"
 //        } else {
 //            timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
 //        }
+        
         timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
     }
     

@@ -7,8 +7,6 @@
 
 import Foundation
 
-// TODO: voor mijn waarden geeft ie bijna 8 uur op. Klopt dit?
-
 struct CurrentUser {
     var gender: String = "female"
     var age: Int = 18
@@ -31,13 +29,11 @@ struct CurrentUser {
         // returns waiting time in minutes to wait after last drink before BAC reaches target value
         // IGNORES PASSED TIME (TIME TO REACH PEAK), SO IT'S THE WAITING TIME AFTER CONSUMING THE LAST DRINK!
         
-        // beginnend: BAC = 0.02
-        // ervaren: BAC = 0.05
+
         let targetBAC = (drivingExperience == "beginnend") ? 20.0 : 50.0
         
         let metabolicRate = 15.0
         let bloodWaterPercentage = 80.65
-//        let passedTime = 1.5
         
         print("Target BAC: \(targetBAC)\nTBW: \(TBW)\nDrinking time: \(drinkingTime)\nAlcohol grams = \(alcoholConsumption)\nWeight = \(weight)\nHeight = \(height)\nbloodWaterPercentage: \(bloodWaterPercentage)\nmetabolicRate: \(metabolicRate)")
         

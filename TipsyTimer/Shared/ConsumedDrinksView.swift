@@ -15,7 +15,6 @@ struct ConsumedDrinksView: View {
     @State var amountOfWine = "0"
     @State var amountOfCocktails = "0"
     @State var amountOfLiquor = "0"
-    // TODO: alcohol grams is 1000 bij 10 wijn?!
     
     var body: some View {
         ZStack {

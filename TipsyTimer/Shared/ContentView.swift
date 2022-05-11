@@ -6,6 +6,8 @@
 //
 // TODO: Make app (images, text etc.) fit on all screen sizes
 // TODO: comments toevoegen?
+// TODO: maak alle @States private?
+
 
 // TODO: HomeScreenView - cocktailglas plaatje
 
@@ -27,9 +29,11 @@
 // TODO: ResultView - Timer die afloopt
 // TODO: ResultView - animatie glaasje zakt in niveau
 // TODO: ResultView - Timer blijft lopen ook als je app sluit
+// TODO: ResultView - Als timer = 0 --> andere tekst
+// TODO: ResultView - Formatting (als hours == 0 --> niet de uren opvragen; 4 minuten --> 04)
 // TODO: ResultView - een notificatie als de timer afgelopen is
+// TODO: ResultView - future date error handling
 
-// TODO: maak alle @States private?
 
 // optionele extra's
 // TODO: Keuzemenu drankjes toevoegen?

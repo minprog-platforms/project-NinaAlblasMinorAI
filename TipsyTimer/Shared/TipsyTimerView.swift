@@ -98,9 +98,7 @@ struct TipsyTimerView: View {
                                 .frame(width: 125, height: 100)
                         }
                     }
-                    
-                    // ResultView een binding van user meegeven 
-                    
+                                        
                     NavigationLink("", destination: ResultView(user: $user)      .navigationBarTitle("")
                         .navigationBarHidden(true), isActive: $stepsCompleted)
                 }
