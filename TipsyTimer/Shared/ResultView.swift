@@ -112,9 +112,7 @@ struct ResultView: View {
                 if dateDiff > 0 {
                     self.updateTimeRemaining()
                 } else {
-                    // TODO: andere tekst weergeven
                     self.Notify()
-                    
                     self.timer.upstream.connect().cancel()
 
                 }

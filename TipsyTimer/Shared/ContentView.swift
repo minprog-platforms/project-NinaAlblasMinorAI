@@ -31,6 +31,7 @@
 // TODO: ResultView - Formatting (als hours == 0 --> niet de uren opvragen; 4 minuten --> 04)
 // TODO: ResultView - future date error handling
 // TODO: ResultView - we willen ook notificatie als we in de app zijn
+// TODO: ResultView - hacking with swift aanpassing en notificatie leuker maken
 
 
 // optionele extra's
