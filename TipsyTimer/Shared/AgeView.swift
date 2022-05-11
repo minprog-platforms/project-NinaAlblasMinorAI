@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct AgeView: View {
+    @Binding var user: CurrentUser
+
     @State var progress: CGFloat = 0
     @State var angle: Double = 0
     @State var age: Int = 18
@@ -83,15 +85,16 @@ struct AgeView: View {
             self.progress = progress
             self.angle = Double(angle)
             self.age = Int(progress * 83 + 18)
-            tipsyDataStruct.userAge = self.age
+            user.age = self.age
             
         }
         
     }
 }
 
-struct AgeView_Previews: PreviewProvider {
-    static var previews: some View {
-        AgeView()
-    }
-}
+//struct AgeView_Previews: PreviewProvider {
+//    @State var user = CurrentUser()
+//    static var previews: some View {
+//        AgeView(user: $user)
+//    }
+//}

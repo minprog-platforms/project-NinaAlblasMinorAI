@@ -14,6 +14,8 @@
 // TODO: GenderView - functie verkleuring buttons?
 
 // TODO: DrivingExperience - functie verkleuring buttons?
+// TODO: DrivingExperience - uitlegtekst korter
+
 
 // TODO: ConsumedDrinksView - (misschien) ML VS STANDAARDGLAZEN TOGGLE (of alleen std glazen, want makkelijker berekenen? dan hoeft % ook niet)
 // TODO: ConsumedDrinksView - (misschien) % ALCOHOL (of van standaardpercentages uitgaan?)

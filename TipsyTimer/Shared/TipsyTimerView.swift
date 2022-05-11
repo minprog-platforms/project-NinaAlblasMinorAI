@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-var tipsyDataStruct = TipsyData()
-
 enum userInputSteps: CGFloat {
     case gender
     case age
@@ -20,7 +18,7 @@ enum userInputSteps: CGFloat {
 
 struct TipsyTimerView: View {
     @State var currentStep: userInputSteps = .gender
-    
+    @State var user = CurrentUser()
     @Environment(\.presentationMode) var presentationMode
     
     @State var stepsCompleted = false
@@ -47,17 +45,17 @@ struct TipsyTimerView: View {
                 
                 switch currentStep {
                 case .gender:
-                    GenderView()
+                    GenderView(user: $user)
                 case .age:
-                    AgeView()
+                    AgeView(user: $user)
                 case .bodyWeightAndHeight:
-                    WeightAndHeightView()
+                    WeightAndHeightView(user: $user)
                 case .consumedDrinks:
-                    ConsumedDrinksView()
+                    ConsumedDrinksView(user: $user)
                 case .drinkingTime:
-                    DrinkingTimeView()
+                    DrinkingTimeView(user: $user)
                 case .drivingExperience:
-                    DrivingExperienceView()
+                    DrivingExperienceView(user: $user)
                 }
                 
                 HStack {
@@ -101,24 +99,14 @@ struct TipsyTimerView: View {
                         }
                     }
                     
+                    // ResultView een binding van user meegeven 
                     
-                    
-                    NavigationLink("", destination: ResultView()      .navigationBarTitle("")
+                    NavigationLink("", destination: ResultView(user: $user)      .navigationBarTitle("")
                         .navigationBarHidden(true), isActive: $stepsCompleted)
                 }
             }
         }
     }
-}
-
-struct TipsyData {
-    var userGender = ""
-    var userAge = 0
-    var userWeight = 0.0
-    var userHeight = 0.0
-    var userConsumedAlcoholGrams = 0 
-    var userDrinkingTime = 0.0
-    var userDrivingExperience = ""
 }
 
 struct TipsyTimerView_Previews: PreviewProvider {

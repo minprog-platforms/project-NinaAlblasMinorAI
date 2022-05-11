@@ -8,22 +8,35 @@
 import SwiftUI
 
 struct ResultView: View {
+    @Binding var user: CurrentUser
+
+    
     @Environment(\.presentationMode) var presentationMode
-    
-    let user = currentUser()
-    
+        
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     
     @State var timeRemaining = ""
     
-    // 30 minutes from now
-    // TODO: juiste tijd ipv 30 min
-    let futureDate: Date = Calendar.current.date(byAdding: .minute, value: 30, to: Date()) ?? Date()
+//    var waitingMinutes: Int
+    var futureDate: Date = Date()
+    
+    // TODO: DEZE DINGEN BUITEN INIT GEEFT FOUTMELDING
+    init(user: Binding<CurrentUser>) {
+        self._user = user
+        // _user bevat daadwerkleijke binding, @binding maakt automatisch een binding object die hoort bij user variabele
+//        self.waitingMinutes = 10
+//        self.waitingMinutes =
+        
+        futureDate = Calendar.current.date(byAdding: .minute, value: self.user.waitingTime, to: Date())!
+        // force unwrappen zodat ie crasht
+            // beter: if let -->handelen als het misgaat
+        
+    }
     
     func updateTimeRemaining() {
         // TODO: als hours == 0 --> niet de uren opvragen?
         
-        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate)
+        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: self.futureDate)
         let hoursRemaining = remaining.hour ?? 0
         let minutesRemaining = remaining.minute ?? 0
         let secondsRemaining = remaining.second ?? 0
@@ -72,6 +85,7 @@ struct ResultView: View {
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 5)
                 
+//                Text("Gender = \(tipsyDataStruct.userGender)\nAge = \(tipsyDataStruct.userAge)\nExperience = \(tipsyDataStruct.userDrivingExperience)\nDrinking time = \(tipsyDataStruct.userDrinkingTime)\nAlcohol grams = \(tipsyDataStruct.userConsumedAlcoholGrams)\nWeight = \(tipsyDataStruct.userWeight)\nHeight = \(tipsyDataStruct.userHeight)")
                 
                 Spacer()
                 NavigationLink(destination: HomeScreenView()
@@ -86,14 +100,14 @@ struct ResultView: View {
             .frame(width: 400, height: 850)
             
             .onReceive(timer) { _ in
-                updateTimeRemaining()
+                self.updateTimeRemaining()
             }
         }
         
     }
 }
-struct ResultView_Previews: PreviewProvider {
-    static var previews: some View {
-        ResultView()
-    }
-}
+//struct ResultView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ResultView()
+//    }
+//}

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WeightAndHeightView: View {
+    @Binding var user: CurrentUser
+
     @State var bodyHeight: Double = 1.80
     @State var bodyWeight: Double = 75
     
@@ -26,7 +28,7 @@ struct WeightAndHeightView: View {
                     .padding(.horizontal)
                     .tint(Color("Nina-hotpink"))
                     .onChange(of: bodyHeight) { height in
-                        tipsyDataStruct.userHeight = height * 100
+                        user.height = height * 100
                     }
                 Text(String(format: "Lengte: %.2f m", bodyHeight))
                     .foregroundColor(Color("Tipsy-white"))
@@ -42,7 +44,7 @@ struct WeightAndHeightView: View {
                     .padding(.horizontal)
                     .tint(Color("Nina-hotpink"))
                     .onChange(of: bodyWeight) { weight in
-                        tipsyDataStruct.userWeight = weight
+                        user.weight = weight
                     }
                 Text(String(format: "Gewicht: %.0f kg", bodyWeight))
                     .foregroundColor(Color("Tipsy-white"))
@@ -56,8 +58,8 @@ struct WeightAndHeightView: View {
     }
 }
 
-struct WeightAndHeightView_Previews: PreviewProvider {
-    static var previews: some View {
-        WeightAndHeightView()
-    }
-}
+//struct WeightAndHeightView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WeightAndHeightView()
+//    }
+//}

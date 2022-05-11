@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GenderView: View {
+    @Binding var user: CurrentUser
+
     @State var maleButtonPressed = false
     @State var femaleButtonPressed = false
     
@@ -31,7 +33,7 @@ struct GenderView: View {
                             femaleButtonPressed = false
                         }
                         maleButtonPressed = true
-                        tipsyDataStruct.userGender = "man"
+                        user.gender = "man"
                     }) {
                         Image("male")
                             .renderingMode(.template)
@@ -55,7 +57,7 @@ struct GenderView: View {
                         }
                         femaleButtonPressed = true
                         
-                        tipsyDataStruct.userGender = "vrouw"
+                        user.gender = "vrouw"
                     }) {
                         Image("female")
                             .renderingMode(.template)
@@ -96,8 +98,8 @@ struct GenderView: View {
     }
 }
 
-struct GenderInputView_Previews: PreviewProvider {
-    static var previews: some View {
-        GenderView()
-    }
-}
+//struct GenderInputView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GenderView()
+//    }
+//}

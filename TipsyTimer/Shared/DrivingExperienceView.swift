@@ -10,7 +10,7 @@ import SwiftUI
 struct DrivingExperienceView: View {
     @State var startingDriverButtonPressed = false
     @State var experiencedDriverButtonPressed = false
-    
+    @Binding var user: CurrentUser
     
     var body: some View {
         ZStack {
@@ -31,7 +31,7 @@ struct DrivingExperienceView: View {
                             experiencedDriverButtonPressed = false
                         }
                         startingDriverButtonPressed = true
-                        tipsyDataStruct.userDrivingExperience = "beginnend"
+                        user.drivingExperience = "beginnend"
                     }) {
                         Image("scared")
                             .renderingMode(.template)
@@ -54,7 +54,7 @@ struct DrivingExperienceView: View {
                             startingDriverButtonPressed = false
                         }
                         experiencedDriverButtonPressed = true
-                        tipsyDataStruct.userDrivingExperience = "ervaren"
+                        user.drivingExperience = "ervaren"
 
                     }) {
                         Image("confident")
@@ -103,8 +103,8 @@ struct DrivingExperienceView: View {
     }
 }
 
-struct DrivingExperienceView_Previews: PreviewProvider {
-    static var previews: some View {
-        DrivingExperienceView()
-    }
-}
+//struct DrivingExperienceView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DrivingExperienceView()
+//    }
+//}

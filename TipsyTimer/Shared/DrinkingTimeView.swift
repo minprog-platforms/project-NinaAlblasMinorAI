@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DrinkingTimeView: View {
+    @Binding var user: CurrentUser
+
     @State var progress: CGFloat = 0
     @State var angle: Double = 0
     @State var drinkingTime: Int = 0
@@ -91,13 +93,13 @@ struct DrinkingTimeView: View {
             // time span of 12 hours
             self.drinkingTimeInHours = progress * 12
             self.drinkingTime = Int(self.drinkingTimeInHours * 60)
-            tipsyDataStruct.userDrinkingTime = self.drinkingTimeInHours
+            user.drinkingTime = self.drinkingTimeInHours
         }
     }
 }
 
-struct DrinkingTimeView_Previews: PreviewProvider {
-    static var previews: some View {
-        DrinkingTimeView()
-    }
-}
+//struct DrinkingTimeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DrinkingTimeView()
+//    }
+//}
