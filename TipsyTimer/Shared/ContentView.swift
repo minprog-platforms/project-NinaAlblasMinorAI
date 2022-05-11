@@ -26,13 +26,12 @@
 
 // TODO: DrinkingTimeView - in stapjes van 5 minuten?
 
-// TODO: ResultView - Timer die afloopt
 // TODO: ResultView - animatie glaasje zakt in niveau
-// TODO: ResultView - Timer blijft lopen ook als je app sluit
 // TODO: ResultView - Als timer = 0 --> andere tekst
 // TODO: ResultView - Formatting (als hours == 0 --> niet de uren opvragen; 4 minuten --> 04)
-// TODO: ResultView - een notificatie als de timer afgelopen is
 // TODO: ResultView - future date error handling
+// TODO: ResultView - timer stoppen als de tijd op is, want nu komt notificatie nog iedere seconde
+// TODO: ResultView - we willen ook notificatie als we in de app zijn
 
 
 // optionele extra's

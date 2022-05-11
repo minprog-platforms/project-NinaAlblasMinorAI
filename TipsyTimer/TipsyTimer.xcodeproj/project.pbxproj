@@ -61,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		74058BFA282BD3A2006CEB8F /* TipsyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyData.swift; sourceTree = "<group>"; };
+		74058BFD282C066D006CEB8F /* TipsyTimer--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TipsyTimer--iOS--Info.plist"; sourceTree = "<group>"; };
 		740892052815E6A7002BFD03 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
 		740E966228153B860089D7E0 /* TipsyTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTimerApp.swift; sourceTree = "<group>"; };
 		740E966328153B860089D7E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 		740E965C28153B860089D7E0 = {
 			isa = PBXGroup;
 			children = (
+				74058BFD282C066D006CEB8F /* TipsyTimer--iOS--Info.plist */,
 				740E966128153B860089D7E0 /* Shared */,
 				740E967028153B870089D7E0 /* macOS */,
 				740E967928153B870089D7E0 /* Tests iOS */,
@@ -536,6 +538,7 @@
 				DEVELOPMENT_TEAM = 42JW26X7WF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TipsyTimer--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -566,6 +569,7 @@
 				DEVELOPMENT_TEAM = 42JW26X7WF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TipsyTimer--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

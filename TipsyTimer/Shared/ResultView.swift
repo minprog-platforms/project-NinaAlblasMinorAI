@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct ResultView: View {
     @Binding var user: CurrentUser
@@ -23,8 +24,10 @@ struct ResultView: View {
         self._user = user
         // _user bevat daadwerkleijke binding, @binding maakt automatisch een binding object die hoort bij user variabele
 
-        
-        futureDate = Calendar.current.date(byAdding: .minute, value: self.user.waitingTime, to: Date())!
+        // ff voor de test of notificaties werken
+        // TODO: deze komt nu iedere seconde ofzo? dus hij repeat wel
+        futureDate = Calendar.current.date(byAdding: .second, value: 12, to: Date())!
+//        futureDate = Calendar.current.date(byAdding: .minute, value: self.user.waitingTime, to: Date())!
         // force unwrappen zodat ie crasht
             // TODO: beter: if let -->handelen als het misgaat
         
@@ -37,14 +40,9 @@ struct ResultView: View {
         let hoursRemaining = remaining.hour ?? 0
         let minutesRemaining = remaining.minute ?? 0
         let secondsRemaining = remaining.second ?? 0
-        // TODO: .
-//        if hoursRemaining + minutesRemaining + secondsRemaining  <= 0 {
-//            timeRemaining = "Time's up!"
-//        } else {
-//            timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
-//        }
-        
         timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
+
+
     }
     
     var body: some View {
@@ -102,12 +100,37 @@ struct ResultView: View {
                     }
             }
             .frame(width: 400, height: 850)
+            .onAppear(perform: {
+                // TODO: _ veranderen in success en error (zie hacking with swift video)
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
+                }
+            })
             
             .onReceive(timer) { _ in
-                self.updateTimeRemaining()
+                let dateDiff = futureDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate
+
+                if dateDiff > 0 {
+                    self.updateTimeRemaining()
+                } else {
+                    // TODO: andere tekst weergeven & stop de timer
+                    self.Notify()
+                }
             }
         }
         
+    }
+    
+    func Notify() {
+        let notificationContent = UNMutableNotificationContent()
+        // TODO: veranderen
+        notificationContent.title = "My message"
+        notificationContent.body = "My body"
+        notificationContent.sound = UNNotificationSound.default
+        
+        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let request = UNNotificationRequest(identifier: "MSG", content: notificationContent, trigger: notificationTrigger)
+        
+        UNUserNotificationCenter.current().add(request)
     }
 }
 //struct ResultView_Previews: PreviewProvider {
