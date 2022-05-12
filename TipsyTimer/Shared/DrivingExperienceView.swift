@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+enum ExperienceButtonPressed {
+    case startingButton, expertButton, none
+}
+
 struct DrivingExperienceView: View {
-    @State var startingDriverButtonPressed = false
-    @State var experiencedDriverButtonPressed = false
     @Binding var user: CurrentUser
+    
+    @State var experienceButtonPressed: ExperienceButtonPressed = .none
     
     var body: some View {
         ZStack {
@@ -26,11 +30,7 @@ struct DrivingExperienceView: View {
                 Spacer()
                 HStack {
                     Button(action: {
-                        // TODO: functie?
-                        if experiencedDriverButtonPressed == true {
-                            experiencedDriverButtonPressed = false
-                        }
-                        startingDriverButtonPressed = true
+                        experienceButtonPressed = .startingButton
                         user.drivingExperience = .starting
                     }) {
                         Image("scared")
@@ -40,7 +40,7 @@ struct DrivingExperienceView: View {
                             .padding(.all)
                             .frame(width: 150, height: 150)
                             .foregroundColor(Color("Tipsy-white"))
-                            .background(startingDriverButtonPressed ? Color("Nina-darkpink") : Color("Nina-hotpink"))
+                            .background((experienceButtonPressed == .startingButton) ? Color("Nina-darkpink") : Color("Nina-hotpink"))
                             .cornerRadius(20)
                             .shadow(color: Color("Nina-dark"), radius: 5)
                     }
@@ -49,11 +49,7 @@ struct DrivingExperienceView: View {
                         .foregroundColor(Color("Tipsy-white"))
                         .shadow(color: Color("Nina-dark"), radius: 5)
                     Button(action: {
-                        // TODO: functie?
-                        if startingDriverButtonPressed == true {
-                            startingDriverButtonPressed = false
-                        }
-                        experiencedDriverButtonPressed = true
+                        experienceButtonPressed = .expertButton
                         user.drivingExperience = .expert
 
                     }) {
@@ -64,7 +60,7 @@ struct DrivingExperienceView: View {
                             .padding(.all)
                             .frame(width: 150, height: 150)
                             .foregroundColor(Color("Tipsy-white"))
-                            .background(experiencedDriverButtonPressed ? Color("Nina-darkpink") : Color("Nina-hotpink"))
+                            .background((experienceButtonPressed == .expertButton) ? Color("Nina-darkpink") : Color("Nina-hotpink"))
                             .cornerRadius(20)
                             .shadow(color: Color("Nina-dark"), radius: 5)
                     }

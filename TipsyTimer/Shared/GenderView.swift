@@ -7,12 +7,14 @@
 
 import SwiftUI
 
+enum GenderButtonPressed {
+    case femaleButton, maleButton, none
+}
+
 struct GenderView: View {
     @Binding var user: CurrentUser
-
-    @State var maleButtonPressed = false
-    @State var femaleButtonPressed = false
     
+    @State var genderButtonPressed: GenderButtonPressed = .none
     
     var body: some View {
         ZStack {
@@ -28,11 +30,7 @@ struct GenderView: View {
                 Spacer()
                 HStack {
                     Button(action: {
-                        // TODO: Dit in een functie? Of een enum? Of een enkele bool die bij true = female bijv
-                        if femaleButtonPressed == true {
-                            femaleButtonPressed = false
-                        }
-                        maleButtonPressed = true
+                        genderButtonPressed = .maleButton
                         user.gender = .male
                     }) {
                         Image("male")
@@ -42,7 +40,7 @@ struct GenderView: View {
                             .padding(.all)
                             .frame(width: 150, height: 150)
                             .foregroundColor(Color("Tipsy-white"))
-                            .background(maleButtonPressed ? Color("Nina-darkpink") : Color("Nina-hotpink"))
+                            .background((genderButtonPressed == .maleButton) ? Color("Nina-darkpink") : Color("Nina-hotpink"))
                             .cornerRadius(20)
                             .shadow(color: Color("Nina-dark"), radius: 5)
                     }
@@ -51,12 +49,7 @@ struct GenderView: View {
                         .foregroundColor(Color("Tipsy-white"))
                         .shadow(color: Color("Nina-dark"), radius: 5)
                     Button(action: {
-                        // TODO: Dit in een functie?
-                        if maleButtonPressed == true {
-                            maleButtonPressed = false
-                        }
-                        femaleButtonPressed = true
-                        
+                        genderButtonPressed = .femaleButton
                         user.gender = .female
                     }) {
                         Image("female")
@@ -66,7 +59,7 @@ struct GenderView: View {
                             .padding(.all)
                             .frame(width: 150, height: 150)
                             .foregroundColor(Color("Tipsy-white"))
-                            .background(femaleButtonPressed ? Color("Nina-darkpink") : Color("Nina-hotpink"))
+                            .background((genderButtonPressed == .femaleButton) ? Color("Nina-darkpink") : Color("Nina-hotpink"))
                             .cornerRadius(20)
                             .shadow(color: Color("Nina-dark"), radius: 5)
                     }

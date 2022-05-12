@@ -9,17 +9,13 @@
 // TODO: maak alle @States private?
 // TODO: GitHub checken of alle files goed staan + Test file verwijderen
 // TODO: Vragen hoe ik een hoger cijfer kan krijgen
-// TODO: Kijken of alle hoofdletters kloppen (struct wel, var niet etc.) & taal & checken of code mooi is
+// TODO: Kijken of alle hoofdletters kloppen (struct wel, var niet etc.) & checken of enum bijv op juiste plek staat & NL vs EN & checken of code mooi is
 // TODO: Debuggen
 
 // TODO: HomeScreenView - cocktailglas plaatje
 
 // TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
 
-// TODO: GenderView - functie verkleuring buttons?
-// TODO: GenderView - enum van gender maken?
-
-// TODO: DrivingExperience - functie verkleuring buttons?
 // TODO: DrivingExperience - uitlegtekst korter
 
 

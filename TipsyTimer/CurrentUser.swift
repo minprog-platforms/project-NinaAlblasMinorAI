@@ -37,7 +37,7 @@ struct CurrentUser {
         // returns waiting time in minutes to wait after last drink before BAC reaches target value
         // IGNORES PASSED TIME (TIME TO REACH PEAK), SO IT'S THE WAITING TIME AFTER CONSUMING THE LAST DRINK!
         
-        let targetBAC = (drivingExperience == "beginnend") ? 20.0 : 50.0
+        let targetBAC = (drivingExperience == .starting) ? 20.0 : 50.0
         
         let metabolicRate = 15.0
         let bloodWaterPercentage = 80.65
