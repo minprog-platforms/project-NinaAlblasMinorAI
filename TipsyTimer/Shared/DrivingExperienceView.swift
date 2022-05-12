@@ -86,13 +86,13 @@ struct DrivingExperienceView: View {
                     Spacer()
                     Spacer()
                 }
-                Text("Als je autorijbewijs je eerste rijbewijs is, ben je de eerste 5 jaar beginnend bestuurder - dan mag je niet rijden met meer dan 0,2 promille alcohol in je bloed\n\nAls je meer dan 5 jaar in bezit bent van je rijbewijs, ben je een ervaren bestuurder - dan mag je niet rijden met meer dan 0,5 promille alcohol in je bloed")
+                Spacer()
+                Text("De eerste 5 jaar na het behalen van je autorijbewijs ben je een **beginnend bestuurder**\n\nBen je meer dan 5 jaar in het bezit van je autorijbewijs? Dan ben je een **ervaren bestuurder**")
                     .padding(.all)
                     .multilineTextAlignment(.center)
                     .frame(width: 375)
                     .background(Color("Tipsy-white"))
                     .cornerRadius(20)
-                Spacer()
                 Spacer()
             }
         }
