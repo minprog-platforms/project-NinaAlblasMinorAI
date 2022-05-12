@@ -42,11 +42,6 @@ struct Test: View {
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfBeer) { _ in
                                 user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
-
-                                // als hij het toch niet blijkt te doen:
-                                // done button -> on change kan weg
-                                // on change closure inclusief de andere drankjes krijgen
-                                // aparte properties in de grote struct voor ieder drankje
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -83,7 +78,6 @@ struct Test: View {
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfWine) { _ in
                                 user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
-
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -121,7 +115,6 @@ struct Test: View {
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfCocktails) { _ in
                                 user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
-
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))

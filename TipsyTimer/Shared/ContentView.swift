@@ -19,13 +19,11 @@
 // TODO: ConsumedDrinksView - (misschien) ML VS STANDAARDGLAZEN TOGGLE (of alleen std glazen, want makkelijker berekenen? dan hoeft % ook niet)
 // TODO: ConsumedDrinksView - (misschien) % ALCOHOL (of van standaardpercentages uitgaan?)
 // TODO: ConsumedDrinksView - eigen stijl definieren (een struct View?) die ik op iedere rechthoek kan toepassen?
-// TODO: ConsumedDrinksView - functie maken van alcohol som?
 
 // TODO: DrinkingTimeView - in stapjes van 5 minuten?
 
 // TODO: ResultView - Als timer = 0 --> andere tekst & als timer vanaf begin 0 was ook andere tekst
 // TODO: ResultView - future date error handling
-// TODO: ResultView - we willen ook notificatie als we in de app zijn
 // TODO: ResultView - hacking with swift aanpassing en notificatie leuker maken
 
 

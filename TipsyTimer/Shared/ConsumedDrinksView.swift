@@ -49,13 +49,10 @@ struct ConsumedDrinksView: View {
                             .frame(width: 75.0)
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfBeer) { _ in
-                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
-
-                                
-                                // als hij het toch niet blijkt te doen:
-                                // done button -> on change kan weg
-                                // on change closure inclusief de andere drankjes krijgen
-                                // aparte properties in de grote struct voor ieder drankje
+                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer,
+                                                                                  wines: amountOfWine,
+                                                                                  cocktails: amountOfCocktails,
+                                                                                  liquors: amountOfLiquor)
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -91,8 +88,10 @@ struct ConsumedDrinksView: View {
                             .frame(width: 75.0)
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfWine) { _ in
-                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
-
+                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer,
+                                                                                  wines: amountOfWine,
+                                                                                  cocktails: amountOfCocktails,
+                                                                                  liquors: amountOfLiquor)
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -129,8 +128,10 @@ struct ConsumedDrinksView: View {
                             .frame(width: 75.0)
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfCocktails) { _ in
-                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
-
+                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer,
+                                                                                  wines: amountOfWine,
+                                                                                  cocktails: amountOfCocktails,
+                                                                                  liquors: amountOfLiquor)
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -166,8 +167,10 @@ struct ConsumedDrinksView: View {
                             .frame(width: 75.0)
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfLiquor) { _ in
-                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
-
+                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer,
+                                                                                  wines: amountOfWine,
+                                                                                  cocktails: amountOfCocktails,
+                                                                                  liquors: amountOfLiquor)
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -180,10 +183,7 @@ struct ConsumedDrinksView: View {
                 .background(Color("Nina-lightpurple"))
                 .cornerRadius(20)
                 .shadow(color: Color("Nina-dark"), radius: 5)
-                
-                
             }
-            
         }
     }
 
