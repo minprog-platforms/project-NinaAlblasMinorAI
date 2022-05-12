@@ -48,14 +48,9 @@ struct ConsumedDrinksView: View {
                             .padding(.horizontal)
                             .frame(width: 75.0)
                             .textFieldStyle(.roundedBorder)
-                            .onChange(of: amountOfBeer) { beers in
-                                // dit lukt niet in een functie (zie onderaan)
-                                let beerAmount = (Double(beers) ?? 0.0)
-                                let wineAmount = (Double(amountOfWine) ?? 0)
-                                let cocktailAmount = (Double(amountOfCocktails) ?? 0)
-                                let liquorAmount = (Double(amountOfLiquor) ?? 0)
-                                
-                                user.alcoholConsumption = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
+                            .onChange(of: amountOfBeer) { _ in
+                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
+
                                 
                                 // als hij het toch niet blijkt te doen:
                                 // done button -> on change kan weg
@@ -95,14 +90,9 @@ struct ConsumedDrinksView: View {
                             .padding(.horizontal)
                             .frame(width: 75.0)
                             .textFieldStyle(.roundedBorder)
-                            .onChange(of: amountOfWine) { wine in
-                                // dit lukt niet in een functie (zie onderaan)
-                                let beerAmount = (Double(amountOfBeer) ?? 0)
-                                let wineAmount = (Double(wine) ?? 0)
-                                let cocktailAmount = (Double(amountOfCocktails) ?? 0)
-                                let liquorAmount = (Double(amountOfLiquor) ?? 0)
-                                
-                                user.alcoholConsumption = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
+                            .onChange(of: amountOfWine) { _ in
+                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
+
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -138,14 +128,9 @@ struct ConsumedDrinksView: View {
                             .padding(.horizontal)
                             .frame(width: 75.0)
                             .textFieldStyle(.roundedBorder)
-                            .onChange(of: amountOfCocktails) { cocktails in
-                                // dit lukt niet in een functie (zie onderaan)
-                                let beerAmount = (Double(amountOfBeer) ?? 0)
-                                let wineAmount = (Double(amountOfWine) ?? 0)
-                                let cocktailAmount = (Double(cocktails) ?? 0)
-                                let liquorAmount = (Double(amountOfLiquor) ?? 0)
-                                
-                                user.alcoholConsumption = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
+                            .onChange(of: amountOfCocktails) { _ in
+                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
+
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -180,14 +165,9 @@ struct ConsumedDrinksView: View {
                             .padding(.horizontal)
                             .frame(width: 75.0)
                             .textFieldStyle(.roundedBorder)
-                            .onChange(of: amountOfLiquor) { liquor in
-                                // dit lukt niet in een functie (zie onderaan)
-                                let beerAmount = (Double(amountOfBeer) ?? 0)
-                                let wineAmount = (Double(amountOfWine) ?? 0)
-                                let cocktailAmount = (Double(amountOfCocktails) ?? 0)
-                                let liquorAmount = (Double(liquor) ?? 0)
-                                
-                                user.alcoholConsumption = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
+                            .onChange(of: amountOfLiquor) { _ in
+                                user.alcoholConsumption = totalAlcoholConsumption(beers: amountOfBeer, wines: amountOfWine, cocktails: amountOfCocktails, liquors: amountOfLiquor)
+
                             }
                         Text("std. glazen")
                             .foregroundColor(Color("Tipsy-white"))
@@ -206,8 +186,17 @@ struct ConsumedDrinksView: View {
             
         }
     }
-    
-    
+
+    func totalAlcoholConsumption(beers: String, wines: String, cocktails: String, liquors: String) -> Double {
+        let beerAmount = (Double(beers) ?? 0)
+        let wineAmount = (Double(wines) ?? 0)
+        let cocktailAmount = (Double(cocktails) ?? 0)
+        let liquorAmount = (Double(liquors) ?? 0)
+        
+        let totalAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
+
+        return totalAlcoholGrams
+    }
 }
 
 //struct ConsumedDrinksView_Previews: PreviewProvider {
