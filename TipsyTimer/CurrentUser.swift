@@ -7,18 +7,26 @@
 
 import Foundation
 
+enum Gender {
+    case female, male
+}
+
+enum DrivingExperience {
+    case starting, expert
+}
+
 struct CurrentUser {
-    var gender: String = "vrouw"
+    var gender: Gender = .female
     var age: Double = 18.0
     var weight: Double = 75.0
     var height: Double = 180.0
     var alcoholConsumption: Double = 0.0
     var drinkingTime: Double = 0.0
-    var drivingExperience: String = "beginnend"
+    var drivingExperience: DrivingExperience = .starting
     
     
     var TBW: Double {
-        if gender == "man" {
+        if gender == .male {
             return 2.44 - (0.09516 * age) + (0.1074 * height) + (0.3362 *  weight)
         } else {
             return -2.097 + (0.1069 * height) + (0.2466 *  weight)

@@ -9,6 +9,8 @@
 // TODO: maak alle @States private?
 // TODO: GitHub checken of alle files goed staan + Test file verwijderen
 // TODO: Vragen hoe ik een hoger cijfer kan krijgen
+// TODO: Kijken of alle hoofdletters kloppen (struct wel, var niet etc.) & taal & checken of code mooi is
+// TODO: Debuggen
 
 // TODO: HomeScreenView - cocktailglas plaatje
 
