@@ -50,10 +50,10 @@ struct ConsumedDrinksView: View {
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfBeer) { beers in
                                 // dit lukt niet in een functie (zie onderaan)
-                                let beerAmount = (Int(beers) ?? 0)
-                                let wineAmount = (Int(amountOfWine) ?? 0)
-                                let cocktailAmount = (Int(amountOfCocktails) ?? 0)
-                                let liquorAmount = (Int(amountOfLiquor) ?? 0)
+                                let beerAmount = (Double(beers) ?? 0.0)
+                                let wineAmount = (Double(amountOfWine) ?? 0)
+                                let cocktailAmount = (Double(amountOfCocktails) ?? 0)
+                                let liquorAmount = (Double(amountOfLiquor) ?? 0)
                                 
                                 user.alcoholConsumption = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                                 
@@ -97,10 +97,10 @@ struct ConsumedDrinksView: View {
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfWine) { wine in
                                 // dit lukt niet in een functie (zie onderaan)
-                                let beerAmount = (Int(amountOfBeer) ?? 0)
-                                let wineAmount = (Int(wine) ?? 0)
-                                let cocktailAmount = (Int(amountOfCocktails) ?? 0)
-                                let liquorAmount = (Int(amountOfLiquor) ?? 0)
+                                let beerAmount = (Double(amountOfBeer) ?? 0)
+                                let wineAmount = (Double(wine) ?? 0)
+                                let cocktailAmount = (Double(amountOfCocktails) ?? 0)
+                                let liquorAmount = (Double(amountOfLiquor) ?? 0)
                                 
                                 user.alcoholConsumption = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                             }
@@ -140,10 +140,10 @@ struct ConsumedDrinksView: View {
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfCocktails) { cocktails in
                                 // dit lukt niet in een functie (zie onderaan)
-                                let beerAmount = (Int(amountOfBeer) ?? 0)
-                                let wineAmount = (Int(amountOfWine) ?? 0)
-                                let cocktailAmount = (Int(cocktails) ?? 0)
-                                let liquorAmount = (Int(amountOfLiquor) ?? 0)
+                                let beerAmount = (Double(amountOfBeer) ?? 0)
+                                let wineAmount = (Double(amountOfWine) ?? 0)
+                                let cocktailAmount = (Double(cocktails) ?? 0)
+                                let liquorAmount = (Double(amountOfLiquor) ?? 0)
                                 
                                 user.alcoholConsumption = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                             }
@@ -182,10 +182,10 @@ struct ConsumedDrinksView: View {
                             .textFieldStyle(.roundedBorder)
                             .onChange(of: amountOfLiquor) { liquor in
                                 // dit lukt niet in een functie (zie onderaan)
-                                let beerAmount = (Int(amountOfBeer) ?? 0)
-                                let wineAmount = (Int(amountOfWine) ?? 0)
-                                let cocktailAmount = (Int(amountOfCocktails) ?? 0)
-                                let liquorAmount = (Int(liquor) ?? 0)
+                                let beerAmount = (Double(amountOfBeer) ?? 0)
+                                let wineAmount = (Double(amountOfWine) ?? 0)
+                                let cocktailAmount = (Double(amountOfCocktails) ?? 0)
+                                let liquorAmount = (Double(liquor) ?? 0)
                                 
                                 user.alcoholConsumption = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
                             }

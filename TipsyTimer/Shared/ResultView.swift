@@ -10,19 +10,14 @@ import UserNotifications
 
 struct ResultView: View {
     @Binding var user: CurrentUser
-
-    
     @Environment(\.presentationMode) var presentationMode
         
-    
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
-    
     @State var timeRemaining = ""
-    
     var futureDate: Date = Date()
     
     var waitingMinutes: Int = 0
-    @State var waitingSeconds: Int = 0
+    var waitingSeconds: Int = 0
     @State var beerLevel: CGFloat = 100.0
     
     init(user: Binding<CurrentUser>) {
@@ -31,12 +26,10 @@ struct ResultView: View {
         waitingMinutes = self.user.waitingTime
         waitingSeconds = waitingMinutes * 60
 
-        // TODO: terugzetten
-        // ff voor de test of notificaties werken
-//        futureDate = Calendar.current.date(byAdding: .second, value: 12, to: Date())!
+
         futureDate = Calendar.current.date(byAdding: .minute, value: waitingMinutes, to: Date())!
         // force unwrappen zodat ie crasht
-            // TODO: beter: if let -->handelen als het misgaat
+        // TODO: beter: if let -->handelen als het misgaat
         
         
     }
@@ -51,7 +44,8 @@ struct ResultView: View {
         // highest beer level - lowest beer level = 1100 - 100 = 1000
         let highestLevel = 1100
         let lowestLevel = 100
-        beerLevel += (((highestLevel - lowestLevel) / waitingSeconds))
+        beerLevel += Double(((highestLevel - lowestLevel) / waitingSeconds))
+        // TODO: als waiting seconds 0 is (kan niet maar oke)? voorkomen dat ie crasht
     }
     
     var body: some View {
@@ -66,8 +60,8 @@ struct ResultView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 700, height: 1300)
-                .offset(y: 260)
-                // als t bierglas leeg is, is y =
+                .offset(y: beerLevel)
+                .animation(.default, value: beerLevel)
             
             VStack {
                 Text("TIPSY TIMER")

@@ -26,8 +26,7 @@
 
 // TODO: DrinkingTimeView - in stapjes van 5 minuten?
 
-// TODO: ResultView - animatie glaasje zakt in niveau
-// TODO: ResultView - Als timer = 0 --> andere tekst
+// TODO: ResultView - Als timer = 0 --> andere tekst & als timer vanaf begin 0 was ook andere tekst
 // TODO: ResultView - Formatting (als hours == 0 --> niet de uren opvragen; 4 minuten --> 04)
 // TODO: ResultView - future date error handling
 // TODO: ResultView - we willen ook notificatie als we in de app zijn
