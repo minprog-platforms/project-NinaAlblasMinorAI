@@ -28,7 +28,7 @@ struct GenderView: View {
                 Spacer()
                 HStack {
                     Button(action: {
-                        // TODO: Dit in een functie?
+                        // TODO: Dit in een functie? Of een enum? Of een enkele bool die bij true = female bijv
                         if femaleButtonPressed == true {
                             femaleButtonPressed = false
                         }

@@ -40,7 +40,6 @@ struct ResultView: View {
         timerFormatter.zeroFormattingBehavior = .pad
         timeRemaining = timerFormatter.string(from: Date(), to: futureDate) ?? ""
         
-        // highest beer level - lowest beer level = 1100 - 100 = 1000
         let highestLevel = 1100
         let lowestLevel = 100
         beerLevel += Double(((highestLevel - lowestLevel) / waitingSeconds))

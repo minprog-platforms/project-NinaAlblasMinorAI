@@ -7,13 +7,15 @@
 // TODO: Make app (images, text etc.) fit on all screen sizes
 // TODO: comments toevoegen?
 // TODO: maak alle @States private?
-
+// TODO: GitHub checken of alle files goed staan + Test file verwijderen
+// TODO: Vragen hoe ik een hoger cijfer kan krijgen
 
 // TODO: HomeScreenView - cocktailglas plaatje
 
 // TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
 
 // TODO: GenderView - functie verkleuring buttons?
+// TODO: GenderView - enum van gender maken?
 
 // TODO: DrivingExperience - functie verkleuring buttons?
 // TODO: DrivingExperience - uitlegtekst korter
@@ -27,7 +29,6 @@
 // TODO: DrinkingTimeView - in stapjes van 5 minuten?
 
 // TODO: ResultView - Als timer = 0 --> andere tekst & als timer vanaf begin 0 was ook andere tekst
-// TODO: ResultView - Formatting (als hours == 0 --> niet de uren opvragen; 4 minuten --> 04)
 // TODO: ResultView - future date error handling
 // TODO: ResultView - we willen ook notificatie als we in de app zijn
 // TODO: ResultView - hacking with swift aanpassing en notificatie leuker maken
