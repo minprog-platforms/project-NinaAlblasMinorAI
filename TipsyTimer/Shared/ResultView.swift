@@ -23,29 +23,27 @@ struct ResultView: View {
     init(user: Binding<CurrentUser>) {
         self._user = user
         // _user bevat daadwerkleijke binding, @binding maakt automatisch een binding object die hoort bij user variabele
+        
         waitingMinutes = self.user.waitingTime
         waitingSeconds = waitingMinutes * 60
-
 
         futureDate = Calendar.current.date(byAdding: .minute, value: waitingMinutes, to: Date())!
         // force unwrappen zodat ie crasht
         // TODO: beter: if let -->handelen als het misgaat
         
-        
     }
     
     func updateTimeRemaining() {
-        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate)
-        let hoursRemaining = remaining.hour ?? 0
-        let minutesRemaining = remaining.minute ?? 0
-        let secondsRemaining = remaining.second ?? 0
-        timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
+        let timerFormatter = DateComponentsFormatter()
+        timerFormatter.allowedUnits = [.hour, .minute, .second]
+        timerFormatter.unitsStyle = .positional
+        timerFormatter.zeroFormattingBehavior = .pad
+        timeRemaining = timerFormatter.string(from: Date(), to: futureDate) ?? ""
         
         // highest beer level - lowest beer level = 1100 - 100 = 1000
         let highestLevel = 1100
         let lowestLevel = 100
         beerLevel += Double(((highestLevel - lowestLevel) / waitingSeconds))
-        // TODO: als waiting seconds 0 is (kan niet maar oke)? voorkomen dat ie crasht
     }
     
     var body: some View {
