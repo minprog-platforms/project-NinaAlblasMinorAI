@@ -1,57 +1,34 @@
 //
-//  ResultView.swift
+//  Test.swift
 //  TipsyTimer
 //
-//  Created by Nina Alblas on 30/04/2022.
+//  Created by Nina Alblas on 11/05/2022.
 //
 
 import SwiftUI
-import UserNotifications
 
-struct ResultView: View {
-    @Binding var user: CurrentUser
-
-    
-    @Environment(\.presentationMode) var presentationMode
-        
-    
+struct Test: View {
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     
     @State var timeRemaining = ""
     
     var futureDate: Date = Date()
     
-    var waitingMinutes: Int = 0
-    @State var waitingSeconds: Int = 0
     @State var beerLevel: CGFloat = 100.0
+    @State var waitingSeconds: Int = 600
     
-    init(user: Binding<CurrentUser>) {
-        self._user = user
-        // _user bevat daadwerkleijke binding, @binding maakt automatisch een binding object die hoort bij user variabele
-        waitingMinutes = self.user.waitingTime
-        waitingSeconds = waitingMinutes * 60
-
-        // TODO: terugzetten
-        // ff voor de test of notificaties werken
-//        futureDate = Calendar.current.date(byAdding: .second, value: 12, to: Date())!
-        futureDate = Calendar.current.date(byAdding: .minute, value: waitingMinutes, to: Date())!
-        // force unwrappen zodat ie crasht
-            // TODO: beter: if let -->handelen als het misgaat
-        
-        
+    init() {
+        futureDate = Calendar.current.date(byAdding: .second, value: waitingSeconds, to: Date())!
     }
     
-    func updateTimeRemaining() {
+    func update() {
         let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate)
         let hoursRemaining = remaining.hour ?? 0
         let minutesRemaining = remaining.minute ?? 0
         let secondsRemaining = remaining.second ?? 0
         timeRemaining = "\(hoursRemaining):\(minutesRemaining):\(secondsRemaining)"
         
-        // highest beer level - lowest beer level = 1100 - 100 = 1000
-        let highestLevel = 1100
-        let lowestLevel = 100
-        beerLevel += (((highestLevel - lowestLevel) / waitingSeconds))
+        beerLevel += (((1100 - 100) / Double(waitingSeconds)))
     }
     
     var body: some View {
@@ -66,8 +43,18 @@ struct ResultView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 700, height: 1300)
-                .offset(y: 260)
-                // als t bierglas leeg is, is y =
+            
+                .offset(y: beerLevel)
+                // 260 of 130
+                // als t bierglas leeg is, is y = 1055
+                // laten we zeggen tussen y = 100 en y = 1000
+            
+                // met iedere seconde verplaatst de offset met (1100 - 100) / waitingSeconds
+                // dus dan wordt de offset = 100 + (1100 - 100) / waitingSeconds; nog - 2 doen ivm vertraging?
+//                .animation(.default)
+            
+                .animation(.default, value: beerLevel)
+
             
             VStack {
                 Text("TIPSY TIMER")
@@ -96,8 +83,7 @@ struct ResultView: View {
                     .font(.system(size: 50, weight: .black))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 5)
-                
-//                Text("Gender = \(tipsyDataStruct.userGender)\nAge = \(tipsyDataStruct.userAge)\nExperience = \(tipsyDataStruct.userDrivingExperience)\nDrinking time = \(tipsyDataStruct.userDrinkingTime)\nAlcohol grams = \(tipsyDataStruct.userConsumedAlcoholGrams)\nWeight = \(tipsyDataStruct.userWeight)\nHeight = \(tipsyDataStruct.userHeight)")
+
                 
                 Spacer()
                 NavigationLink(destination: HomeScreenView()
@@ -110,42 +96,25 @@ struct ResultView: View {
                     }
             }
             .frame(width: 400, height: 850)
-            .onAppear(perform: {
-                // TODO: _ veranderen in success en error (zie hacking with swift video)
-                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
-                }
-            })
-            
             .onReceive(timer) { _ in
                 let dateDiff = futureDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate
 
                 if dateDiff > 0 {
-                    self.updateTimeRemaining()
+                    self.update()
                 } else {
-                    self.Notify()
                     self.timer.upstream.connect().cancel()
 
                 }
             }
+ 
+            
         }
         
     }
-    
-    func Notify() {
-        let notificationContent = UNMutableNotificationContent()
-        // TODO: veranderen
-        notificationContent.title = "My message"
-        notificationContent.body = "My body"
-        notificationContent.sound = UNNotificationSound.default
-        
-        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        let request = UNNotificationRequest(identifier: "MSG", content: notificationContent, trigger: notificationTrigger)
-        
-        UNUserNotificationCenter.current().add(request)
+}
+
+struct Test_Previews: PreviewProvider {
+    static var previews: some View {
+        Test()
     }
 }
-//struct ResultView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ResultView()
-//    }
-//}

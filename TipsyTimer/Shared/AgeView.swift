@@ -85,7 +85,7 @@ struct AgeView: View {
             self.progress = progress
             self.angle = Double(angle)
             self.age = Int(progress * 83 + 18)
-            user.age = self.age
+            user.age = Double(self.age)
             
         }
         

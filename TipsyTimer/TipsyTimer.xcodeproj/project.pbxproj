@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74058BFB282BD3A2006CEB8F /* TipsyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74058BFA282BD3A2006CEB8F /* TipsyData.swift */; };
-		74058BFC282BD3A2006CEB8F /* TipsyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74058BFA282BD3A2006CEB8F /* TipsyData.swift */; };
 		740892062815E6A7002BFD03 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740892052815E6A7002BFD03 /* DisclaimerView.swift */; };
 		740E967B28153B870089D7E0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E967A28153B870089D7E0 /* Tests_iOS.swift */; };
 		740E967D28153B870089D7E0 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E967C28153B870089D7E0 /* Tests_iOSLaunchTests.swift */; };
@@ -38,8 +36,10 @@
 		747C763A28180E4F00852DFB /* DrivingExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763828180E4F00852DFB /* DrivingExperienceView.swift */; };
 		74CB2D03281EDDA2001CC294 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB2D02281EDDA2001CC294 /* ResultView.swift */; };
 		74CB2D04281EDDA2001CC294 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB2D02281EDDA2001CC294 /* ResultView.swift */; };
-		74FB89542822D03600768368 /* WaitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB89532822D03600768368 /* WaitingTime.swift */; };
-		74FB89552822D03700768368 /* WaitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB89532822D03600768368 /* WaitingTime.swift */; };
+		74CCAFE3282C4ECD00C28F25 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE2282C4ECD00C28F25 /* Test.swift */; };
+		74CCAFE4282C4ECD00C28F25 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE2282C4ECD00C28F25 /* Test.swift */; };
+		74CCAFE6282D4A5500C28F25 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */; };
+		74CCAFE7282D4A5500C28F25 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		74058BFA282BD3A2006CEB8F /* TipsyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyData.swift; sourceTree = "<group>"; };
 		74058BFD282C066D006CEB8F /* TipsyTimer--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TipsyTimer--iOS--Info.plist"; sourceTree = "<group>"; };
 		740892052815E6A7002BFD03 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
 		740E966228153B860089D7E0 /* TipsyTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTimerApp.swift; sourceTree = "<group>"; };
@@ -84,7 +83,8 @@
 		747C763528180E3500852DFB /* DrinkingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingTimeView.swift; sourceTree = "<group>"; };
 		747C763828180E4F00852DFB /* DrivingExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingExperienceView.swift; sourceTree = "<group>"; };
 		74CB2D02281EDDA2001CC294 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		74FB89532822D03600768368 /* WaitingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingTime.swift; sourceTree = "<group>"; };
+		74CCAFE2282C4ECD00C28F25 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = SOURCE_ROOT; };
+		74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,13 +134,13 @@
 		740E966128153B860089D7E0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */,
+				74CCAFE2282C4ECD00C28F25 /* Test.swift */,
 				740E966228153B860089D7E0 /* TipsyTimerApp.swift */,
 				740E966328153B860089D7E0 /* ContentView.swift */,
 				74CB2D02281EDDA2001CC294 /* ResultView.swift */,
-				74FB89532822D03600768368 /* WaitingTime.swift */,
 				747C76262817367500852DFB /* HomeScreenView.swift */,
 				747C7623281731F300852DFB /* TipsyTimerView.swift */,
-				74058BFA282BD3A2006CEB8F /* TipsyData.swift */,
 				747C763828180E4F00852DFB /* DrivingExperienceView.swift */,
 				747C763528180E3500852DFB /* DrinkingTimeView.swift */,
 				747C763228180E1B00852DFB /* ConsumedDrinksView.swift */,
@@ -349,7 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */,
-				74058BFB282BD3A2006CEB8F /* TipsyData.swift in Sources */,
+				74CCAFE3282C4ECD00C28F25 /* Test.swift in Sources */,
 				747C763628180E3500852DFB /* DrinkingTimeView.swift in Sources */,
 				740E968C28153B870089D7E0 /* ContentView.swift in Sources */,
 				747C76272817367500852DFB /* HomeScreenView.swift in Sources */,
@@ -360,7 +360,7 @@
 				740E968A28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
 				747C762D2817F5B700852DFB /* AgeView.swift in Sources */,
 				747C763328180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
-				74FB89542822D03600768368 /* WaitingTime.swift in Sources */,
+				74CCAFE6282D4A5500C28F25 /* CurrentUser.swift in Sources */,
 				747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,10 +371,9 @@
 			files = (
 				747C763A28180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
 				740E968D28153B870089D7E0 /* ContentView.swift in Sources */,
-				74FB89552822D03700768368 /* WaitingTime.swift in Sources */,
+				74CCAFE4282C4ECD00C28F25 /* Test.swift in Sources */,
 				747C762B281738A300852DFB /* GenderView.swift in Sources */,
 				747C763128180DDA00852DFB /* WeightAndHeightView.swift in Sources */,
-				74058BFC282BD3A2006CEB8F /* TipsyData.swift in Sources */,
 				74CB2D04281EDDA2001CC294 /* ResultView.swift in Sources */,
 				747C762E2817F5B700852DFB /* AgeView.swift in Sources */,
 				747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */,
@@ -382,6 +381,7 @@
 				747C76282817367500852DFB /* HomeScreenView.swift in Sources */,
 				747C763428180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
 				747C763728180E3500852DFB /* DrinkingTimeView.swift in Sources */,
+				74CCAFE7282D4A5500C28F25 /* CurrentUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
