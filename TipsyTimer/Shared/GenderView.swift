@@ -17,76 +17,73 @@ struct GenderView: View {
     @State var genderButtonPressed: GenderButtonPressed = .none
     
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"), Color("Nina-sky")]), startPoint: .leading, endPoint: .trailing)
-                .edgesIgnoringSafeArea(.all)
-            VStack {
+        
+        VStack {
+            Spacer()
+            Text("MET WELK GESLACHT IDENTIFICEER JE JE HET MEEST?")
+                .font(.system(size: 30, weight: .heavy))
+                .foregroundColor(Color("Tipsy-white"))
+                .multilineTextAlignment(.center)
+                .shadow(color: Color("Nina-dark"), radius: 5)
+            Spacer()
+            HStack {
+                Button(action: {
+                    genderButtonPressed = .maleButton
+                    user.gender = .male
+                }) {
+                    Image("male")
+                        .renderingMode(.template)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.all)
+                        .frame(width: 150, height: 150)
+                        .foregroundColor(Color("Tipsy-white"))
+                        .background((genderButtonPressed == .maleButton) ? Color("Nina-darkpink") : Color("Nina-hotpink"))
+                        .cornerRadius(20)
+                        .shadow(color: Color("Nina-dark"), radius: 5)
+                }
+                Text("OF")
+                    .font(.system(size: 30, weight: .heavy))
+                    .foregroundColor(Color("Tipsy-white"))
+                    .shadow(color: Color("Nina-dark"), radius: 5)
+                Button(action: {
+                    genderButtonPressed = .femaleButton
+                    user.gender = .female
+                }) {
+                    Image("female")
+                        .renderingMode(.template)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.all)
+                        .frame(width: 150, height: 150)
+                        .foregroundColor(Color("Tipsy-white"))
+                        .background((genderButtonPressed == .femaleButton) ? Color("Nina-darkpink") : Color("Nina-hotpink"))
+                        .cornerRadius(20)
+                        .shadow(color: Color("Nina-dark"), radius: 5)
+                }
+                
+            }
+            HStack {
                 Spacer()
-                Text("MET WELK GESLACHT IDENTIFICEER JE JE HET MEEST?")
+                Text("MAN")
                     .font(.system(size: 30, weight: .heavy))
                     .foregroundColor(Color("Tipsy-white"))
                     .multilineTextAlignment(.center)
+                    .frame(width: 150)
                     .shadow(color: Color("Nina-dark"), radius: 5)
                 Spacer()
-                HStack {
-                    Button(action: {
-                        genderButtonPressed = .maleButton
-                        user.gender = .male
-                    }) {
-                        Image("male")
-                            .renderingMode(.template)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding(.all)
-                            .frame(width: 150, height: 150)
-                            .foregroundColor(Color("Tipsy-white"))
-                            .background((genderButtonPressed == .maleButton) ? Color("Nina-darkpink") : Color("Nina-hotpink"))
-                            .cornerRadius(20)
-                            .shadow(color: Color("Nina-dark"), radius: 5)
-                    }
-                    Text("OF")
-                        .font(.system(size: 30, weight: .heavy))
-                        .foregroundColor(Color("Tipsy-white"))
-                        .shadow(color: Color("Nina-dark"), radius: 5)
-                    Button(action: {
-                        genderButtonPressed = .femaleButton
-                        user.gender = .female
-                    }) {
-                        Image("female")
-                            .renderingMode(.template)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding(.all)
-                            .frame(width: 150, height: 150)
-                            .foregroundColor(Color("Tipsy-white"))
-                            .background((genderButtonPressed == .femaleButton) ? Color("Nina-darkpink") : Color("Nina-hotpink"))
-                            .cornerRadius(20)
-                            .shadow(color: Color("Nina-dark"), radius: 5)
-                    }
-                    
-                }
-                HStack {
-                    Spacer()
-                    Text("MAN")
-                        .font(.system(size: 30, weight: .heavy))
-                        .foregroundColor(Color("Tipsy-white"))
-                        .multilineTextAlignment(.center)
-                        .frame(width: 150)
-                        .shadow(color: Color("Nina-dark"), radius: 5)
-                    Spacer()
-                    Spacer()
-                    Text("VROUW")
-                        .font(.system(size: 30, weight: .heavy))
-                        .foregroundColor(Color("Tipsy-white"))
-                        .multilineTextAlignment(.center)
-                        .frame(width: 150)
-                        .shadow(color: Color("Nina-dark"), radius: 5)
-                    Spacer()
-                }
                 Spacer()
+                Text("VROUW")
+                    .font(.system(size: 30, weight: .heavy))
+                    .foregroundColor(Color("Tipsy-white"))
+                    .multilineTextAlignment(.center)
+                    .frame(width: 150)
+                    .shadow(color: Color("Nina-dark"), radius: 5)
                 Spacer()
-                
             }
+            Spacer()
+            Spacer()
+            
         }
     }
 }

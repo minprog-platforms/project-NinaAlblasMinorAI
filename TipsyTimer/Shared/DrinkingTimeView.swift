@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DrinkingTimeView: View {
     @Binding var user: CurrentUser
-
+    
     @State var progress: CGFloat = 0.0
     @State var angle: Double = 0.0
     
@@ -17,53 +17,49 @@ struct DrinkingTimeView: View {
     @State var drinkingTimeInHours: Double = 0.0
     
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"), Color("Nina-sky")]), startPoint: .leading, endPoint: .trailing)
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                Spacer()
-                Text("HOE LANG HEB JE GEDRONKEN?")
-                    .font(.system(size: 30, weight: .heavy))
-                    .foregroundColor(Color("Tipsy-white"))
-                    .multilineTextAlignment(.center)
+        VStack {
+            Spacer()
+            Text("HOE LANG HEB JE GEDRONKEN?")
+                .font(.system(size: 30, weight: .heavy))
+                .foregroundColor(Color("Tipsy-white"))
+                .multilineTextAlignment(.center)
+                .shadow(color: Color("Nina-dark"), radius: 5)
+            Spacer()
+            ZStack {
+                Circle()
+                    .stroke(Color("Nina-sky"), style: StrokeStyle(lineWidth: 45, lineCap: .round, lineJoin: .round))
+                    .frame(width: 300.0, height: 300.0)
+                    .rotationEffect(.init(degrees: -90))
+                    .shadow(color: Color("Nina-dark"), radius: 1)
+                Circle()
+                    .trim(from: 0, to: progress)
+                    .stroke(Color("Nina-pinkpurple"), style: StrokeStyle(lineWidth: 45, lineCap: .round, lineJoin: .round))
+                    .frame(width: 300.0, height: 300.0)
+                    .rotationEffect(.init(degrees: -90))
                     .shadow(color: Color("Nina-dark"), radius: 5)
-                Spacer()
-                ZStack {
-                    Circle()
-                        .stroke(Color("Nina-sky"), style: StrokeStyle(lineWidth: 45, lineCap: .round, lineJoin: .round))
-                        .frame(width: 300.0, height: 300.0)
-                        .rotationEffect(.init(degrees: -90))
-                        .shadow(color: Color("Nina-dark"), radius: 1)
-                    Circle()
-                        .trim(from: 0, to: progress)
-                        .stroke(Color("Nina-pinkpurple"), style: StrokeStyle(lineWidth: 45, lineCap: .round, lineJoin: .round))
-                        .frame(width: 300.0, height: 300.0)
-                        .rotationEffect(.init(degrees: -90))
-                        .shadow(color: Color("Nina-dark"), radius: 5)
-                    Circle()
-                        .frame(width: 45, height: 45)
+                Circle()
+                    .frame(width: 45, height: 45)
+                    .foregroundColor(Color("Tipsy-white"))
+                    .offset(x: 150)
+                    .rotationEffect(.init(degrees: angle))
+                    .gesture(DragGesture().onChanged(drinkingTimeOnDrag(value:)))
+                    .rotationEffect(.init(degrees: -90))
+                    .shadow(color: Color("Nina-dark"), radius: 1)
+                
+                VStack {
+                    Text(String("\(drinkingTime) minuten"))
+                        .font(.system(size: 40, weight: .heavy))
                         .foregroundColor(Color("Tipsy-white"))
-                        .offset(x: 150)
-                        .rotationEffect(.init(degrees: angle))
-                        .gesture(DragGesture().onChanged(drinkingTimeOnDrag(value:)))
-                        .rotationEffect(.init(degrees: -90))
-                        .shadow(color: Color("Nina-dark"), radius: 1)
-                
-                    VStack {
-                        Text(String("\(drinkingTime) minuten"))
-                            .font(.system(size: 40, weight: .heavy))
-                            .foregroundColor(Color("Tipsy-white"))
-                            .shadow(color: Color("Nina-dark"), radius: 5)
-                        Text(String(format:"= %.1f uur", drinkingTimeInHours))
-                            .font(.system(size: 25, weight: .heavy))
-                            .foregroundColor(Color("Tipsy-white"))
-                            .shadow(color: Color("Nina-dark"), radius: 5)
-                    }
+                        .shadow(color: Color("Nina-dark"), radius: 5)
+                    Text(String(format:"= %.1f uur", drinkingTimeInHours))
+                        .font(.system(size: 25, weight: .heavy))
+                        .foregroundColor(Color("Tipsy-white"))
+                        .shadow(color: Color("Nina-dark"), radius: 5)
                 }
-                Spacer()
-                Spacer()
-                
             }
+            Spacer()
+            Spacer()
+            
         }
     }
     func drinkingTimeOnDrag(value: DragGesture.Value) {

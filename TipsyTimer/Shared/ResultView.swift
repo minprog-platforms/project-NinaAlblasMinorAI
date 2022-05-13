@@ -32,7 +32,7 @@ struct ResultView: View {
 
         futureDate = Calendar.current.date(byAdding: .minute, value: waitingMinutes, to: Date())!
         // force unwrappen zodat ie crasht
-        // TODO: beter: if let -->handelen als het misgaat
+        // TODO: beter: if let -->handelen als het misgaat, ik weet niet hoe
         
     }
     
@@ -51,7 +51,14 @@ struct ResultView: View {
     
     var body: some View {
         ZStack {
-           
+            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"),
+                                                       Color("Nina-sky")]),
+                           startPoint: .leading,
+                           endPoint: .trailing)
+                .edgesIgnoringSafeArea(.all)
+            Image("tipsytimerlogo")
+                .offset(x: -20)
+            
             switch timesUp {
             case true:
                 GifImage("driving_jb")
@@ -60,13 +67,6 @@ struct ResultView: View {
                     .offset(y: -100)
                     
             case false:
-                LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"),
-                                                           Color("Nina-sky")]),
-                               startPoint: .leading,
-                               endPoint: .trailing)
-                    .edgesIgnoringSafeArea(.all)
-                Image("tipsytimerlogo")
-                    .offset(x: -20)
                 Image("beer-1")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -123,7 +123,6 @@ struct ResultView: View {
             }
             .frame(width: 400, height: 850)
             .onAppear(perform: {
-                // TODO: _ veranderen in success en error (zie hacking with swift video)
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
                 }
             })

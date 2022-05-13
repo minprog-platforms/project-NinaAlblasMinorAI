@@ -50,6 +50,8 @@
 		74CCAFF9282E989400C28F25 /* driving_hangover.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74CCAFF7282E989300C28F25 /* driving_hangover.gif */; };
 		74CCAFFB282EA26D00C28F25 /* driving_jb.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74CCAFFA282EA26D00C28F25 /* driving_jb.gif */; };
 		74CCAFFC282EA26D00C28F25 /* driving_jb.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74CCAFFA282EA26D00C28F25 /* driving_jb.gif */; };
+		74CCAFFE282EF4F200C28F25 /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFFD282EF4F200C28F25 /* DrinkView.swift */; };
+		74CCAFFF282EF4F200C28F25 /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFFD282EF4F200C28F25 /* DrinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,7 @@
 		74CCAFF2282E949C00C28F25 /* driving_man.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = driving_man.gif; sourceTree = "<group>"; };
 		74CCAFF7282E989300C28F25 /* driving_hangover.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = driving_hangover.gif; sourceTree = "<group>"; };
 		74CCAFFA282EA26D00C28F25 /* driving_jb.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = driving_jb.gif; sourceTree = "<group>"; };
+		74CCAFFD282EF4F200C28F25 /* DrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,7 @@
 				747C763828180E4F00852DFB /* DrivingExperienceView.swift */,
 				747C763528180E3500852DFB /* DrinkingTimeView.swift */,
 				747C763228180E1B00852DFB /* ConsumedDrinksView.swift */,
+				74CCAFFD282EF4F200C28F25 /* DrinkView.swift */,
 				747C762F28180DDA00852DFB /* WeightAndHeightView.swift */,
 				747C7629281738A300852DFB /* GenderView.swift */,
 				747C762C2817F5B700852DFB /* AgeView.swift */,
@@ -389,6 +393,7 @@
 				747C762D2817F5B700852DFB /* AgeView.swift in Sources */,
 				747C763328180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
 				74CCAFE6282D4A5500C28F25 /* CurrentUser.swift in Sources */,
+				74CCAFFE282EF4F200C28F25 /* DrinkView.swift in Sources */,
 				747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
 				74CCAFEF282E7BDD00C28F25 /* GifImage.swift in Sources */,
 			);
@@ -401,6 +406,7 @@
 				747C763A28180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
 				740E968D28153B870089D7E0 /* ContentView.swift in Sources */,
 				74CCAFE4282C4ECD00C28F25 /* Test.swift in Sources */,
+				74CCAFFF282EF4F200C28F25 /* DrinkView.swift in Sources */,
 				747C762B281738A300852DFB /* GenderView.swift in Sources */,
 				747C763128180DDA00852DFB /* WeightAndHeightView.swift in Sources */,
 				74CB2D04281EDDA2001CC294 /* ResultView.swift in Sources */,

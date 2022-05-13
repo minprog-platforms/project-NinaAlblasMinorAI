@@ -10,53 +10,49 @@ import SwiftUI
 
 struct AgeView: View {
     @Binding var user: CurrentUser
-
+    
     @State var progress: CGFloat = 0
     @State var angle: Double = 0
     @State var age: Int = 18
     
     
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"), Color("Nina-sky")]), startPoint: .leading, endPoint: .trailing)
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                Spacer()
-                Text("HOE OUD BEN JE?")
-                    .font(.system(size: 30, weight: .heavy))
+        VStack {
+            Spacer()
+            Text("HOE OUD BEN JE?")
+                .font(.system(size: 30, weight: .heavy))
+                .foregroundColor(Color("Tipsy-white"))
+                .shadow(color: Color("Nina-dark"), radius: 5)
+            Spacer()
+            ZStack {
+                Circle()
+                    .stroke(Color("Nina-sky"), style: StrokeStyle(lineWidth: 45, lineCap: .round, lineJoin: .round))
+                    .frame(width: 300.0, height: 300.0)
+                    .rotationEffect(.init(degrees: -90))
+                    .shadow(color: Color("Nina-dark"), radius: 1)
+                Circle()
+                    .trim(from: 0, to: progress)
+                    .stroke(Color("Nina-pinkpurple"), style: StrokeStyle(lineWidth: 45, lineCap: .round, lineJoin: .round))
+                    .frame(width: 300.0, height: 300.0)
+                    .rotationEffect(.init(degrees: -90))
+                    .shadow(color: Color("Nina-dark"), radius: 5)
+                Circle()
+                    .frame(width: 45, height: 45)
+                    .foregroundColor(Color("Tipsy-white"))
+                    .offset(x: 150)
+                    .rotationEffect(.init(degrees: angle))
+                    .gesture(DragGesture().onChanged(ageOnDrag(value:)))
+                    .rotationEffect(.init(degrees: -90))
+                    .shadow(color: Color("Nina-dark"), radius: 1)
+                
+                Text(String(age))
+                    .font(.system(size: 60, weight: .heavy))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 5)
-                Spacer()
-                ZStack {
-                    Circle()
-                        .stroke(Color("Nina-sky"), style: StrokeStyle(lineWidth: 45, lineCap: .round, lineJoin: .round))
-                        .frame(width: 300.0, height: 300.0)
-                        .rotationEffect(.init(degrees: -90))
-                        .shadow(color: Color("Nina-dark"), radius: 1)
-                    Circle()
-                        .trim(from: 0, to: progress)
-                        .stroke(Color("Nina-pinkpurple"), style: StrokeStyle(lineWidth: 45, lineCap: .round, lineJoin: .round))
-                        .frame(width: 300.0, height: 300.0)
-                        .rotationEffect(.init(degrees: -90))
-                        .shadow(color: Color("Nina-dark"), radius: 5)
-                    Circle()
-                        .frame(width: 45, height: 45)
-                        .foregroundColor(Color("Tipsy-white"))
-                        .offset(x: 150)
-                        .rotationEffect(.init(degrees: angle))
-                        .gesture(DragGesture().onChanged(ageOnDrag(value:)))
-                        .rotationEffect(.init(degrees: -90))
-                        .shadow(color: Color("Nina-dark"), radius: 1)
-                
-                    Text(String(age))
-                        .font(.system(size: 60, weight: .heavy))
-                        .foregroundColor(Color("Tipsy-white"))
-                        .shadow(color: Color("Nina-dark"), radius: 5)
-                }
-                Spacer()
-                Spacer()
-                
             }
+            Spacer()
+            Spacer()
+            
         }
     }
     func ageOnDrag(value: DragGesture.Value) {
