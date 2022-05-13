@@ -40,6 +40,8 @@
 		74CCAFE4282C4ECD00C28F25 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE2282C4ECD00C28F25 /* Test.swift */; };
 		74CCAFE6282D4A5500C28F25 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */; };
 		74CCAFE7282D4A5500C28F25 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */; };
+		74CCAFEF282E7BDD00C28F25 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFEE282E7BDD00C28F25 /* GifImage.swift */; };
+		74CCAFF0282E7BDD00C28F25 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFEE282E7BDD00C28F25 /* GifImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,7 @@
 		74CB2D02281EDDA2001CC294 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		74CCAFE2282C4ECD00C28F25 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = SOURCE_ROOT; };
 		74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = SOURCE_ROOT; };
+		74CCAFEE282E7BDD00C28F25 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,7 @@
 		740E966128153B860089D7E0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				74CCAFEE282E7BDD00C28F25 /* GifImage.swift */,
 				74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */,
 				74CCAFE2282C4ECD00C28F25 /* Test.swift */,
 				740E966228153B860089D7E0 /* TipsyTimerApp.swift */,
@@ -362,6 +366,7 @@
 				747C763328180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
 				74CCAFE6282D4A5500C28F25 /* CurrentUser.swift in Sources */,
 				747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
+				74CCAFEF282E7BDD00C28F25 /* GifImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +384,7 @@
 				747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */,
 				740E968B28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
 				747C76282817367500852DFB /* HomeScreenView.swift in Sources */,
+				74CCAFF0282E7BDD00C28F25 /* GifImage.swift in Sources */,
 				747C763428180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
 				747C763728180E3500852DFB /* DrinkingTimeView.swift in Sources */,
 				74CCAFE7282D4A5500C28F25 /* CurrentUser.swift in Sources */,

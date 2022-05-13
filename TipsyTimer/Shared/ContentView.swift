@@ -13,7 +13,6 @@
 // TODO: Debuggen
 
 // TODO: HomeScreenView - cocktailglas plaatje
-// TODO: Opmaak bepalen, met witte achtergrond of niet?
 
 // TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
 

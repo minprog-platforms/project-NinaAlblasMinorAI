@@ -22,6 +22,7 @@ struct ResultView: View {
         
     @State var beerLevel: CGFloat = 260
     
+    
     init(user: Binding<CurrentUser>) {
         self._user = user
         // _user bevat daadwerkleijke binding, @binding maakt automatisch een binding object die hoort bij user variabele
@@ -42,6 +43,7 @@ struct ResultView: View {
         timerFormatter.zeroFormattingBehavior = .pad
         timeRemaining = timerFormatter.string(from: Date(), to: futureDate) ?? ""
         
+        // TODO: dit bereken ik nu steeds opnieuw, maar als ik het in de init initialiseer, deelt ie door 0 (waiting seconds)
         let highestLevel = 1100
         let lowestLevel = 260
         beerLevel += Double(((highestLevel - lowestLevel) / waitingSeconds))
@@ -49,7 +51,7 @@ struct ResultView: View {
     
     var body: some View {
         ZStack {
-            switch timesUp{
+            switch timesUp {
             case true:
                 Color("Nina-hotpink")
                     .edgesIgnoringSafeArea(.all)
@@ -59,6 +61,8 @@ struct ResultView: View {
                                startPoint: .leading,
                                endPoint: .trailing)
                     .edgesIgnoringSafeArea(.all)
+                Image("tipsytimerlogo")
+                    .offset(x: -20)
             }
 
             Image("beer-1")
