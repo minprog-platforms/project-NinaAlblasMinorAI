@@ -26,7 +26,7 @@
 // TODO: ResultView - Als timer = 0 --> andere tekst & als timer vanaf begin 0 was ook andere tekst
 // TODO: ResultView - future date error handling
 // TODO: ResultView - hacking with swift aanpassing en notificatie leuker maken
-
+// TODO: ResultView - bij notificatie leuk vuurwerk
 
 // optionele extra's
 // TODO: Keuzemenu drankjes toevoegen?

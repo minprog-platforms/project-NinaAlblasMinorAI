@@ -49,12 +49,18 @@ struct ResultView: View {
     
     var body: some View {
         ZStack {
-            
-            LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"),
-                                                       Color("Nina-sky")]),
-                           startPoint: .leading,
-                           endPoint: .trailing)
-            .edgesIgnoringSafeArea(.all)
+            switch timesUp{
+            case true:
+                Color("Nina-hotpink")
+                    .edgesIgnoringSafeArea(.all)
+            case false:
+                LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"),
+                                                           Color("Nina-sky")]),
+                               startPoint: .leading,
+                               endPoint: .trailing)
+                    .edgesIgnoringSafeArea(.all)
+            }
+
             Image("beer-1")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -85,11 +91,17 @@ struct ResultView: View {
                 
                 Spacer()
                 
-                // TODO: tekst mooier opmaken
-                Text(timesUp ? "Je kunt weer veilig de weg op" : timeRemaining)
-                    .font(.system(size: 50, weight: .black))
-                    .foregroundColor(Color("Tipsy-white"))
-                    .shadow(color: Color("Nina-dark"), radius: 5)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .foregroundColor(Color("Tipsy-white"))
+                        .shadow(color: Color("Nina-dark"), radius: 3)
+                        .opacity(0.6)
+                    Text(timesUp ? "JE KUNT WEER VEILIG DE WEG OP!" : "WACHT NOG\n\(timeRemaining)")
+                        .font(.system(size: 35, weight: .black))
+                        .foregroundColor(Color("Nina-dark"))
+                        .multilineTextAlignment(.center)
+                }
+                .frame(width: 350, height: 150)
                 
                 
                 Spacer()
@@ -112,7 +124,7 @@ struct ResultView: View {
             .onReceive(timer) { _ in
                 let dateDiff = futureDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate
 
-                if dateDiff > 0 {
+                if dateDiff > 1 {
                     self.updateTimeRemaining()
                 } else {
                     self.Notify()
