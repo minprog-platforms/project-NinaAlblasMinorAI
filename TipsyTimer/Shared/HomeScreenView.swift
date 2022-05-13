@@ -17,6 +17,7 @@ struct HomeScreenView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
+
                 Text("TIPSY TIMER")
                     .font(Font.system(size: 60, weight: .black))
                     .overlay {
@@ -33,11 +34,11 @@ struct HomeScreenView: View {
                                 .font(.system(size: 60, weight: .black))
                         )
                     }
-                    .shadow(color: Color("Nina-dark"), radius: 5)
                 
+
                 Text("Zie in één oogopslag\nwanneer je weer de weg op mag!")
                     .font(.system(size: 25, weight: .medium, design: .rounded))
-                    .foregroundColor(Color("Nina-pink"))
+                    .foregroundColor(Color("Nina-prettypink"))
                     .multilineTextAlignment(.center)
                     .shadow(color: Color("Nina-dark"), radius: 2)
                 

@@ -13,6 +13,7 @@
 // TODO: Debuggen
 
 // TODO: HomeScreenView - cocktailglas plaatje
+// TODO: Opmaak bepalen, met witte achtergrond of niet?
 
 // TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
 
@@ -30,10 +31,10 @@
 // optionele extra's
 // TODO: Keuzemenu drankjes toevoegen?
 // TODO: widget?
-// TODO: app cover op homescreen
 // TODO: app op eigen telefoon?
 // TODO: stappen ondernemen om in app store te krijgen (copyrighted plaatjes?)
 // TODO: Uber
+// TODO: make it work for Mac? Dan ook app icons toevoegen
 
 
 import SwiftUI

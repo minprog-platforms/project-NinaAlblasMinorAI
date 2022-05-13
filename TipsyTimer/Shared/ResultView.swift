@@ -15,10 +15,12 @@ struct ResultView: View {
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     @State var timeRemaining = ""
     var futureDate: Date = Date()
+    @State var timesUp: Bool = false
     
     var waitingMinutes: Int = 0
     var waitingSeconds: Int = 0
-    @State var beerLevel: CGFloat = 100.0
+        
+    @State var beerLevel: CGFloat = 260
     
     init(user: Binding<CurrentUser>) {
         self._user = user
@@ -41,7 +43,7 @@ struct ResultView: View {
         timeRemaining = timerFormatter.string(from: Date(), to: futureDate) ?? ""
         
         let highestLevel = 1100
-        let lowestLevel = 100
+        let lowestLevel = 260
         beerLevel += Double(((highestLevel - lowestLevel) / waitingSeconds))
     }
     
@@ -83,12 +85,12 @@ struct ResultView: View {
                 
                 Spacer()
                 
-                Text(timeRemaining)
+                // TODO: tekst mooier opmaken
+                Text(timesUp ? "Je kunt weer veilig de weg op" : timeRemaining)
                     .font(.system(size: 50, weight: .black))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 5)
                 
-//                Text("Gender = \(tipsyDataStruct.userGender)\nAge = \(tipsyDataStruct.userAge)\nExperience = \(tipsyDataStruct.userDrivingExperience)\nDrinking time = \(tipsyDataStruct.userDrinkingTime)\nAlcohol grams = \(tipsyDataStruct.userConsumedAlcoholGrams)\nWeight = \(tipsyDataStruct.userWeight)\nHeight = \(tipsyDataStruct.userHeight)")
                 
                 Spacer()
                 NavigationLink(destination: HomeScreenView()
@@ -115,6 +117,7 @@ struct ResultView: View {
                 } else {
                     self.Notify()
                     self.timer.upstream.connect().cancel()
+                    timesUp = true
 
                 }
             }
@@ -124,9 +127,8 @@ struct ResultView: View {
     
     func Notify() {
         let notificationContent = UNMutableNotificationContent()
-        // TODO: veranderen
-        notificationContent.title = "My message"
-        notificationContent.body = "My body"
+        notificationContent.title = "De tijd zit erop!"
+        notificationContent.body = "Je kunt weer veilig de weg op"
         notificationContent.sound = UNNotificationSound.default
         
         let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
