@@ -51,10 +51,14 @@ struct ResultView: View {
     
     var body: some View {
         ZStack {
+           
             switch timesUp {
             case true:
-                Color("Nina-hotpink")
+                GifImage("driving_jb")
                     .edgesIgnoringSafeArea(.all)
+                    .frame(width: 1700, height: 1100)
+                    .offset(y: -100)
+                    
             case false:
                 LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"),
                                                            Color("Nina-sky")]),
@@ -63,15 +67,14 @@ struct ResultView: View {
                     .edgesIgnoringSafeArea(.all)
                 Image("tipsytimerlogo")
                     .offset(x: -20)
+                Image("beer-1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 700, height: 1300)
+                    .offset(y: beerLevel)
+                    .animation(.default, value: beerLevel)
             }
 
-            Image("beer-1")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 700, height: 1300)
-                .offset(y: beerLevel)
-                .animation(.default, value: beerLevel)
-            
             VStack {
                 Text("TIPSY TIMER")
                     .font(Font.system(size: 60, weight: .black))
@@ -131,9 +134,10 @@ struct ResultView: View {
                 if dateDiff > 1 {
                     self.updateTimeRemaining()
                 } else {
+                    timesUp = true
                     self.Notify()
                     self.timer.upstream.connect().cancel()
-                    timesUp = true
+                    
 
                 }
             }

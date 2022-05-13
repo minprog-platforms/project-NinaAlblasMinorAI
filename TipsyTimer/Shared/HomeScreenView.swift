@@ -77,19 +77,7 @@ struct HomeScreenView: View {
                 })
                 Spacer()
             }
-//            // TODO: Hoe krijg ik dit zodat de button nog indrukbaar is? Misschien een niet-button onder het plaatje en dan een lege button eroverheen ofzo? Of geen moeite doen
-//            Image("tipsytimerlogo")
-//                .resizable()
-//                .aspectRatio(contentMode: .fit)
-//                .padding(.all)
-//                .frame(width: 180, height: 180)
-//                .foregroundColor(Color("Tipsy-white"))
-//                .background(maleButtonPressed ? Color("Nina-darkpink") : Color("Nina-hotpink"))
-//                .cornerRadius(20)
-//                .shadow(color: Color("Nina-dark"), radius: 10)
-//                .offset(x: -90, y: -130)
-//                .offset(x: -140, y: 150)
-//                .rotationEffect(.degrees(-10))
+
         }
     }
 }

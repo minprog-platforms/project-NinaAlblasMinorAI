@@ -12,9 +12,8 @@
 // TODO: Kijken of alle hoofdletters kloppen (struct wel, var niet etc.) & checken of enum bijv op juiste plek staat & NL vs EN & checken of code mooi is
 // TODO: Debuggen
 
-// TODO: HomeScreenView - cocktailglas plaatje
-
 // TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
+// TODO: TipsyTimerView - progress bar op gelijke hoogte houden
 
 // TODO: ConsumedDrinksView - (misschien) ML VS STANDAARDGLAZEN TOGGLE (of alleen std glazen, want makkelijker berekenen? dan hoeft % ook niet)
 // TODO: ConsumedDrinksView - (misschien) % ALCOHOL (of van standaardpercentages uitgaan?)
@@ -22,7 +21,6 @@
 
 // TODO: DrinkingTimeView - in stapjes van 5 minuten?
 
-// TODO: ResultView - Als timer = 0 --> andere tekst & als timer vanaf begin 0 was ook andere tekst
 // TODO: ResultView - future date error handling
 // TODO: ResultView - hacking with swift aanpassing en notificatie leuker maken
 // TODO: ResultView - bij notificatie leuk vuurwerk
