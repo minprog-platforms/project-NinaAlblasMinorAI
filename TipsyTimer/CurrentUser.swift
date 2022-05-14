@@ -47,6 +47,9 @@ struct CurrentUser {
         
         // waiting time in minutes (1.89 hours * 60 mins = 113 mins)
         let waitingTimeInMinutes = Int(waitingTimeInHours * 60)
+        
+//        print("Gender: \(gender)\nAge: \(age)\nWeight: \(weight)\nHeight: \(height)\nAlcohol consumption: \(alcoholConsumption)\nDrinking time: \(drinkingTime)\nDriving experience: \(drivingExperience)\nWaiting minutes: \(waitingTimeInMinutes)")
+        
                 
         return waitingTimeInMinutes
 

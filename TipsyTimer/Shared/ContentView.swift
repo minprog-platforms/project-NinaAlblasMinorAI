@@ -11,24 +11,19 @@
 // TODO: Kijken of alle hoofdletters kloppen (struct wel, var niet etc.) & checken of enum bijv op juiste plek staat & NL vs EN & checken of code mooi is
 // TODO: Debuggen
 
+// TODO: Crasht de app als je in TextField een float / string invult?
 // TODO: 1.5 uur ( de max) bij de tijd optellen, want dan bereikt ie pas piek. Je moet dus sowieso 1.5 uur wachten. Maar dit is niet handig als je maar 1 biertje op hebt. Vanaf de grens naar > 0 minuten wachten, tel er tijd bij op
-// TODO: als je op opnieuw klikt -> alle data herladen naar default waarden
-// als je op opnieuw klikt, update ie dan wel de huidige en future date?
+// TODO: als je op opnieuw klikt -> wordt alle data dan herladen naar default waarden? en update ie de huidige en future date? OPNIEUW meot timer ook cancelen!
 
 // TODO: Make app (images, text etc.) fit on all screen sizes
 
 // TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
 
-// TODO: ConsumedDrinksView - (misschien) ML VS STANDAARDGLAZEN TOGGLE (of alleen std glazen, want makkelijker berekenen? dan hoeft % ook niet)
-// TODO: ConsumedDrinksView - (misschien) % ALCOHOL (of van standaardpercentages uitgaan?)
-// TODO: ConsumedDrinksView - eigen stijl definieren (een struct View?) die ik op iedere rechthoek kan toepassen?
-
 // TODO: ResultView - future date error handling. Ook op andere plekken?
 
 // TODO: DrinkView - enum maken van drinks waarbij je switcht van drinkname en drink image (lukte nie)
 
-// TODO: james bond wordt afgeknipt als ik 3 wijn en 189 minuten doe en buiten de app wacht op notificatie en dan de app open. ik had ook op opnieuw geklikt. nu doet ie t niet meer?
-// TODO: std -> standaard of glazen
+// TODO: Notificaties doen het niet op eigen telefoon, wel in simulator
 
 // optionele extra's
 // TODO: Keuzemenu drankjes toevoegen?

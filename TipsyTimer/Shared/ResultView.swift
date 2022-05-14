@@ -120,8 +120,12 @@ struct ResultView: View {
                             .font(.system(size: 25, weight: .heavy))
                             .shadow(color: Color("Nina-dark"), radius: 5)
                     }
+                    .simultaneousGesture(TapGesture().onEnded {
+                        self.timer.upstream.connect().cancel()
+                    })
             }
             .frame(width: 400, height: 850)
+
             .onAppear(perform: {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
                 }

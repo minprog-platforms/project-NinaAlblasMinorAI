@@ -46,7 +46,7 @@ struct DrinkView: View {
                                                                           cocktails: cocktails,
                                                                           liquors: liquors)
                     }
-                Text("std. glazen")
+                Text("standaard\nglazen")
                     .foregroundColor(Color("Tipsy-white"))
                     .fontWeight(.bold)
             }
