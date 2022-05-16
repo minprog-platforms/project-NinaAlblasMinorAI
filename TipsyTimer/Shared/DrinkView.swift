@@ -60,10 +60,11 @@ struct DrinkView: View {
     }
     
     func totalAlcoholConsumption(beers: String, wines: String, cocktails: String, liquors: String) -> Double {
-        let beerAmount = (Double(beers) ?? 0)
-        let wineAmount = (Double(wines) ?? 0)
-        let cocktailAmount = (Double(cocktails) ?? 0)
-        let liquorAmount = (Double(liquors) ?? 0)
+        
+        let beerAmount = amount(of: beers)
+        let wineAmount = amount(of: wines)
+        let cocktailAmount = amount(of: cocktails)
+        let liquorAmount = amount(of: liquors)
         
         let totalAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
         
@@ -71,6 +72,14 @@ struct DrinkView: View {
 //        print(totalAlcoholGrams)
 
         return totalAlcoholGrams
+    }
+    
+    func amount(of drink: String) -> Double {
+        // error prevention in case someone enters a float with a comma
+        if drink.contains(",") {
+            return Double(drink.replacingOccurrences(of: ",", with: ".")) ?? 0
+        }
+        return Double(drink) ?? 0
     }
 }
 

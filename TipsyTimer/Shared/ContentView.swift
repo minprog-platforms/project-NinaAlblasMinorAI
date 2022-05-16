@@ -11,7 +11,6 @@
 // TODO: Kijken of alle hoofdletters kloppen (struct wel, var niet etc.) & checken of enum bijv op juiste plek staat & NL vs EN & checken of code mooi is
 // TODO: Debuggen
 
-// TODO: Crasht de app als je in TextField een float / string invult?
 // TODO: 1.5 uur ( de max) bij de tijd optellen, want dan bereikt ie pas piek. Je moet dus sowieso 1.5 uur wachten. Maar dit is niet handig als je maar 1 biertje op hebt. Vanaf de grens naar > 0 minuten wachten, tel er tijd bij op
 // TODO: als je op opnieuw klikt -> wordt alle data dan herladen naar default waarden? en update ie de huidige en future date? OPNIEUW meot timer ook cancelen!
 
@@ -27,11 +26,9 @@
 
 // TODO: DisclaimerView - akkoord geven om door te kunnen
 
-
 // TODO: ConsumedDrinksView - 0 weghalen?
 
-// TODO: DrinkingTimeView - hoeveel tijd zat er tussen je 1e en laatste drankje?
-
+// TODO: Scherm met tijd sinds laatste drankje OF disclaimer dat de hetoonde wachttijd geldt vanaf laatste drankje
 
 // optionele extra's
 // TODO: Keuzemenu drankjes toevoegen?
