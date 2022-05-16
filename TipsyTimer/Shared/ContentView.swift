@@ -30,8 +30,7 @@
 
 // TODO: Scherm met tijd sinds laatste drankje OF disclaimer dat de hetoonde wachttijd geldt vanaf laatste drankje
 
-// optionele extra's
-// TODO: Keuzemenu drankjes toevoegen?
+ // TODO: Keuzemenu drankjes toevoegen?
 // TODO: widget?
 // TODO: app op eigen telefoon?
 // TODO: stappen ondernemen om in app store te krijgen (copyrighted plaatjes?)
@@ -45,9 +44,9 @@ struct ContentView: View {
    
     var body: some View {
         NavigationView {
-                HomeScreenView()
-                    .navigationBarTitle("")
-                    .navigationBarHidden(true)
+            DisclaimerView()
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
         }
     }
 }
