@@ -24,9 +24,7 @@
 
 // TODO: Notificaties doen het niet op eigen telefoon, wel in simulator
 
-// TODO: DisclaimerView - akkoord geven om door te kunnen
-
-// TODO: ConsumedDrinksView - 0 weghalen?
+// TODO: Nu is disclaimer view lelijk
 
 // TODO: Scherm met tijd sinds laatste drankje OF disclaimer dat de hetoonde wachttijd geldt vanaf laatste drankje
 

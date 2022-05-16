@@ -11,10 +11,10 @@ import SwiftUI
 struct ConsumedDrinksView: View {
     @Binding var user: CurrentUser
     
-    @State var amountOfBeer = "0"
-    @State var amountOfWine = "0"
-    @State var amountOfCocktails = "0"
-    @State var amountOfLiquor = "0"
+    @State var amountOfBeer = ""
+    @State var amountOfWine = ""
+    @State var amountOfCocktails = ""
+    @State var amountOfLiquor = ""
     
     var body: some View {
         VStack {

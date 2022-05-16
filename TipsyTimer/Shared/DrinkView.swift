@@ -36,7 +36,7 @@ struct DrinkView: View {
                     .padding(.all)
                     .frame(width: 125, height: 110)
                     .foregroundColor(Color("Tipsy-white"))
-                TextField("", text: drinkName == "BIER" ? $beers : drinkName == "WIJN" ? $wines : drinkName == "COCKTAILS" ? $cocktails : $liquors) // TODO: MAKE INTO ENUM?
+                TextField("0", text: drinkName == "BIER" ? $beers : drinkName == "WIJN" ? $wines : drinkName == "COCKTAILS" ? $cocktails : $liquors) // TODO: MAKE INTO ENUM?
                     .padding(.horizontal)
                     .frame(width: 75.0)
                     .textFieldStyle(.roundedBorder)
