@@ -19,7 +19,7 @@ struct DrinkingTimeView: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("HOE LANG HEB JE GEDRONKEN?")
+            Text("HOEVEEL TIJD ZAT ER TUSSEN JE EERSTE EN LAATSTE SLOK?")
                 .font(.system(size: 30, weight: .heavy))
                 .foregroundColor(Color("Tipsy-white"))
                 .multilineTextAlignment(.center)

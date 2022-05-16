@@ -52,9 +52,9 @@ struct ConsumedDrinksView: View {
                       cocktails: $amountOfCocktails,
                       liquors: $amountOfLiquor)
             
-            // shots
+            // sterke drank
             DrinkView(user: $user,
-                      drinkName: "SHOTS",
+                      drinkName: "STERKE DRANK",
                       drinkImage: Image("liquor"),
                       beers: $amountOfBeer,
                       wines: $amountOfWine,

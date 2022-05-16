@@ -25,6 +25,14 @@
 
 // TODO: Notificaties doen het niet op eigen telefoon, wel in simulator
 
+// TODO: DisclaimerView - akkoord geven om door te kunnen
+
+
+// TODO: ConsumedDrinksView - 0 weghalen?
+
+// TODO: DrinkingTimeView - hoeveel tijd zat er tussen je 1e en laatste drankje?
+
+
 // optionele extra's
 // TODO: Keuzemenu drankjes toevoegen?
 // TODO: widget?
