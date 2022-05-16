@@ -25,7 +25,7 @@ struct DrinkView: View {
                 .fontWeight(.heavy)
                 .foregroundColor(Color("Nina-dark"))
                 .padding()
-                .frame(width: 340.0, height: 30.0)
+                .frame(width: getFrameWidth(340), height: getFrameHeight(30))
                 .background(Color("Nina-lightpink"))
                 .cornerRadius(20)
             HStack {
@@ -34,11 +34,11 @@ struct DrinkView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(.all)
-                    .frame(width: 125, height: 110)
+                    .frame(width: getFrameWidth(125), height: getFrameHeight(110))
                     .foregroundColor(Color("Tipsy-white"))
                 TextField("0", text: drinkName == "BIER" ? $beers : drinkName == "WIJN" ? $wines : drinkName == "COCKTAILS" ? $cocktails : $liquors) // TODO: MAKE INTO ENUM?
                     .padding(.horizontal)
-                    .frame(width: 75.0)
+                    .frame(width: getFrameWidth(75))
                     .textFieldStyle(.roundedBorder)
                     .onChange(of: drinkName == "BIER" ? beers : drinkName == "WIJN" ? wines : drinkName == "COCKTAILS" ? cocktails : liquors) { _ in // TODO: MAKE INTO ENUM?
                         user.alcoholConsumption = totalAlcoholConsumption(beers: beers,
@@ -53,7 +53,7 @@ struct DrinkView: View {
             .padding(.trailing)
             
         }
-        .frame(width: 350.0, height: 145.0)
+        .frame(width: getFrameWidth(350), height: getFrameHeight(145))
         .background(Color("Nina-lightpurple"))
         .cornerRadius(20)
         .shadow(color: Color("Nina-dark"), radius: 5)

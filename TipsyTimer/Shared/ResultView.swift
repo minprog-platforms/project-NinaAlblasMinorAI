@@ -22,6 +22,7 @@ struct ResultView: View {
         
     @State var beerLevel: CGFloat = 260
     
+    @State var showTimer: Bool = true
     
     init(user: Binding<CurrentUser>) {
         self._user = user
@@ -36,19 +37,6 @@ struct ResultView: View {
         
     }
     
-    func updateTimeRemaining() {
-        let timerFormatter = DateComponentsFormatter()
-        timerFormatter.allowedUnits = [.hour, .minute, .second]
-        timerFormatter.unitsStyle = .positional
-        timerFormatter.zeroFormattingBehavior = .pad
-        timeRemaining = timerFormatter.string(from: Date(), to: futureDate) ?? ""
-        
-        // TODO: dit bereken ik nu steeds opnieuw, maar als ik het in de init initialiseer, deelt ie door 0 (waiting seconds)
-        let highestLevel = 1100
-        let lowestLevel = 260
-        beerLevel += Double(((highestLevel - lowestLevel) / waitingSeconds))
-    }
-    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"),
@@ -57,21 +45,21 @@ struct ResultView: View {
                            endPoint: .trailing)
                 .edgesIgnoringSafeArea(.all)
             Image("tipsytimerlogo")
-                .offset(x: -20)
+                .offset(x: getOffsetX(-20))
             
             switch timesUp {
             case true:
                 GifImage("driving_jb")
                     .edgesIgnoringSafeArea(.all)
-                    .frame(width: 1700, height: 1100)
-                    .offset(y: -100)
+                    .frame(width: getFrameWidth(1700), height: getFrameHeight(1100))
+                    .offset(y: getOffsetY(-100))
                     
             case false:
                 Image("beer-1")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 700, height: 1300)
-                    .offset(y: beerLevel)
+                    .frame(width: getFrameWidth(700), height: getFrameHeight(1300))
+                    .offset(y: getOffsetY(beerLevel))
                     .animation(.default, value: beerLevel)
             }
 
@@ -101,14 +89,14 @@ struct ResultView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
                         .foregroundColor(Color("Tipsy-white"))
-                        .shadow(color: Color("Nina-dark"), radius: 3)
+                        .shadow(color: Color("Nina-lightpink"), radius: 3)
                         .opacity(0.6)
-                    Text(timesUp ? "JE KUNT WEER VEILIG DE WEG OP!" : "WACHT NOG\n\(timeRemaining)")
-                        .font(.system(size: 35, weight: .black))
+                    Text(timesUp ? "JE KUNT WEER VEILIG DE WEG OP!" : showTimer ? "WACHT NOG\n\(timeRemaining)\nNA JE LAATSTE SLOK" : "ZODRA DIT BIERTJE OP IS,\nMAG JIJ WEER RIJDEN!")
+                        .font(.system(size: (showTimer ? 30 : 27), weight: .heavy))
                         .foregroundColor(Color("Nina-dark"))
                         .multilineTextAlignment(.center)
                 }
-                .frame(width: 350, height: 150)
+                .frame(width: getFrameWidth(350), height: getFrameHeight(150))
                 
                 
                 Spacer()
@@ -124,7 +112,7 @@ struct ResultView: View {
                         self.timer.upstream.connect().cancel()
                     })
             }
-            .frame(width: 400, height: 850)
+            .frame(width: getFrameWidth(400), height: getFrameHeight(850))
 
             .onAppear(perform: {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
@@ -136,6 +124,12 @@ struct ResultView: View {
 
                 if dateDiff > 1 {
                     self.updateTimeRemaining()
+                    
+                    // switch between timer and beer info
+                    if Int(dateDiff) % 9 == 0 {
+                        showTimer.toggle()
+                    }
+                    
                 } else {
                     timesUp = true
                     self.Notify()
@@ -146,6 +140,19 @@ struct ResultView: View {
             }
         }
         
+    }
+    
+    func updateTimeRemaining() {
+        let timerFormatter = DateComponentsFormatter()
+        timerFormatter.allowedUnits = [.hour, .minute, .second]
+        timerFormatter.unitsStyle = .positional
+        timerFormatter.zeroFormattingBehavior = .pad
+        timeRemaining = timerFormatter.string(from: Date(), to: futureDate) ?? ""
+        
+        // TODO: dit bereken ik nu steeds opnieuw, maar als ik het in de init initialiseer, deelt ie door 0 (waiting seconds)
+        let highestLevel = 1100
+        let lowestLevel = 260
+        beerLevel += Double(((highestLevel - lowestLevel) / waitingSeconds))
     }
     
     func Notify() {

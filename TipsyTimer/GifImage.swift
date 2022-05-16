@@ -38,16 +38,16 @@ struct GifImage: UIViewRepresentable {
     }
 }
 
-struct GifImage_Previews: PreviewProvider {
-    static var previews: some View {
-        GifImage("driving_jb")
-            .edgesIgnoringSafeArea(.all)
-            .frame(width: 1700, height: 1100)
-            .offset(y: -100)
-
-
-        
-//                    .background(Color("Nina-dark"))
-//                    .aspectRatio(contentMode: .fit)
-    }
-}
+//struct GifImage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GifImage("driving_jb")
+//            .edgesIgnoringSafeArea(.all)
+//            .frame(width: getFrameWidth(1700), height: getFrameHeight(1100))
+//            .offset(y: -100)
+//
+//
+//        
+////                    .background(Color("Nina-dark"))
+////                    .aspectRatio(contentMode: .fit)
+//    }
+//}

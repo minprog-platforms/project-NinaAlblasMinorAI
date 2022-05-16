@@ -16,7 +16,7 @@ struct HomeScreenView: View {
                            endPoint: .trailing)
                 .edgesIgnoringSafeArea(.all)
             Image("tipsytimerlogo")
-                .offset(x: -20)
+                .offset(x: getOffsetX(-20))
             VStack {
                 Spacer()
 
@@ -53,13 +53,14 @@ struct HomeScreenView: View {
                     Text("CHECK JE TIMER")
                         .font(.system(size: 55, weight: .black))
                         .foregroundColor(Color("Tipsy-white"))
-                        .frame(width: 300, height: 300)
+                        // square dus 2x width
+                        .frame(width: getFrameWidth(300), height: getFrameWidth(300))
                         .background(Color("Nina-hotpink"))
                         .cornerRadius(25.0)
                         .shadow(color: Color("Nina-dark"), radius: 5)
                     
                 }
-                .frame(width: 300, height: 300)
+                .frame(width: getFrameWidth(300), height: getFrameWidth(300))
                 
                 Spacer()
                 Spacer()
@@ -67,7 +68,7 @@ struct HomeScreenView: View {
                     .navigationBarTitle("")
                     .navigationBarHidden(true), label: {
                     Label("DISCLAIMER", systemImage: "exclamationmark.circle")
-                        .frame(width: 350.0, height: 50)
+                        .frame(width: getFrameWidth(350), height: getFrameHeight(50))
                         .font(.system(size: 25, weight: .bold))
                         .foregroundColor(Color("Tipsy-white"))
                         .background(Color("Nina-sky"))

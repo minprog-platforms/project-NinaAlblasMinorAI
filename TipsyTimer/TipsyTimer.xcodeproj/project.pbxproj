@@ -34,6 +34,8 @@
 		747C763728180E3500852DFB /* DrinkingTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763528180E3500852DFB /* DrinkingTimeView.swift */; };
 		747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763828180E4F00852DFB /* DrivingExperienceView.swift */; };
 		747C763A28180E4F00852DFB /* DrivingExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C763828180E4F00852DFB /* DrivingExperienceView.swift */; };
+		74A201E02832E9CD004D2D3B /* AdaptiveDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A201DF2832E9CD004D2D3B /* AdaptiveDimensions.swift */; };
+		74A201E12832E9CD004D2D3B /* AdaptiveDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A201DF2832E9CD004D2D3B /* AdaptiveDimensions.swift */; };
 		74CB2D03281EDDA2001CC294 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB2D02281EDDA2001CC294 /* ResultView.swift */; };
 		74CB2D04281EDDA2001CC294 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB2D02281EDDA2001CC294 /* ResultView.swift */; };
 		74CCAFE3282C4ECD00C28F25 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE2282C4ECD00C28F25 /* Test.swift */; };
@@ -94,6 +96,7 @@
 		747C763228180E1B00852DFB /* ConsumedDrinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumedDrinksView.swift; sourceTree = "<group>"; };
 		747C763528180E3500852DFB /* DrinkingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingTimeView.swift; sourceTree = "<group>"; };
 		747C763828180E4F00852DFB /* DrivingExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingExperienceView.swift; sourceTree = "<group>"; };
+		74A201DF2832E9CD004D2D3B /* AdaptiveDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveDimensions.swift; sourceTree = "<group>"; };
 		74CB2D02281EDDA2001CC294 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		74CCAFE2282C4ECD00C28F25 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = SOURCE_ROOT; };
 		74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = SOURCE_ROOT; };
@@ -172,6 +175,7 @@
 				747C7629281738A300852DFB /* GenderView.swift */,
 				747C762C2817F5B700852DFB /* AgeView.swift */,
 				740892052815E6A7002BFD03 /* DisclaimerView.swift */,
+				74A201DF2832E9CD004D2D3B /* AdaptiveDimensions.swift */,
 				740E966428153B870089D7E0 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -382,6 +386,7 @@
 			files = (
 				747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */,
 				74CCAFE3282C4ECD00C28F25 /* Test.swift in Sources */,
+				74A201E02832E9CD004D2D3B /* AdaptiveDimensions.swift in Sources */,
 				747C763628180E3500852DFB /* DrinkingTimeView.swift in Sources */,
 				740E968C28153B870089D7E0 /* ContentView.swift in Sources */,
 				747C76272817367500852DFB /* HomeScreenView.swift in Sources */,
@@ -413,6 +418,7 @@
 				747C762E2817F5B700852DFB /* AgeView.swift in Sources */,
 				747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */,
 				740E968B28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
+				74A201E12832E9CD004D2D3B /* AdaptiveDimensions.swift in Sources */,
 				747C76282817367500852DFB /* HomeScreenView.swift in Sources */,
 				74CCAFF0282E7BDD00C28F25 /* GifImage.swift in Sources */,
 				747C763428180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
