@@ -32,6 +32,8 @@ struct CurrentUser {
             return -2.097 + (0.1069 * height) + (0.2466 *  weight)
         }
     }
+    // TODO: alcohol consumption = 0?
+    // TODO: beslissen of ik +/-1.5 ga doen of geen van beiden
     
     var waitingTime: Int {
         // returns waiting time in minutes to wait after last drink before BAC reaches target value
@@ -43,7 +45,8 @@ struct CurrentUser {
         let bloodWaterPercentage = 80.65
         
         // waiting time in hours (1.89 hours)
-        let waitingTimeInHours: Double = (((-targetBAC + ((alcoholConsumption / TBW) * bloodWaterPercentage)) / metabolicRate) - drinkingTime)
+        let waitingTimeInHours: Double = (((-targetBAC + ((alcoholConsumption / TBW) * bloodWaterPercentage)) / metabolicRate) - drinkingTime + 1.5)
+//        print("Waiting time: \(waitingTimeInHours)")
         
         // waiting time in minutes (1.89 hours * 60 mins = 113 mins)
         let waitingTimeInMinutes = Int(waitingTimeInHours * 60)

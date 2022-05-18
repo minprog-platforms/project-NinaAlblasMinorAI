@@ -26,24 +26,24 @@ struct DisclaimerView: View {
 
                 List {
                     Text("Geen 18, geen alchol")
-                        .font(.system(size: 15))
+                        .font(.system(size: 18))
 
                     Text("Geniet, maar drink met mate")
-                        .font(.system(size: 15))
+                        .font(.system(size: 18))
 
                     Text("Rijden onder invloed kan fatale gevolgen hebben; breng jezelf en anderen niet in gevaar")
-                        .font(.system(size: 15))
+                        .font(.system(size: 18))
 
                     Text("De Tipsy Timer geeft alleen een schatting van de wachttijd en mag niet worden gebruikt om te bepalen of je nog mag autorijden")
-                        .font(.system(size: 15))
+                        .font(.system(size: 18))
                     
                     Text("Vertrouw niet volledig op deze applicatie; laat de beslissing over of je de weg op kunt niet afhangen van het resultaat van de Tipsy Timer")
-                        .font(.system(size: 15))
+                        .font(.system(size: 18))
 
                     Text("Naast de gegevens die Tipsy Timer van je vraagt, spelen er ook andere factoren mee bij de absorptie en afbraak van alcohol, zoals voeding, fysieke conditie en drugs- of medicijngebruik")
-                        .font(.system(size: 15))
+                        .font(.system(size: 18))
                 }
-                .frame(width: getFrameWidth(350), height: getFrameHeight(660))
+                .frame(width: getFrameWidth(350), height: getFrameHeight(620))
                 .cornerRadius(20)
                 
                 NavigationLink(destination: HomeScreenView()

@@ -99,8 +99,8 @@ struct DrinkView: View {
         
         let totalAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
         
-//        print(beerAmount, wineAmount, cocktailAmount, liquorAmount)
-//        print(totalAlcoholGrams)
+        print(beerAmount, wineAmount, cocktailAmount, liquorAmount)
+        print(totalAlcoholGrams)
 
         return totalAlcoholGrams
     }

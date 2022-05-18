@@ -7,7 +7,6 @@
 // TODO: comments toevoegen?
 // TODO: maak alle @States private?
 // TODO: GitHub checken of alle files goed staan + Test file verwijderen
-// TODO: Vragen hoe ik een hoger cijfer kan krijgen ***
 // TODO: Kijken of alle hoofdletters kloppen (struct wel, var niet etc.) & checken of enum bijv op juiste plek staat & NL vs EN & checken of code mooi is
 // TODO: Debuggen
 // TODO: import foundation?
@@ -22,11 +21,8 @@
 
 // TODO: ResultView - future date error handling. Ook op andere plekken?
 
-// TODO: DrinkView - enum maken van drinks waarbij je switcht van drinkname en drink image (lukte nie) *** DICTIONARY
-
 // TODO: Notificaties doen het niet op eigen telefoon, wel in simulator ***
-
-// TODO: Nu is disclaimer view lelijk
+// TODO: Notificaties ook in-app? Delegate
 
 // TODO: iOS 14 downgrade?
 
