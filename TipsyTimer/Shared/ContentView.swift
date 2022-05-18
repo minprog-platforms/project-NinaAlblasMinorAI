@@ -16,16 +16,17 @@
 // TODO: als je op opnieuw klikt -> wordt alle data dan herladen naar default waarden? en update ie de huidige en future date? OPNIEUW meot timer ook cancelen!
 // TODO: Scherm met tijd sinds laatste drankje OF disclaimer dat de hetoonde wachttijd geldt vanaf laatste drankje
 
+// TODO: na notificatie is james bond afgeknipt
 
-// TODO: Make app (images, text etc.) fit on all screen sizes. Tekstgrootte ook aanpassen? Gaat bijna niet! En offset?
+// TODO: Make app (images, text etc.) fit on all screen sizes. Tekstgrootte ook aanpassen? Gaat bijna niet! 
 
-// TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
+// TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben ***
 
 // TODO: ResultView - future date error handling. Ook op andere plekken?
 
-// TODO: DrinkView - enum maken van drinks waarbij je switcht van drinkname en drink image (lukte nie)
+// TODO: DrinkView - enum maken van drinks waarbij je switcht van drinkname en drink image (lukte nie) ***
 
-// TODO: Notificaties doen het niet op eigen telefoon, wel in simulator
+// TODO: Notificaties doen het niet op eigen telefoon, wel in simulator ***
 
 // TODO: Nu is disclaimer view lelijk
 

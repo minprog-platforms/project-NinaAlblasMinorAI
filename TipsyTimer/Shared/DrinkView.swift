@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct DrinkView: View {
     @Binding var user: CurrentUser
 
