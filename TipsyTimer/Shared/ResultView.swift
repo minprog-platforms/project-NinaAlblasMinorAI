@@ -95,6 +95,7 @@ struct ResultView: View {
                         .font(.system(size: (showTimer ? 30 : 27), weight: .heavy))
                         .foregroundColor(Color("Nina-dark"))
                         .multilineTextAlignment(.center)
+                        .padding(.horizontal)
                 }
                 .frame(width: getFrameWidth(350), height: getFrameHeight(150))
                 

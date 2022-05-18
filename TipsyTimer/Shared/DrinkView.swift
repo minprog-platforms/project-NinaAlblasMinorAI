@@ -19,6 +19,8 @@ struct DrinkView: View {
     @Binding var cocktails: String
     @Binding var liquors: String
     
+    
+    
     let drinkNames: [Drink: String] = [
         .beer: "BIER",
         .wine: "WIJN",
@@ -32,23 +34,6 @@ struct DrinkView: View {
         .cocktail: Image("cocktail"),
         .liquor: Image("liquor")
     ]
-    
-    var drinkType: Binding<String> { Binding  (
-        get: {
-            switch currentDrink {
-            case .beer:
-                return beers
-            case .wine:
-                return wines
-            case .cocktail:
-                return cocktails
-            case .liquor:
-                return liquors
-            }
-        },
-        set: {_ in }
-        )
-    }
     
     var body: some View {
         VStack(spacing: -10) {
@@ -67,11 +52,11 @@ struct DrinkView: View {
                     .padding(.all)
                     .frame(width: getFrameWidth(125), height: getFrameHeight(110))
                     .foregroundColor(Color("Tipsy-white"))
-                TextField("0", text: drinkType)
+                TextField("0", text: drinkNames[currentDrink] == "BIER" ? $beers : drinkNames[currentDrink] == "WIJN" ? $wines : drinkNames[currentDrink] == "COCKTAILS" ? $cocktails : $liquors)
                     .padding(.horizontal)
                     .frame(width: getFrameWidth(75))
                     .textFieldStyle(.roundedBorder)
-                    .onChange(of: drinkType.wrappedValue) { _ in // TODO: .
+                    .onChange(of: drinkNames[currentDrink] == "BIER" ? beers : drinkNames[currentDrink] == "WIJN" ? wines : drinkNames[currentDrink] == "COCKTAILS" ? cocktails : liquors) { _ in
                         user.alcoholConsumption = totalAlcoholConsumption(beers: beers,
                                                                           wines: wines,
                                                                           cocktails: cocktails,
