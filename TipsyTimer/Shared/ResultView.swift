@@ -125,8 +125,8 @@ struct ResultView: View {
                 if dateDiff > 1 {
                     self.updateTimeRemaining()
                     
-                    // switch between timer and beer info
-                    if Int(dateDiff) % 9 == 0 {
+                    // switch between timer and beer info every 10 seconds
+                    if Int(dateDiff) % 10 == 0 {
                         showTimer.toggle()
                     }
                     

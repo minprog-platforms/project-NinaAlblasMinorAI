@@ -7,7 +7,7 @@
 // TODO: comments toevoegen?
 // TODO: maak alle @States private?
 // TODO: GitHub checken of alle files goed staan + Test file verwijderen
-// TODO: Vragen hoe ik een hoger cijfer kan krijgen
+// TODO: Vragen hoe ik een hoger cijfer kan krijgen ***
 // TODO: Kijken of alle hoofdletters kloppen (struct wel, var niet etc.) & checken of enum bijv op juiste plek staat & NL vs EN & checken of code mooi is
 // TODO: Debuggen
 // TODO: import foundation?
@@ -18,13 +18,11 @@
 
 // TODO: na notificatie is james bond afgeknipt
 
-// TODO: Make app (images, text etc.) fit on all screen sizes. Tekstgrootte ook aanpassen? Gaat bijna niet! 
-
 // TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben ***
 
 // TODO: ResultView - future date error handling. Ook op andere plekken?
 
-// TODO: DrinkView - enum maken van drinks waarbij je switcht van drinkname en drink image (lukte nie) ***
+// TODO: DrinkView - enum maken van drinks waarbij je switcht van drinkname en drink image (lukte nie) *** DICTIONARY
 
 // TODO: Notificaties doen het niet op eigen telefoon, wel in simulator ***
 

@@ -8,6 +8,10 @@
 
 import SwiftUI
 
+enum Drink {
+    case beer, wine, cocktail, liquor
+}
+
 struct ConsumedDrinksView: View {
     @Binding var user: CurrentUser
     
@@ -26,8 +30,7 @@ struct ConsumedDrinksView: View {
             
             // bier
             DrinkView(user: $user,
-                      drinkName: "BIER",
-                      drinkImage: Image("beer"),
+                      currentDrink: .beer,
                       beers: $amountOfBeer,
                       wines: $amountOfWine,
                       cocktails: $amountOfCocktails,
@@ -35,8 +38,7 @@ struct ConsumedDrinksView: View {
             
             // wijn
             DrinkView(user: $user,
-                      drinkName: "WIJN",
-                      drinkImage: Image("wine"),
+                      currentDrink: .wine,
                       beers: $amountOfBeer,
                       wines: $amountOfWine,
                       cocktails: $amountOfCocktails,
@@ -45,8 +47,7 @@ struct ConsumedDrinksView: View {
             
             // cocktail
             DrinkView(user: $user,
-                      drinkName: "COCKTAILS",
-                      drinkImage: Image("cocktail"),
+                      currentDrink: .cocktail,
                       beers: $amountOfBeer,
                       wines: $amountOfWine,
                       cocktails: $amountOfCocktails,
@@ -54,8 +55,7 @@ struct ConsumedDrinksView: View {
             
             // sterke drank
             DrinkView(user: $user,
-                      drinkName: "STERKE DRANK",
-                      drinkImage: Image("liquor"),
+                      currentDrink: .liquor,
                       beers: $amountOfBeer,
                       wines: $amountOfWine,
                       cocktails: $amountOfCocktails,

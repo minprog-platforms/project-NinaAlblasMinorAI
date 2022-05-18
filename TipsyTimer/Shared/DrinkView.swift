@@ -12,18 +12,47 @@ import SwiftUI
 struct DrinkView: View {
     @Binding var user: CurrentUser
 
-    let drinkName: String
-    let drinkImage: Image
+    let currentDrink: Drink
     
     @Binding var beers: String
     @Binding var wines: String
     @Binding var cocktails: String
     @Binding var liquors: String
     
+    let drinkNames: [Drink: String] = [
+        .beer: "BIER",
+        .wine: "WIJN",
+        .cocktail: "COCKTAILS",
+        .liquor: "STERKE DRANK"
+    ]
+    
+    let drinkImages: [Drink: Image] = [
+        .beer: Image("beer"),
+        .wine: Image("wine"),
+        .cocktail: Image("cocktail"),
+        .liquor: Image("liquor")
+    ]
+    
+    var drinkType: Binding<String> { Binding  (
+        get: {
+            switch currentDrink {
+            case .beer:
+                return beers
+            case .wine:
+                return wines
+            case .cocktail:
+                return cocktails
+            case .liquor:
+                return liquors
+            }
+        },
+        set: {_ in }
+        )
+    }
     
     var body: some View {
         VStack(spacing: -10) {
-            Text(drinkName)
+            Text(drinkNames[currentDrink]!)
                 .fontWeight(.heavy)
                 .foregroundColor(Color("Nina-dark"))
                 .padding()
@@ -31,18 +60,18 @@ struct DrinkView: View {
                 .background(Color("Nina-lightpink"))
                 .cornerRadius(20)
             HStack {
-                drinkImage
+                drinkImages[currentDrink]!
                     .renderingMode(.template)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(.all)
                     .frame(width: getFrameWidth(125), height: getFrameHeight(110))
                     .foregroundColor(Color("Tipsy-white"))
-                TextField("0", text: drinkName == "BIER" ? $beers : drinkName == "WIJN" ? $wines : drinkName == "COCKTAILS" ? $cocktails : $liquors) // TODO: MAKE INTO ENUM?
+                TextField("0", text: drinkType)
                     .padding(.horizontal)
                     .frame(width: getFrameWidth(75))
                     .textFieldStyle(.roundedBorder)
-                    .onChange(of: drinkName == "BIER" ? beers : drinkName == "WIJN" ? wines : drinkName == "COCKTAILS" ? cocktails : liquors) { _ in // TODO: MAKE INTO ENUM?
+                    .onChange(of: drinkType.wrappedValue) { _ in // TODO: .
                         user.alcoholConsumption = totalAlcoholConsumption(beers: beers,
                                                                           wines: wines,
                                                                           cocktails: cocktails,
