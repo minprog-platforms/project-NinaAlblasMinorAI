@@ -61,3 +61,13 @@ De app [What's Your Buzz?](https://apps.apple.com/nl/app/whats-your-buzz/id93093
 Eerlijk gezegd denk ik dat ik een applicatie heb ontworpen die ik goed zou kunnen programmeren. Toch maak ik me wel een beetje zorgen om het algehele werken met SwiftUI. Hierbij gaat het dan vooral om het efficiënt kunnen inzetten van enumerations, structs, classes en closures. Aangezien deze taal natuurlijk nieuw voor me is, vraag ik me af of dit meteen goed zal gaan. Ik had ook al veel moeite met de calculator en ik had veel YouTube filmpjes nodig om enigszins te begrijpen hoe ik het best kon beginnen en welke datastructuren ik het best kon gebruiken. Hopelijk zal YouTube (en de rest van het internet) mij weer uit de brand kunnen helpen als ik vastloop tijdens het maken van de Tipsy Timer.
 
 *Slagzin: "Zie in één oogopslag wanneer je weer de weg op mag!"*
+
+Dingen die ik heb gedaan die niet per se nodig waren
+- notificaties
+- alle screen sizes
+- gifje
+- zorg dat je akkoord moet geven bij de disclaimer
+- switch elke 10 seconden de message
+- bierglas loopt leeg
+- werkt ook op de achtergrond
+- ...
