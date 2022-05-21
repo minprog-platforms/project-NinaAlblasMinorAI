@@ -4,6 +4,8 @@
 //
 //  Created by Nina Alblas on 24/04/2022.
 //
+// TODO voor de deadline, hierna geen functionaliteit meer toevoegen:
+
 // TODO: comments toevoegen?
 // TODO: maak alle @States private?
 // TODO: GitHub checken of alle files goed staan + Test file verwijderen
@@ -11,31 +13,25 @@
 // TODO: Debuggen
 // TODO: import foundation?
 
-// TODO: 1.5 uur ( de max) bij de tijd optellen, want dan bereikt ie pas piek. Je moet dus sowieso 1.5 uur wachten. Maar dit is niet handig als je maar 1 biertje op hebt. Vanaf de grens naar > 0 minuten wachten, tel er tijd bij op
-// TODO: als je op opnieuw klikt -> wordt alle data dan herladen naar default waarden? en update ie de huidige en future date? OPNIEUW meot timer ook cancelen!
-// TODO: Scherm met tijd sinds laatste drankje OF disclaimer dat de hetoonde wachttijd geldt vanaf laatste drankje
+// TODO: waarom gaat ie iedere seconde door de functie waiting time?
 
-// TODO: na notificatie is james bond afgeknipt
+// TODO: na notificatie is james bond afgeknipt - lijkt gefixt?
 
 // TODO: Merijns enum van drinks werkt niet
 
-// TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben ***
+// TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
 
 // TODO: ResultView - future date error handling. Ook op andere plekken?
 
-// TODO: Notificaties doen het niet op eigen telefoon, wel in simulator ***
+// TODO: Notificaties doen het niet op eigen telefoon, wel in simulator
 
 // TODO: Notificaties ook in-app? Delegate
 
 // TODO: iOS 14 downgrade?
 
-// TODO: Uber
-
-// TODO: Keuzemenu drankjes toevoegen?
 // TODO: widget?
-// TODO: app op eigen telefoon?
+
 // TODO: stappen ondernemen om in app store te krijgen (copyrighted plaatjes?)
-// TODO: make it work for Mac? Dan ook app icons toevoegen
 
 
 import SwiftUI

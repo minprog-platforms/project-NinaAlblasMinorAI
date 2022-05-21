@@ -18,6 +18,8 @@
 		740E968D28153B870089D7E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E966328153B860089D7E0 /* ContentView.swift */; };
 		740E968E28153B870089D7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E966428153B870089D7E0 /* Assets.xcassets */; };
 		740E968F28153B870089D7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E966428153B870089D7E0 /* Assets.xcassets */; };
+		7436A50A2839725700F25E26 /* PhoneCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436A5092839725700F25E26 /* PhoneCallView.swift */; };
+		7436A50B2839725700F25E26 /* PhoneCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436A5092839725700F25E26 /* PhoneCallView.swift */; };
 		747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
 		747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
 		747C76272817367500852DFB /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C76262817367500852DFB /* HomeScreenView.swift */; };
@@ -88,6 +90,7 @@
 		740E968228153B870089D7E0 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		740E968628153B870089D7E0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		740E968828153B870089D7E0 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		7436A5092839725700F25E26 /* PhoneCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallView.swift; sourceTree = "<group>"; };
 		747C7623281731F300852DFB /* TipsyTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTimerView.swift; sourceTree = "<group>"; };
 		747C76262817367500852DFB /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		747C7629281738A300852DFB /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 				74CCAFEE282E7BDD00C28F25 /* GifImage.swift */,
 				74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */,
 				74CCAFE2282C4ECD00C28F25 /* Test.swift */,
+				7436A5092839725700F25E26 /* PhoneCallView.swift */,
 				740E966228153B860089D7E0 /* TipsyTimerApp.swift */,
 				740E966328153B860089D7E0 /* ContentView.swift */,
 				74CB2D02281EDDA2001CC294 /* ResultView.swift */,
@@ -397,6 +401,7 @@
 				740E968A28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
 				747C762D2817F5B700852DFB /* AgeView.swift in Sources */,
 				747C763328180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
+				7436A50A2839725700F25E26 /* PhoneCallView.swift in Sources */,
 				74CCAFE6282D4A5500C28F25 /* CurrentUser.swift in Sources */,
 				74CCAFFE282EF4F200C28F25 /* DrinkView.swift in Sources */,
 				747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
@@ -422,6 +427,7 @@
 				747C76282817367500852DFB /* HomeScreenView.swift in Sources */,
 				74CCAFF0282E7BDD00C28F25 /* GifImage.swift in Sources */,
 				747C763428180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
+				7436A50B2839725700F25E26 /* PhoneCallView.swift in Sources */,
 				747C763728180E3500852DFB /* DrinkingTimeView.swift in Sources */,
 				74CCAFE7282D4A5500C28F25 /* CurrentUser.swift in Sources */,
 			);

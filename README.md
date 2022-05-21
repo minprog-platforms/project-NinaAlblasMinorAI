@@ -70,4 +70,4 @@ Dingen die ik heb gedaan die niet per se nodig waren
 - switch elke 10 seconden de message
 - bierglas loopt leeg
 - werkt ook op de achtergrond
-- ...
+- Uber pop up

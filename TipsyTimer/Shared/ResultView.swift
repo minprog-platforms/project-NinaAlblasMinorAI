@@ -11,6 +11,9 @@ import UserNotifications
 struct ResultView: View {
     @Binding var user: CurrentUser
     @Environment(\.presentationMode) var presentationMode
+    
+    var taxiNumber = "085 130 1675"
+    @State private var showingAlert = false
         
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     @State var timeRemaining = ""
@@ -30,6 +33,7 @@ struct ResultView: View {
         
         waitingMinutes = self.user.waitingTime
         waitingSeconds = waitingMinutes * 60
+    
 
         futureDate = Calendar.current.date(byAdding: .minute, value: waitingMinutes, to: Date())!
         // force unwrappen zodat ie crasht
@@ -86,12 +90,14 @@ struct ResultView: View {
                 
                 Spacer()
                 
+
+
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
                         .foregroundColor(Color("Tipsy-white"))
                         .shadow(color: Color("Nina-lightpink"), radius: 3)
                         .opacity(0.6)
-                    Text(timesUp ? "JE KUNT WEER VEILIG DE WEG OP!" : showTimer ? "WACHT NOG\n\(timeRemaining)\nNA JE LAATSTE SLOK" : "ZODRA DIT BIERTJE OP IS,\nMAG JIJ WEER RIJDEN!")
+                    Text(timesUp ? "JE KUNT WEER VEILIG DE WEG OP!" : showTimer ? "WACHT NOG\n\(timeRemaining)\nNA JE LAATSTE SLOK" : "ZODRA DIT\nBIERTJE OP IS,\nMAG JE WEER RIJDEN!")
                         .font(.system(size: (showTimer ? 30 : 27), weight: .heavy))
                         .foregroundColor(Color("Nina-dark"))
                         .multilineTextAlignment(.center)
@@ -118,8 +124,12 @@ struct ResultView: View {
             .onAppear(perform: {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
                 }
+                // TODO: 3 uur arbitrair?
+                if waitingMinutes > (60 * 3) {
+                    showingAlert = true
+                }
             })
-            
+                        
             .onReceive(timer) { _ in
                 let dateDiff = futureDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate
 
@@ -139,6 +149,23 @@ struct ResultView: View {
 
                 }
             }
+            
+            .alert("Bel een taxi", isPresented: $showingAlert) {
+                Button(action: {
+                    let phone = "tel://"
+                    let phoneNumberformatted = phone + taxiNumber
+                    guard let url = URL(string: phoneNumberformatted) else { return }
+                    UIApplication.shared.open(url)
+                }, label: {
+                    Text(taxiNumber)
+                })
+                Button("Nee, ik rijd met de BOB mee", role: .cancel) { }
+            }
+            
+            
+            
+            
+            
         }
         
     }

@@ -7,25 +7,31 @@ import SwiftUI
 //  Created by Nina Alblas on 30/04/2022.
 //
 
-import SwiftUI
 import UserNotifications
 
-struct TestView: View {
-    
-    
+struct PhoneView: View {
+
+    var phoneNumber = "+31613535053"
+
     var body: some View {
-        Color("Nina-hotpink")
-            .frame(width: 50, height: 50)
-            .edgesIgnoringSafeArea(.all)
+        VStack {
+            Button(action: {
+                let phone = "tel://"
+                let phoneNumberformatted = phone + phoneNumber
+                guard let url = URL(string: phoneNumberformatted) else { return }
+                UIApplication.shared.open(url)
+               }) {
+               Text(phoneNumber)
+                .foregroundColor(.blue)
+            }
+        }
     }
-    
-    
 }
 
 
 
-struct TestView_Previews: PreviewProvider {
+struct PhoneView_Previews: PreviewProvider {
     static var previews: some View {
-        TestView()
+        PhoneView()
     }
 }
