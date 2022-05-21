@@ -143,7 +143,7 @@ struct ResultView: View {
                     
                 } else {
                     timesUp = true
-                    self.Notify()
+                    self.notify()
                     self.timer.upstream.connect().cancel()
                     
 
@@ -183,7 +183,7 @@ struct ResultView: View {
         beerLevel += Double(((highestLevel - lowestLevel) / waitingSeconds))
     }
     
-    func Notify() {
+    func notify() {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = "De tijd zit erop!"
         notificationContent.body = "Je kunt weer veilig de weg op"
