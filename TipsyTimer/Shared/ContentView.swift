@@ -18,9 +18,8 @@
 // TODO: Merijns enum van drinks werkt niet
 // TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
 // TODO: ResultView - future date error handling. Ook op andere plekken?
-// TODO: Notificaties doen het niet op eigen telefoon, wel in simulator
-// TODO: Notificaties ook in-app? Delegate
 // TODO: iOS 14 downgrade?
+// TODO: Uber belt niet
 
 import SwiftUI
 

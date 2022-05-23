@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PhoneCallView: View {
-    var phoneNumber = "085 130 1675"
+    var phoneNumber = "+31851301675"
     @State private var showingAlert = false
 
     

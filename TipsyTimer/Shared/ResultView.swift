@@ -12,7 +12,7 @@ struct ResultView: View {
     @Binding var user: CurrentUser
     @Environment(\.presentationMode) var presentationMode
     
-    var taxiNumber = "085 130 1675"
+    var taxiNumber = "+31851301675"
     @State private var showingAlert = false
         
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
@@ -124,8 +124,7 @@ struct ResultView: View {
             .onAppear(perform: {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
                 }
-                // TODO: 3 uur arbitrair?
-                if waitingMinutes > (60 * 3) {
+                if waitingMinutes > (60 * 2) {
                     showingAlert = true
                 }
             })

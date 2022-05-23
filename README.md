@@ -63,7 +63,7 @@ Eerlijk gezegd denk ik dat ik een applicatie heb ontworpen die ik goed zou kunne
 *Slagzin: "Zie in één oogopslag wanneer je weer de weg op mag!"*
 
 Dingen die ik heb gedaan die niet per se nodig waren
-- notificaties
+- notificaties: werken alleen in simulator. Push notifications (iOS) doen het alleen op je device voor betalende gebruikers...
 - alle screen sizes
 - gifje
 - zorg dat je akkoord moet geven bij de disclaimer
