@@ -14,6 +14,8 @@
 // TODO: checken of code mooi is
 // TODO: print statements weg
 // TODO: alle }) weg
+// TODO: assets opruimen, gifje daarin?
+// TODO: AdaptiveDimensions in eigen file?
 
 import SwiftUI
 
