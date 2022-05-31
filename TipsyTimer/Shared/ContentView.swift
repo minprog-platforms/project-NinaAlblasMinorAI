@@ -8,18 +8,20 @@
 
 // TODO: comments toevoegen
 // TODO: maak alle @States private?
-// TODO: GitHub checken of alle files goed staan + Test en PhoneView verwijderen
-// TODO: Kijken of alle hoofdletters kloppen (struct wel, var niet etc.) & checken of enum bijv op juiste plek staat & NL vs EN & checken of code mooi is
-// TODO: Debuggen
-// TODO: import foundation?
-
-// TODO: waarom gaat ie iedere seconde door de functie waiting time? en in updateTimeRemaining() steeds opnieuw berekenen
-// TODO: na notificatie is james bond afgeknipt - lijkt gefixt?
-// TODO: Merijns enum van drinks werkt niet
-// TODO: TipsyTimerView - laat de view zoals ie was bij terugstap? Ik denk dat ie het zou onthouden als ik State en Binding vars zou hebben
-// TODO: ResultView - future date error handling. Ook op andere plekken?
+// TODO: GitHub checken of alle files goed staan + Test en PhoneView verwijderen                                                    ***
+// TODO: Kijken of alle hoofdletters kloppen (struct wel, var niet etc.)                                                            ***
+// TODO: checken of enum bijv op juiste plek staat                                                                                  ***
+// TODO: NL vs EN namen
+// TODO: checken of code mooi is
+// TODO: Debuggen?                                                                                                                  ***
+// TODO: import foundation?                                                                                                         ***
+// TODO: waarom gaat ie met iedere tap door de functie waiting time?                                                                ***
+// TODO: in updateTimeRemaining() steeds opnieuw berekenen                                                                          ***
+// TODO: TipsyTimerView - laat de view zoals ie was bij terugstap?                                                                  ***
+// TODO: ResultView - future date error handling. Ook op andere plekken?                                                            ***
 // TODO: iOS 14 downgrade?
-// TODO: Uber belt niet
+// TODO: gele error
+// TODO: print statements weg
 
 import SwiftUI
 
