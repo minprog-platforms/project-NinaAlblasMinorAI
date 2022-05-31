@@ -18,8 +18,10 @@
 		740E968D28153B870089D7E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E966328153B860089D7E0 /* ContentView.swift */; };
 		740E968E28153B870089D7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E966428153B870089D7E0 /* Assets.xcassets */; };
 		740E968F28153B870089D7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E966428153B870089D7E0 /* Assets.xcassets */; };
-		7436A50A2839725700F25E26 /* PhoneCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436A5092839725700F25E26 /* PhoneCallView.swift */; };
-		7436A50B2839725700F25E26 /* PhoneCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436A5092839725700F25E26 /* PhoneCallView.swift */; };
+		744FDD00284631E3000752EF /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDCFF284631E3000752EF /* CurrentUser.swift */; };
+		744FDD01284631E3000752EF /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDCFF284631E3000752EF /* CurrentUser.swift */; };
+		744FDD0328468A74000752EF /* CallTaxiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDD0228468A74000752EF /* CallTaxiView.swift */; };
+		744FDD0428468A74000752EF /* CallTaxiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDD0228468A74000752EF /* CallTaxiView.swift */; };
 		747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
 		747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
 		747C76272817367500852DFB /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C76262817367500852DFB /* HomeScreenView.swift */; };
@@ -40,10 +42,6 @@
 		74A201E12832E9CD004D2D3B /* AdaptiveDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A201DF2832E9CD004D2D3B /* AdaptiveDimensions.swift */; };
 		74CB2D03281EDDA2001CC294 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB2D02281EDDA2001CC294 /* ResultView.swift */; };
 		74CB2D04281EDDA2001CC294 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB2D02281EDDA2001CC294 /* ResultView.swift */; };
-		74CCAFE3282C4ECD00C28F25 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE2282C4ECD00C28F25 /* Test.swift */; };
-		74CCAFE4282C4ECD00C28F25 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE2282C4ECD00C28F25 /* Test.swift */; };
-		74CCAFE6282D4A5500C28F25 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */; };
-		74CCAFE7282D4A5500C28F25 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */; };
 		74CCAFEF282E7BDD00C28F25 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFEE282E7BDD00C28F25 /* GifImage.swift */; };
 		74CCAFF0282E7BDD00C28F25 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFEE282E7BDD00C28F25 /* GifImage.swift */; };
 		74CCAFF3282E949C00C28F25 /* driving_dog.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74CCAFF1282E949B00C28F25 /* driving_dog.gif */; };
@@ -90,7 +88,8 @@
 		740E968228153B870089D7E0 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		740E968628153B870089D7E0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		740E968828153B870089D7E0 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		7436A5092839725700F25E26 /* PhoneCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallView.swift; sourceTree = "<group>"; };
+		744FDCFF284631E3000752EF /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		744FDD0228468A74000752EF /* CallTaxiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallTaxiView.swift; sourceTree = "<group>"; };
 		747C7623281731F300852DFB /* TipsyTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTimerView.swift; sourceTree = "<group>"; };
 		747C76262817367500852DFB /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		747C7629281738A300852DFB /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
@@ -101,9 +100,7 @@
 		747C763828180E4F00852DFB /* DrivingExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingExperienceView.swift; sourceTree = "<group>"; };
 		74A201DF2832E9CD004D2D3B /* AdaptiveDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveDimensions.swift; sourceTree = "<group>"; };
 		74CB2D02281EDDA2001CC294 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		74CCAFE2282C4ECD00C28F25 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = SOURCE_ROOT; };
-		74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = SOURCE_ROOT; };
-		74CCAFEE282E7BDD00C28F25 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = SOURCE_ROOT; };
+		74CCAFEE282E7BDD00C28F25 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GifImage.swift; path = Shared/GifImage.swift; sourceTree = SOURCE_ROOT; };
 		74CCAFF1282E949B00C28F25 /* driving_dog.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = driving_dog.gif; sourceTree = "<group>"; };
 		74CCAFF2282E949C00C28F25 /* driving_man.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = driving_man.gif; sourceTree = "<group>"; };
 		74CCAFF7282E989300C28F25 /* driving_hangover.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = driving_hangover.gif; sourceTree = "<group>"; };
@@ -158,17 +155,16 @@
 		740E966128153B860089D7E0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				744FDCFF284631E3000752EF /* CurrentUser.swift */,
 				74CCAFF1282E949B00C28F25 /* driving_dog.gif */,
 				74CCAFF2282E949C00C28F25 /* driving_man.gif */,
 				74CCAFF7282E989300C28F25 /* driving_hangover.gif */,
 				74CCAFFA282EA26D00C28F25 /* driving_jb.gif */,
 				74CCAFEE282E7BDD00C28F25 /* GifImage.swift */,
-				74CCAFE5282D4A5500C28F25 /* CurrentUser.swift */,
-				74CCAFE2282C4ECD00C28F25 /* Test.swift */,
-				7436A5092839725700F25E26 /* PhoneCallView.swift */,
 				740E966228153B860089D7E0 /* TipsyTimerApp.swift */,
 				740E966328153B860089D7E0 /* ContentView.swift */,
 				74CB2D02281EDDA2001CC294 /* ResultView.swift */,
+				744FDD0228468A74000752EF /* CallTaxiView.swift */,
 				747C76262817367500852DFB /* HomeScreenView.swift */,
 				747C7623281731F300852DFB /* TipsyTimerView.swift */,
 				747C763828180E4F00852DFB /* DrivingExperienceView.swift */,
@@ -303,7 +299,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					740E966828153B870089D7E0 = {
 						CreatedOnToolsVersion = 13.3;
@@ -389,8 +385,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */,
-				74CCAFE3282C4ECD00C28F25 /* Test.swift in Sources */,
 				74A201E02832E9CD004D2D3B /* AdaptiveDimensions.swift in Sources */,
+				744FDD0328468A74000752EF /* CallTaxiView.swift in Sources */,
 				747C763628180E3500852DFB /* DrinkingTimeView.swift in Sources */,
 				740E968C28153B870089D7E0 /* ContentView.swift in Sources */,
 				747C76272817367500852DFB /* HomeScreenView.swift in Sources */,
@@ -401,10 +397,9 @@
 				740E968A28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
 				747C762D2817F5B700852DFB /* AgeView.swift in Sources */,
 				747C763328180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
-				7436A50A2839725700F25E26 /* PhoneCallView.swift in Sources */,
-				74CCAFE6282D4A5500C28F25 /* CurrentUser.swift in Sources */,
 				74CCAFFE282EF4F200C28F25 /* DrinkView.swift in Sources */,
 				747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
+				744FDD00284631E3000752EF /* CurrentUser.swift in Sources */,
 				74CCAFEF282E7BDD00C28F25 /* GifImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +410,6 @@
 			files = (
 				747C763A28180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
 				740E968D28153B870089D7E0 /* ContentView.swift in Sources */,
-				74CCAFE4282C4ECD00C28F25 /* Test.swift in Sources */,
 				74CCAFFF282EF4F200C28F25 /* DrinkView.swift in Sources */,
 				747C762B281738A300852DFB /* GenderView.swift in Sources */,
 				747C763128180DDA00852DFB /* WeightAndHeightView.swift in Sources */,
@@ -424,12 +418,12 @@
 				747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */,
 				740E968B28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
 				74A201E12832E9CD004D2D3B /* AdaptiveDimensions.swift in Sources */,
+				744FDD0428468A74000752EF /* CallTaxiView.swift in Sources */,
+				744FDD01284631E3000752EF /* CurrentUser.swift in Sources */,
 				747C76282817367500852DFB /* HomeScreenView.swift in Sources */,
 				74CCAFF0282E7BDD00C28F25 /* GifImage.swift in Sources */,
 				747C763428180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
-				7436A50B2839725700F25E26 /* PhoneCallView.swift in Sources */,
 				747C763728180E3500852DFB /* DrinkingTimeView.swift in Sources */,
-				74CCAFE7282D4A5500C28F25 /* CurrentUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -569,6 +564,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -649,6 +645,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -675,6 +672,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

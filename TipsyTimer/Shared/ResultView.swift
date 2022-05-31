@@ -12,7 +12,6 @@ struct ResultView: View {
     @Binding var user: CurrentUser
     @Environment(\.presentationMode) var presentationMode
     
-    var taxiNumber = "+31851301675"
     @State private var showingAlert = false
         
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
@@ -24,6 +23,9 @@ struct ResultView: View {
     var waitingSeconds: Int = 0
         
     @State var beerLevel: CGFloat = 260
+    let highestBeerLevel = 1100
+    let lowestBeerLevel = 260
+    var beerLevelChange = 0.0
     
     @State var showTimer: Bool = true
     
@@ -33,12 +35,11 @@ struct ResultView: View {
         
         waitingMinutes = self.user.waitingTime
         waitingSeconds = waitingMinutes * 60
-    
-
-        futureDate = Calendar.current.date(byAdding: .minute, value: waitingMinutes, to: Date())!
-        // force unwrappen zodat ie crasht
-        // TODO: beter: if let -->handelen als het misgaat, ik weet niet hoe
         
+        futureDate = Calendar.current.date(byAdding: .minute, value: waitingMinutes, to: Date())!
+        
+        // TODO: als waiting seconds 0 is of negatief
+        beerLevelChange = Double(((highestBeerLevel - lowestBeerLevel) / waitingSeconds))
     }
     
     var body: some View {
@@ -150,23 +151,9 @@ struct ResultView: View {
             }
             
             .alert("Bel een taxi", isPresented: $showingAlert) {
-                Button(action: {
-                    let phone = "tel://"
-                    let phoneNumberformatted = phone + taxiNumber
-                    guard let url = URL(string: phoneNumberformatted) else { return }
-                    UIApplication.shared.open(url)
-                }, label: {
-                    Text(taxiNumber)
-                })
-                Button("Nee, ik rijd met de BOB mee", role: .cancel) { }
+                CallTaxiView()
             }
-            
-            
-            
-            
-            
         }
-        
     }
     
     func updateTimeRemaining() {
@@ -176,10 +163,7 @@ struct ResultView: View {
         timerFormatter.zeroFormattingBehavior = .pad
         timeRemaining = timerFormatter.string(from: Date(), to: futureDate) ?? ""
         
-        // TODO: dit bereken ik nu steeds opnieuw, maar als ik het in de init initialiseer, deelt ie door 0 (waiting seconds)
-        let highestLevel = 1100
-        let lowestLevel = 260
-        beerLevel += Double(((highestLevel - lowestLevel) / waitingSeconds))
+        beerLevel += beerLevelChange
     }
     
     func notify() {
