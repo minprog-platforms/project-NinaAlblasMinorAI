@@ -8,15 +8,12 @@
 
 // TODO: comments toevoegen
 // TODO: maak alle @States private?
-// TODO: GitHub checken of alle files goed staan + Test en PhoneView verwijderen. Hoe?                                              ***
 // TODO: Kijken of alle hoofdletters kloppen (struct en enum (alle types) wel, var niet etc.) Functies?
-// TODO: checken of enum bijv op juiste plek staat                                                                                  *** Eigen types (enums, structs, classes) wil je apart hebben, losse file! Waar functies?
+// TODO: checken of enum bijv op juiste plek staat                                                                                  ***                          Eigen types (enums, structs, classes) wil je apart hebben, losse file! Waar functies?
 // TODO: NL vs EN namen
 // TODO: checken of code mooi is
-// TODO: ResultView - in updateTimeRemaining() steeds opnieuw berekenen                                                             ***
-// TODO: TipsyTimerView - laat de view zoals ie was bij terugstap?                                                                  *** Nee.
 // TODO: print statements weg
-// TODO: taxi buttons?
+// TODO: alle }) weg
 
 import SwiftUI
 

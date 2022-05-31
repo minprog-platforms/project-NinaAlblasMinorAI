@@ -20,8 +20,8 @@
 		740E968F28153B870089D7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E966428153B870089D7E0 /* Assets.xcassets */; };
 		744FDD00284631E3000752EF /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDCFF284631E3000752EF /* CurrentUser.swift */; };
 		744FDD01284631E3000752EF /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDCFF284631E3000752EF /* CurrentUser.swift */; };
-		744FDD0328468A74000752EF /* CallTaxiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDD0228468A74000752EF /* CallTaxiView.swift */; };
-		744FDD0428468A74000752EF /* CallTaxiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDD0228468A74000752EF /* CallTaxiView.swift */; };
+		744FDD06284694A3000752EF /* callTaxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDD05284694A3000752EF /* callTaxi.swift */; };
+		744FDD07284694A3000752EF /* callTaxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDD05284694A3000752EF /* callTaxi.swift */; };
 		747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
 		747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
 		747C76272817367500852DFB /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C76262817367500852DFB /* HomeScreenView.swift */; };
@@ -89,7 +89,7 @@
 		740E968628153B870089D7E0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		740E968828153B870089D7E0 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		744FDCFF284631E3000752EF /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
-		744FDD0228468A74000752EF /* CallTaxiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallTaxiView.swift; sourceTree = "<group>"; };
+		744FDD05284694A3000752EF /* callTaxi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = callTaxi.swift; sourceTree = "<group>"; };
 		747C7623281731F300852DFB /* TipsyTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTimerView.swift; sourceTree = "<group>"; };
 		747C76262817367500852DFB /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		747C7629281738A300852DFB /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 				740E966228153B860089D7E0 /* TipsyTimerApp.swift */,
 				740E966328153B860089D7E0 /* ContentView.swift */,
 				74CB2D02281EDDA2001CC294 /* ResultView.swift */,
-				744FDD0228468A74000752EF /* CallTaxiView.swift */,
+				744FDD05284694A3000752EF /* callTaxi.swift */,
 				747C76262817367500852DFB /* HomeScreenView.swift */,
 				747C7623281731F300852DFB /* TipsyTimerView.swift */,
 				747C763828180E4F00852DFB /* DrivingExperienceView.swift */,
@@ -386,7 +386,7 @@
 			files = (
 				747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */,
 				74A201E02832E9CD004D2D3B /* AdaptiveDimensions.swift in Sources */,
-				744FDD0328468A74000752EF /* CallTaxiView.swift in Sources */,
+				744FDD06284694A3000752EF /* callTaxi.swift in Sources */,
 				747C763628180E3500852DFB /* DrinkingTimeView.swift in Sources */,
 				740E968C28153B870089D7E0 /* ContentView.swift in Sources */,
 				747C76272817367500852DFB /* HomeScreenView.swift in Sources */,
@@ -418,8 +418,8 @@
 				747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */,
 				740E968B28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
 				74A201E12832E9CD004D2D3B /* AdaptiveDimensions.swift in Sources */,
-				744FDD0428468A74000752EF /* CallTaxiView.swift in Sources */,
 				744FDD01284631E3000752EF /* CurrentUser.swift in Sources */,
+				744FDD07284694A3000752EF /* callTaxi.swift in Sources */,
 				747C76282817367500852DFB /* HomeScreenView.swift in Sources */,
 				74CCAFF0282E7BDD00C28F25 /* GifImage.swift in Sources */,
 				747C763428180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,

@@ -12,6 +12,8 @@ struct ResultView: View {
     @Binding var user: CurrentUser
     @Environment(\.presentationMode) var presentationMode
     
+    let taxiNumber = "+31851301675"
+
     @State private var showingAlert = false
         
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
@@ -38,8 +40,9 @@ struct ResultView: View {
         
         futureDate = Calendar.current.date(byAdding: .minute, value: waitingMinutes, to: Date())!
         
-        // TODO: als waiting seconds 0 is of negatief
-        beerLevelChange = Double(((highestBeerLevel - lowestBeerLevel) / waitingSeconds))
+        if waitingSeconds > 0 {
+            beerLevelChange = Double(((highestBeerLevel - lowestBeerLevel) / waitingSeconds))
+        }
     }
     
     var body: some View {
@@ -149,10 +152,10 @@ struct ResultView: View {
 
                 }
             }
-            
-            .alert("Bel een taxi", isPresented: $showingAlert) {
-                CallTaxiView()
+            .actionSheet(isPresented: $showingAlert) {
+                callTaxi()
             }
+
         }
     }
     
