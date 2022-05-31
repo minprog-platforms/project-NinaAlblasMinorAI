@@ -41,7 +41,7 @@ struct DrinkView: View {
                 .fontWeight(.heavy)
                 .foregroundColor(Color("Nina-dark"))
                 .padding()
-                .frame(width: getFrameWidth(340), height: getFrameHeight(30))
+                .frame(width: convertWidth(340), height: convertHeight(30))
                 .background(Color("Nina-lightpink"))
                 .cornerRadius(20)
             HStack {
@@ -50,11 +50,11 @@ struct DrinkView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(.all)
-                    .frame(width: getFrameWidth(125), height: getFrameHeight(110))
+                    .frame(width: convertWidth(125), height: convertHeight(110))
                     .foregroundColor(Color("Tipsy-white"))
                 TextField("0", text: drinkNames[currentDrink] == "BIER" ? $beers : drinkNames[currentDrink] == "WIJN" ? $wines : drinkNames[currentDrink] == "COCKTAILS" ? $cocktails : $liquors)
                     .padding(.horizontal)
-                    .frame(width: getFrameWidth(75))
+                    .frame(width: convertWidth(75))
                     .textFieldStyle(.roundedBorder)
                     .onChange(of: drinkNames[currentDrink] == "BIER" ? beers : drinkNames[currentDrink] == "WIJN" ? wines : drinkNames[currentDrink] == "COCKTAILS" ? cocktails : liquors) { _ in
                         user.alcoholConsumption = totalAlcoholConsumption(beers: beers,
@@ -69,7 +69,7 @@ struct DrinkView: View {
             .padding(.trailing)
             
         }
-        .frame(width: getFrameWidth(350), height: getFrameHeight(145))
+        .frame(width: convertWidth(350), height: convertHeight(145))
         .background(Color("Nina-lightpurple"))
         .cornerRadius(20)
         .shadow(color: Color("Nina-dark"), radius: 5)

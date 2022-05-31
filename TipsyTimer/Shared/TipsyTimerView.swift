@@ -71,7 +71,7 @@ struct TipsyTimerView: View {
                             .foregroundColor(Color("Tipsy-white"))
                             .shadow(color: Color("Nina-dark"), radius: 5)
                             .labelStyle(.iconOnly)
-                            .frame(width: getFrameWidth(125), height: getFrameHeight(100))
+                            .frame(width: convertWidth(125), height: convertHeight(100))
                     }
 
                     
@@ -89,13 +89,12 @@ struct TipsyTimerView: View {
                                 .font(.system(size: 25, weight: .heavy))
                                 .foregroundColor(Color("Tipsy-white"))
                                 .shadow(color: Color("Nina-dark"), radius: 5)
-        //                        .frame(width: getFrameWidth(300), height: getFrameHeight(100))
                             Label("", systemImage: "arrow.right")
                                 .font(.system(size: 25, weight: .heavy))
                                 .foregroundColor(Color("Tipsy-white"))
                                 .shadow(color: Color("Nina-dark"), radius: 5)
                                 .labelStyle(.iconOnly)
-                                .frame(width: getFrameWidth(125), height: getFrameHeight(100))
+                                .frame(width: convertWidth(125), height: convertHeight(100))
                         }
                     }
                                         

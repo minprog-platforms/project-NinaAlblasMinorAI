@@ -16,7 +16,7 @@ struct HomeScreenView: View {
                            endPoint: .trailing)
                 .edgesIgnoringSafeArea(.all)
             Image("tipsytimerlogo")
-                .offset(x: getOffsetX(-20))
+                .offset(x: convertWidth(-20))
             VStack {
                 Spacer()
 
@@ -54,28 +54,30 @@ struct HomeScreenView: View {
                         .font(.system(size: 55, weight: .black))
                         .foregroundColor(Color("Tipsy-white"))
                         // square dus 2x width
-                        .frame(width: getFrameWidth(300), height: getFrameWidth(300))
+                        .frame(width: convertWidth(300), height: convertWidth(300))
                         .background(Color("Nina-hotpink"))
                         .cornerRadius(25.0)
                         .shadow(color: Color("Nina-dark"), radius: 5)
                     
                 }
-                .frame(width: getFrameWidth(300), height: getFrameWidth(300))
+                .frame(width: convertWidth(300), height: convertWidth(300))
                 
                 Spacer()
                 Spacer()
-                NavigationLink(destination: DisclaimerView()
+                NavigationLink(
+                    destination: DisclaimerView()
                     .navigationBarTitle("")
-                    .navigationBarHidden(true), label: {
+                    .navigationBarHidden(true)
+                ) {
                     Label("DISCLAIMER", systemImage: "exclamationmark.circle")
-                        .frame(width: getFrameWidth(350), height: getFrameHeight(50))
+                        .frame(width: convertWidth(350), height: convertHeight(50))
                         .font(.system(size: 25, weight: .bold))
                         .foregroundColor(Color("Tipsy-white"))
                         .background(Color("Nina-sky"))
                         .cornerRadius(6.0)
                         .shadow(color: Color("Nina-dark"), radius: 1)
 
-                })
+                    }
                 Spacer()
             }
 

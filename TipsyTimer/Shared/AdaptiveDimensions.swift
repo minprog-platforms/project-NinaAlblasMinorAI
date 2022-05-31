@@ -10,22 +10,16 @@ import SwiftUI
 
 // Uses the dimensions of the screen this application was built on (iPhone 11 Pro Max) to determine the dimensions of views on different screen sizes
 
-func getFrameWidth(_ originalWidth: Double) -> CGFloat {
+let originalScreenWidth: Double = 414
+let originalScreenHeight: Double = 896
+
+
+func convertWidth(_ width: Double) -> CGFloat {
     // the layout was designed on an iPhone 11 Pro Max with a screen width of 414
-    return Double(originalWidth / 414) * UIScreen.main.bounds.width
+    return Double(width / originalScreenWidth) * UIScreen.main.bounds.width
 }
 
-func getFrameHeight(_ originalHeight: Double) -> CGFloat {
+func convertHeight(_ height: Double) -> CGFloat {
     // the layout was designed on an iPhone 11 Pro Max with a screen height of 896
-    return Double(originalHeight / 896) * UIScreen.main.bounds.height
-}
-
-func getOffsetX(_ originalOffsetX: Double) -> CGFloat {
-    // the layout was designed on an iPhone 11 Pro Max with a screen width of 414
-    return Double(originalOffsetX / 414) * UIScreen.main.bounds.width
-}
-
-func getOffsetY(_ originalOffsetY: Double) -> CGFloat {
-    // the layout was designed on an iPhone 11 Pro Max with a screen height of 896
-    return Double(originalOffsetY / 896) * UIScreen.main.bounds.height
+    return Double(height / originalScreenHeight) * UIScreen.main.bounds.height
 }

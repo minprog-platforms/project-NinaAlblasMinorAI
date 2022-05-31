@@ -53,21 +53,21 @@ struct ResultView: View {
                            endPoint: .trailing)
                 .edgesIgnoringSafeArea(.all)
             Image("tipsytimerlogo")
-                .offset(x: getOffsetX(-20))
+                .offset(x: convertWidth(-20))
             
             switch timesUp {
             case true:
                 GifImage("driving_jb")
                     .edgesIgnoringSafeArea(.all)
-                    .frame(width: getFrameWidth(1700), height: getFrameHeight(1100))
-                    .offset(y: getOffsetY(-100))
+                    .frame(width: convertWidth(1700), height: convertHeight(1100))
+                    .offset(y: convertHeight(-100))
                     
             case false:
                 Image("beer-1")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: getFrameWidth(700), height: getFrameHeight(1300))
-                    .offset(y: getOffsetY(beerLevel))
+                    .frame(width: convertWidth(700), height: convertHeight(1300))
+                    .offset(y: convertHeight(beerLevel))
                     .animation(.default, value: beerLevel)
             }
 
@@ -107,7 +107,7 @@ struct ResultView: View {
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
                 }
-                .frame(width: getFrameWidth(350), height: getFrameHeight(150))
+                .frame(width: convertWidth(350), height: convertHeight(150))
                 
                 
                 Spacer()
@@ -119,19 +119,22 @@ struct ResultView: View {
                             .font(.system(size: 25, weight: .heavy))
                             .shadow(color: Color("Nina-dark"), radius: 5)
                     }
-                    .simultaneousGesture(TapGesture().onEnded {
-                        self.timer.upstream.connect().cancel()
-                    })
+                    .simultaneousGesture(
+                        TapGesture().onEnded {
+                            self.timer.upstream.connect().cancel()
+                    }
+                )
             }
-            .frame(width: getFrameWidth(400), height: getFrameHeight(850))
+            .frame(width: convertWidth(400), height: convertHeight(850))
 
-            .onAppear(perform: {
+            .onAppear() {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
                 }
+                
                 if waitingMinutes > (60 * 2) {
                     showingAlert = true
                 }
-            })
+            }
                         
             .onReceive(timer) { _ in
                 let dateDiff = futureDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate

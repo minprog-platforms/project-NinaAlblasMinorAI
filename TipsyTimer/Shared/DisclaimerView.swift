@@ -19,7 +19,7 @@ struct DisclaimerView: View {
                 Label("DISCLAIMER", systemImage: "exclamationmark.circle")
                     .font(.system(size: 25, weight: .bold))
                     .foregroundColor(Color("Tipsy-white"))
-                    .frame(width: getFrameWidth(350), height: getFrameHeight(50))
+                    .frame(width: convertWidth(350), height: convertHeight(50))
                     .background((Color("Nina-sky")))
                     .cornerRadius(20)
                     .shadow(color: Color("Nina-dark"), radius: 1)
@@ -43,7 +43,7 @@ struct DisclaimerView: View {
                     Text("Naast de gegevens die Tipsy Timer van je vraagt, spelen er ook andere factoren mee bij de absorptie en afbraak van alcohol, zoals voeding, fysieke conditie en drugs- of medicijngebruik")
                         .font(.system(size: 18))
                 }
-                .frame(width: getFrameWidth(350), height: getFrameHeight(620))
+                .frame(width: convertWidth(350), height: convertHeight(620))
                 .cornerRadius(20)
                 
                 NavigationLink(destination: HomeScreenView()
@@ -52,13 +52,13 @@ struct DisclaimerView: View {
                     Label("AKKOORD", systemImage: "checkmark")
                         .font(.system(size: 25, weight: .black))
                         .foregroundColor(Color("Tipsy-white"))
-                        .frame(width: getFrameWidth(200), height: getFrameHeight(50))
+                        .frame(width: convertWidth(200), height: convertHeight(50))
                         .background(Color("Nina-hotpink"))
                         .cornerRadius(20)
                         .shadow(color: Color("Nina-dark"), radius: 5)
                     
                 }
-                .frame(width: getFrameWidth(200), height: getFrameHeight(50))
+                .frame(width: convertWidth(200), height: convertHeight(50))
             }
         }
     }
