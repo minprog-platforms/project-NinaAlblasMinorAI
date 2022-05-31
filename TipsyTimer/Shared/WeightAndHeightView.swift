@@ -54,9 +54,3 @@ struct WeightAndHeightView: View {
         }
     }
 }
-
-//struct WeightAndHeightView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        WeightAndHeightView()
-//    }
-//}

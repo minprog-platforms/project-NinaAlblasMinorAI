@@ -95,9 +95,3 @@ struct DrivingExperienceView: View {
         }
     }
 }
-
-//struct DrivingExperienceView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DrivingExperienceView()
-//    }
-//}

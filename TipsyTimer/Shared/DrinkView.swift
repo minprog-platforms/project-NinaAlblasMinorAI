@@ -83,9 +83,6 @@ struct DrinkView: View {
         let liquorAmount = amount(of: liquors)
         
         let totalAlcoholGrams = (beerAmount + wineAmount + cocktailAmount + liquorAmount) * 10
-        
-        print(beerAmount, wineAmount, cocktailAmount, liquorAmount)
-        print(totalAlcoholGrams)
 
         return totalAlcoholGrams
     }
@@ -99,8 +96,3 @@ struct DrinkView: View {
     }
 }
 
-//struct DrinkView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DrinkView()
-//    }
-//}

@@ -94,9 +94,3 @@ struct DrinkingTimeView: View {
         }
     }
 }
-
-//struct DrinkingTimeView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DrinkingTimeView()
-//    }
-//}

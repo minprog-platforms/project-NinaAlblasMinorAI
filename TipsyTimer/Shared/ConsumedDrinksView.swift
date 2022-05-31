@@ -64,9 +64,3 @@ struct ConsumedDrinksView: View {
     }
     
 }
-
-//struct ConsumedDrinksView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ConsumedDrinksView(user: $user)
-//    }
-//}

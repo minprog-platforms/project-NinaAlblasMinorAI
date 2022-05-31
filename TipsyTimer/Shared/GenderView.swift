@@ -88,8 +88,3 @@ struct GenderView: View {
     }
 }
 
-//struct GenderInputView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GenderView()
-//    }
-//}
