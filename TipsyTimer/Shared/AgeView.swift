@@ -11,9 +11,9 @@ import SwiftUI
 struct AgeView: View {
     @Binding var user: CurrentUser
     
-    @State var progress: CGFloat = 0
-    @State var angle: Double = 0
-    @State var age: Int = 18
+    @State private var progress: CGFloat = 0
+    @State private var angle: Double = 0
+    @State private var age: Int = 18
     
     
     var body: some View {
@@ -87,10 +87,3 @@ struct AgeView: View {
         
     }
 }
-
-//struct AgeView_Previews: PreviewProvider {
-//    @State var user = CurrentUser()
-//    static var previews: some View {
-//        AgeView(user: $user)
-//    }
-//}

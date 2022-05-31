@@ -10,11 +10,11 @@ import SwiftUI
 struct DrinkingTimeView: View {
     @Binding var user: CurrentUser
     
-    @State var progress: CGFloat = 0.0
-    @State var angle: Double = 0.0
+    @State private var progress: CGFloat = 0.0
+    @State private var angle: Double = 0.0
     
-    @State var drinkingTime: Int = 0
-    @State var drinkingTimeInHours: Double = 0.0
+    @State private var drinkingTime: Int = 0
+    @State private var drinkingTimeInHours: Double = 0.0
     
     var body: some View {
         VStack {

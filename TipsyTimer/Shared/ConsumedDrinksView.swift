@@ -15,10 +15,10 @@ enum Drink {
 struct ConsumedDrinksView: View {
     @Binding var user: CurrentUser
     
-    @State var amountOfBeer = ""
-    @State var amountOfWine = ""
-    @State var amountOfCocktails = ""
-    @State var amountOfLiquor = ""
+    @State private var amountOfBeer = ""
+    @State private var amountOfWine = ""
+    @State private var amountOfCocktails = ""
+    @State private var amountOfLiquor = ""
     
     var body: some View {
         VStack {

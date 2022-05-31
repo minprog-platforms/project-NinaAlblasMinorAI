@@ -10,8 +10,8 @@ import SwiftUI
 struct WeightAndHeightView: View {
     @Binding var user: CurrentUser
     
-    @State var bodyHeight: Double = 1.80
-    @State var bodyWeight: Double = 75
+    @State private var bodyHeight: Double = 1.80
+    @State private var bodyWeight: Double = 75
     
     var body: some View {
         VStack() {

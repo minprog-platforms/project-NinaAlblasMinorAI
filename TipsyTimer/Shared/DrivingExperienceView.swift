@@ -14,7 +14,7 @@ enum ExperienceButtonPressed {
 struct DrivingExperienceView: View {
     @Binding var user: CurrentUser
     
-    @State var experienceButtonPressed: ExperienceButtonPressed = .none
+    @State private var experienceButtonPressed: ExperienceButtonPressed = .none
     
     var body: some View {
         VStack {

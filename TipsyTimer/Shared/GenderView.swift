@@ -14,7 +14,7 @@ enum GenderButtonPressed {
 struct GenderView: View {
     @Binding var user: CurrentUser
     
-    @State var genderButtonPressed: GenderButtonPressed = .none
+    @State private var genderButtonPressed: GenderButtonPressed = .none
     
     var body: some View {
         

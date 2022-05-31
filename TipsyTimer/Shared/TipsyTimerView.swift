@@ -17,11 +17,11 @@ enum userInputSteps: CGFloat {
 }
 
 struct TipsyTimerView: View {
-    @State var currentStep: userInputSteps = .gender
-    @State var user = CurrentUser()
+    @State private var currentStep: userInputSteps = .gender
+    @State private var user = CurrentUser()
     @Environment(\.presentationMode) var presentationMode
     
-    @State var stepsCompleted = false
+    @State private var stepsCompleted = false
     
     var body: some View {
         ZStack {

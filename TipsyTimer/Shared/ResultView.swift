@@ -17,19 +17,19 @@ struct ResultView: View {
     @State private var showingAlert = false
         
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
-    @State var timeRemaining = ""
+    @State private var timeRemaining = ""
     var futureDate: Date = Date()
-    @State var timesUp: Bool = false
+    @State private var timesUp: Bool = false
     
     var waitingMinutes: Int = 0
     var waitingSeconds: Int = 0
         
-    @State var beerLevel: CGFloat = 260
+    @State private var beerLevel: CGFloat = 260
     let highestBeerLevel = 1100
     let lowestBeerLevel = 260
     var beerLevelChange = 0.0
     
-    @State var showTimer: Bool = true
+    @State private var showTimer: Bool = true
     
     init(user: Binding<CurrentUser>) {
         self._user = user
@@ -202,8 +202,3 @@ struct ResultView: View {
         )
     }
 }
-//struct ResultView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ResultView()
-//    }
-//}

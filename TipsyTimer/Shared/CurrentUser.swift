@@ -45,14 +45,9 @@ struct CurrentUser {
         
         // waiting time in hours (1.89 hours)
         let waitingTimeInHours: Double = (((((alcoholConsumption / TBW) * bloodWaterPercentage) - targetBAC) / metabolicRate) - drinkingTime)
-        print("Waiting time: \(waitingTimeInHours)")
         
         // waiting time in minutes (1.89 hours * 60 mins = 113 mins)
         let waitingTimeInMinutes = Int(waitingTimeInHours * 60)
-        
-//        print("Gender: \(gender)\nAge: \(age)\nWeight: \(weight)\nHeight: \(height)\nAlcohol consumption: \(alcoholConsumption)\nDrinking time: \(drinkingTime)\nDriving experience: \(drivingExperience)\nWaiting minutes: \(waitingTimeInMinutes)")
-        print("Waiting time (hrs) = \(waitingTimeInHours)\nWaiting time (mins) = \(waitingTimeInMinutes)")
-        
                 
         return waitingTimeInMinutes
 

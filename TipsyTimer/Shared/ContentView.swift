@@ -4,7 +4,6 @@
 //
 //  Created by Nina Alblas on 24/04/2022.
 //
-// TODO voor de deadline, hierna geen functionaliteit meer toevoegen:
 
 // TODO: comments toevoegen
 // TODO: maak alle @States private?
@@ -12,8 +11,8 @@
 // TODO: checken of enum bijv op juiste plek staat                                                                                  ***                          Eigen types (enums, structs, classes) wil je apart hebben, losse file! Waar functies?
 // TODO: NL vs EN namen
 // TODO: checken of code mooi is
-// TODO: print statements weg
 // TODO: assets opruimen, gifje daarin?
+// TODO: control + i
 
 import SwiftUI
 
