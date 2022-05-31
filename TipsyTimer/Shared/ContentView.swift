@@ -8,9 +8,9 @@
 // TODO: comments toevoegen + meteen control i
 // TODO: Kijken of alle hoofdletters kloppen (struct en enum (alle types) wel, var niet etc.) Functies?
 // TODO: checken of enum bijv op juiste plek staat                                                                                  ***                          Eigen types (enums, structs, classes) wil je apart hebben, losse file! Waar functies?
-// TODO: NL vs EN namen
 // TODO: checken of code mooi is
 // TODO: assets opruimen, gifje daarin?
+// TODO: force unwrappen fixen met if let!
 
 import SwiftUI
 

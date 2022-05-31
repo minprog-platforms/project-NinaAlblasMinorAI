@@ -48,8 +48,8 @@ struct CurrentUser {
         
         // waiting time in minutes (1.89 hours * 60 mins = 113 mins)
         let waitingTimeInMinutes = Int(waitingTimeInHours * 60)
-                
+        
         return waitingTimeInMinutes
-
+        
     }
 }
