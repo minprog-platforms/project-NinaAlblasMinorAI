@@ -12,7 +12,7 @@ struct ResultView: View {
     @Binding var user: CurrentUser
     @Environment(\.presentationMode) var presentationMode
     
-    let taxiNumber = "+31851301675"
+//    let taxiNumber = "+31851301675"
 
     @State private var showingAlert = false
         
@@ -57,7 +57,7 @@ struct ResultView: View {
             
             switch timesUp {
             case true:
-                GifImage("driving_jb")
+                GifImage("DrivingJamesBond")
                     .edgesIgnoringSafeArea(.all)
                     .frame(width: convertWidth(1700), height: convertHeight(1100))
                     .offset(y: convertHeight(-100))

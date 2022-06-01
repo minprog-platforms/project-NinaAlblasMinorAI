@@ -11,6 +11,13 @@
 // TODO: checken of code mooi is
 // TODO: assets opruimen, gifje daarin?
 // TODO: force unwrappen fixen met if let!
+// TODO: structureren
+// TODO: referenties (gif, waiting time, cirkels)
+
+// 1: contentview
+// 2: identificeer vs ben
+// 3: geen permanente data
+// 4: timer loopt niet door
 
 import SwiftUI
 
