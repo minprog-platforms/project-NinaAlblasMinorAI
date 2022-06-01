@@ -78,7 +78,6 @@ struct HomeScreenView: View {
                 
                 Spacer()
             }
-            
         }
     }
 }

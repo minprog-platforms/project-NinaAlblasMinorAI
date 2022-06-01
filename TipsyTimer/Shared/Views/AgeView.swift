@@ -73,6 +73,8 @@ struct AgeView: View {
             let progress = angle / 360
             self.progress = progress
             self.angle = Double(angle)
+            
+            // possible age inputs range from 18 up to and excl. 101 
             self.age = Int(progress * 83 + 18)
             user.age = Double(self.age)
         }
