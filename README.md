@@ -5,12 +5,13 @@ Ieder jaar stijgt het aantal ongelukken waarbij alcohol in het spel is ([NOS, 20
 De applicatie Tipsy Timer zal het aantal beschonken bestuurders helpen verminderen doordat ze de gebruiker aan de hand van een aantal gegevens, waaronder lengte, gewicht en de genuttigde hoeveelheid standaardglazen, toont hoe lang hij nog moet wachten tot de alcohol in zijn bloed is afgebroken en hij weer veilig de weg op kan.
 
 ## Doel van deze applicatie
+* Vraagt de gebruiker naar een aantal gegevens, waaronder geslacht, leeftijd, lengte en gewicht, en het aantal genuttigde alcoholische consumpties.
 * Geeft je de tijd in uren waarna de alcohol in je lichaam in zoverre is afgebroken dat de toegestane BAC is bereikt a.d.h.v. een animatie van een leegdrinkend glaasje met een timer erin
 * Timer blijft lopen ook als je app sluit
 * Geeft een notificatie als de timer afgelopen is
 
-<img src="doc/Home-Screen.png" alt="Screenshot van home-scherm" width="200"/>
-<img src="doc/Beer-Level.png" alt="Screenshot van scherm met resultaat en leeglopend biertje" width="200"/>
+<img src="doc/Home-Screen.png" alt="Screenshot van home-scherm" width="300"/>
+<img src="doc/Beer-Level.png" alt="Screenshot van scherm met resultaat en leeglopend biertje" width="300"/>
 
 ## Disclaimers
 * Geen 18, geen alchol
