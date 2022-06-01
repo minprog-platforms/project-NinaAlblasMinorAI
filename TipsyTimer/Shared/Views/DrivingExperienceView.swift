@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-enum ExperienceButtonPressed {
-    case startingButton, expertButton, none
-}
-
 struct DrivingExperienceView: View {
     @Binding var user: CurrentUser
     

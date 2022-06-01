@@ -64,9 +64,3 @@ struct DisclaimerView: View {
     }
 }
 
-
-struct DisclaimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        DisclaimerView()
-    }
-}

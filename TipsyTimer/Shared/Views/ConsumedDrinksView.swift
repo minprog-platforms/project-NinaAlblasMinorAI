@@ -8,9 +8,7 @@
 
 import SwiftUI
 
-enum Drink {
-    case beer, wine, cocktail, liquor
-}
+
 
 struct ConsumedDrinksView: View {
     @Binding var user: CurrentUser

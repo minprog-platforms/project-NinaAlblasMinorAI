@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct DrinkView: View {
     @Binding var user: CurrentUser
 
@@ -18,8 +16,6 @@ struct DrinkView: View {
     @Binding var wines: String
     @Binding var cocktails: String
     @Binding var liquors: String
-    
-    
     
     let drinkNames: [Drink: String] = [
         .beer: "BIER",

@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-enum GenderButtonPressed {
-    case femaleButton, maleButton, none
-}
-
 struct GenderView: View {
     @Binding var user: CurrentUser
     

@@ -7,17 +7,8 @@
 
 import SwiftUI
 
-enum userInputSteps: CGFloat {
-    case gender
-    case age
-    case bodyWeightAndHeight
-    case consumedDrinks
-    case drinkingTime
-    case drivingExperience
-}
-
 struct TipsyTimerView: View {
-    @State private var currentStep: userInputSteps = .gender
+    @State private var currentStep: UserInputSteps = .gender
     @State private var user = CurrentUser()
     @Environment(\.presentationMode) var presentationMode
     
@@ -64,7 +55,7 @@ struct TipsyTimerView: View {
                     Button(action: {
                         let newStepValue = currentStep.rawValue - 1
                         
-                        currentStep = userInputSteps(rawValue: newStepValue) ?? .gender
+                        currentStep = UserInputSteps(rawValue: newStepValue) ?? .gender
                     }) {
                         Label("", systemImage: "arrow.left")
                             .font(.system(size: 25, weight: .heavy))
@@ -82,7 +73,7 @@ struct TipsyTimerView: View {
                         if newStepValue == 6 {
                             self.stepsCompleted = true
                         }
-                        currentStep = userInputSteps(rawValue: newStepValue) ?? .gender
+                        currentStep = UserInputSteps(rawValue: newStepValue) ?? .gender
                     }) {
                         HStack {
                             Text("VOLGENDE")
@@ -98,7 +89,8 @@ struct TipsyTimerView: View {
                         }
                     }
                                         
-                    NavigationLink("", destination: ResultView(user: $user)      .navigationBarTitle("")
+                    NavigationLink("", destination: ResultView(user: $user)
+                        .navigationBarTitle("")
                         .navigationBarHidden(true), isActive: $stepsCompleted)
                 }
             }

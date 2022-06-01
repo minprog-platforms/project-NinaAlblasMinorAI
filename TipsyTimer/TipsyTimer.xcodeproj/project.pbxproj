@@ -20,6 +20,10 @@
 		740E968F28153B870089D7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E966428153B870089D7E0 /* Assets.xcassets */; };
 		747187F12847B03C00C4BF95 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDCFF284631E3000752EF /* CurrentUser.swift */; };
 		747187F22847B06F00C4BF95 /* FrameConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A201DF2832E9CD004D2D3B /* FrameConversion.swift */; };
+		747187F72847B15D00C4BF95 /* UserInputSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747187F62847B15C00C4BF95 /* UserInputSteps.swift */; };
+		747187F92847B1AB00C4BF95 /* GenderButtonPressed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747187F82847B1AB00C4BF95 /* GenderButtonPressed.swift */; };
+		747187FB2847B1E400C4BF95 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747187FA2847B1E400C4BF95 /* Drink.swift */; };
+		747187FD2847B21400C4BF95 /* ExperienceButtonPressed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747187FC2847B21400C4BF95 /* ExperienceButtonPressed.swift */; };
 		747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
 		747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
 		747C76272817367500852DFB /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C76262817367500852DFB /* HomeScreenView.swift */; };
@@ -82,6 +86,10 @@
 		740E968628153B870089D7E0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		740E968828153B870089D7E0 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		744FDCFF284631E3000752EF /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		747187F62847B15C00C4BF95 /* UserInputSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputSteps.swift; sourceTree = "<group>"; };
+		747187F82847B1AB00C4BF95 /* GenderButtonPressed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderButtonPressed.swift; sourceTree = "<group>"; };
+		747187FA2847B1E400C4BF95 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		747187FC2847B21400C4BF95 /* ExperienceButtonPressed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceButtonPressed.swift; sourceTree = "<group>"; };
 		747C7623281731F300852DFB /* TipsyTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTimerView.swift; sourceTree = "<group>"; };
 		747C76262817367500852DFB /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		747C7629281738A300852DFB /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
@@ -199,6 +207,10 @@
 				744FDCFF284631E3000752EF /* CurrentUser.swift */,
 				74D6165F28479C13004F2367 /* DrivingExperience.swift */,
 				74D6165C28479BF9004F2367 /* Gender.swift */,
+				747187F62847B15C00C4BF95 /* UserInputSteps.swift */,
+				747187F82847B1AB00C4BF95 /* GenderButtonPressed.swift */,
+				747187FA2847B1E400C4BF95 /* Drink.swift */,
+				747187FC2847B21400C4BF95 /* ExperienceButtonPressed.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -398,7 +410,9 @@
 				747C763028180DDA00852DFB /* WeightAndHeightView.swift in Sources */,
 				740892062815E6A7002BFD03 /* DisclaimerView.swift in Sources */,
 				74D6165D28479BF9004F2367 /* Gender.swift in Sources */,
+				747187F92847B1AB00C4BF95 /* GenderButtonPressed.swift in Sources */,
 				74CB2D03281EDDA2001CC294 /* ResultView.swift in Sources */,
+				747187F72847B15D00C4BF95 /* UserInputSteps.swift in Sources */,
 				747C762A281738A300852DFB /* GenderView.swift in Sources */,
 				740E968A28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
 				747C762D2817F5B700852DFB /* AgeView.swift in Sources */,
@@ -407,7 +421,9 @@
 				747187F22847B06F00C4BF95 /* FrameConversion.swift in Sources */,
 				747C763328180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
 				74D6166028479C13004F2367 /* DrivingExperience.swift in Sources */,
+				747187FD2847B21400C4BF95 /* ExperienceButtonPressed.swift in Sources */,
 				74CCAFFE282EF4F200C28F25 /* DrinkView.swift in Sources */,
+				747187FB2847B1E400C4BF95 /* Drink.swift in Sources */,
 				747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
