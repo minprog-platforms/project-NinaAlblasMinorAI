@@ -91,7 +91,7 @@
 		747C763828180E4F00852DFB /* DrivingExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingExperienceView.swift; sourceTree = "<group>"; };
 		74A201DF2832E9CD004D2D3B /* AdaptiveDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveDimensions.swift; sourceTree = "<group>"; };
 		74CB2D02281EDDA2001CC294 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		74CCAFEE282E7BDD00C28F25 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GifImage.swift; path = Shared/GifImage.swift; sourceTree = SOURCE_ROOT; };
+		74CCAFEE282E7BDD00C28F25 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GifImage.swift; path = "Shared/New Group/GifImage.swift"; sourceTree = SOURCE_ROOT; };
 		74CCAFFA282EA26D00C28F25 /* driving_jb.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = driving_jb.gif; sourceTree = "<group>"; };
 		74CCAFFD282EF4F200C28F25 /* DrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,23 +143,10 @@
 		740E966128153B860089D7E0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				744FDCFF284631E3000752EF /* CurrentUser.swift */,
-				74CCAFFA282EA26D00C28F25 /* driving_jb.gif */,
-				74CCAFEE282E7BDD00C28F25 /* GifImage.swift */,
+				74D616542847890A004F2367 /* Model */,
+				74D6165528478920004F2367 /* Gif Image */,
 				740E966228153B860089D7E0 /* TipsyTimerApp.swift */,
-				740E966328153B860089D7E0 /* ContentView.swift */,
-				74CB2D02281EDDA2001CC294 /* ResultView.swift */,
-				747C76262817367500852DFB /* HomeScreenView.swift */,
-				747C7623281731F300852DFB /* TipsyTimerView.swift */,
-				747C763828180E4F00852DFB /* DrivingExperienceView.swift */,
-				747C763528180E3500852DFB /* DrinkingTimeView.swift */,
-				747C763228180E1B00852DFB /* ConsumedDrinksView.swift */,
-				74CCAFFD282EF4F200C28F25 /* DrinkView.swift */,
-				747C762F28180DDA00852DFB /* WeightAndHeightView.swift */,
-				747C7629281738A300852DFB /* GenderView.swift */,
-				747C762C2817F5B700852DFB /* AgeView.swift */,
-				740892052815E6A7002BFD03 /* DisclaimerView.swift */,
-				74A201DF2832E9CD004D2D3B /* AdaptiveDimensions.swift */,
+				74D616532847889B004F2367 /* Views */,
 				740E966428153B870089D7E0 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -200,6 +187,43 @@
 				740E968828153B870089D7E0 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		74D616532847889B004F2367 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				740892052815E6A7002BFD03 /* DisclaimerView.swift */,
+				740E966328153B860089D7E0 /* ContentView.swift */,
+				74CB2D02281EDDA2001CC294 /* ResultView.swift */,
+				747C76262817367500852DFB /* HomeScreenView.swift */,
+				747C7623281731F300852DFB /* TipsyTimerView.swift */,
+				747C763828180E4F00852DFB /* DrivingExperienceView.swift */,
+				747C763528180E3500852DFB /* DrinkingTimeView.swift */,
+				747C763228180E1B00852DFB /* ConsumedDrinksView.swift */,
+				74CCAFFD282EF4F200C28F25 /* DrinkView.swift */,
+				747C762F28180DDA00852DFB /* WeightAndHeightView.swift */,
+				747C7629281738A300852DFB /* GenderView.swift */,
+				747C762C2817F5B700852DFB /* AgeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		74D616542847890A004F2367 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				744FDCFF284631E3000752EF /* CurrentUser.swift */,
+				74A201DF2832E9CD004D2D3B /* AdaptiveDimensions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74D6165528478920004F2367 /* Gif Image */ = {
+			isa = PBXGroup;
+			children = (
+				74CCAFFA282EA26D00C28F25 /* driving_jb.gif */,
+				74CCAFEE282E7BDD00C28F25 /* GifImage.swift */,
+			);
+			path = "Gif Image";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
