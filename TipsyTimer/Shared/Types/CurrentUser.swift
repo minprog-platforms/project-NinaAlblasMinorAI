@@ -7,14 +7,6 @@
 
 import Foundation
 
-enum Gender {
-    case female, male
-}
-
-enum DrivingExperience {
-    case starting, expert
-}
-
 struct CurrentUser {
     var gender: Gender = .female
     var age: Double = 18.0
@@ -25,7 +17,7 @@ struct CurrentUser {
     var drivingExperience: DrivingExperience = .starting
     
     
-    var TBW: Double {
+    var totalBodyWater: Double {
         if gender == .male {
             return 2.44 - (0.09516 * age) + (0.1074 * height) + (0.3362 *  weight)
         } else {
@@ -44,7 +36,7 @@ struct CurrentUser {
         
         
         // waiting time in hours (1.89 hours)
-        let waitingTimeInHours: Double = (((((alcoholConsumption / TBW) * bloodWaterPercentage) - targetBAC) / metabolicRate) - drinkingTime)
+        let waitingTimeInHours: Double = (((((alcoholConsumption / totalBodyWater) * bloodWaterPercentage) - targetBAC) / metabolicRate) - drinkingTime)
         
         // waiting time in minutes (1.89 hours * 60 mins = 113 mins)
         let waitingTimeInMinutes = Int(waitingTimeInHours * 60)

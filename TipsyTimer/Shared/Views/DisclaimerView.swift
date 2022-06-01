@@ -25,7 +25,7 @@ struct DisclaimerView: View {
                     .shadow(color: Color("Nina-dark"), radius: 1)
 
                 List {
-                    Text("Geen 18, geen alchol")
+                    Text("Geen 18, geen alcohol")
                         .font(.system(size: 18))
 
                     Text("Geniet, maar drink met mate")
