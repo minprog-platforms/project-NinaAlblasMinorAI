@@ -5,10 +5,7 @@
 //  Created by Nina Alblas on 26/04/2022.
 //
 
-
 import SwiftUI
-
-
 
 struct ConsumedDrinksView: View {
     @Binding var user: CurrentUser
@@ -26,7 +23,7 @@ struct ConsumedDrinksView: View {
                 .multilineTextAlignment(.center)
                 .shadow(color: Color("Nina-dark"), radius: 5)
             
-            // bier
+            // beer
             DrinkView(user: $user,
                       currentDrink: .beer,
                       beers: $amountOfBeer,
@@ -34,7 +31,7 @@ struct ConsumedDrinksView: View {
                       cocktails: $amountOfCocktails,
                       liquors: $amountOfLiquor)
             
-            // wijn
+            // wine
             DrinkView(user: $user,
                       currentDrink: .wine,
                       beers: $amountOfBeer,
@@ -42,8 +39,7 @@ struct ConsumedDrinksView: View {
                       cocktails: $amountOfCocktails,
                       liquors: $amountOfLiquor)
             
-            
-            // cocktail
+            // cocktails
             DrinkView(user: $user,
                       currentDrink: .cocktail,
                       beers: $amountOfBeer,
@@ -51,7 +47,7 @@ struct ConsumedDrinksView: View {
                       cocktails: $amountOfCocktails,
                       liquors: $amountOfLiquor)
             
-            // sterke drank
+            // liquor
             DrinkView(user: $user,
                       currentDrink: .liquor,
                       beers: $amountOfBeer,
@@ -60,5 +56,4 @@ struct ConsumedDrinksView: View {
                       liquors: $amountOfLiquor)
         }
     }
-    
 }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct GenderView: View {
     @Binding var user: CurrentUser
-    
     @State private var genderButtonPressed: GenderButtonPressed = .none
     
     var body: some View {
@@ -23,6 +22,7 @@ struct GenderView: View {
                 .shadow(color: Color("Nina-dark"), radius: 5)
             Spacer()
             HStack {
+                
                 Button(action: {
                     genderButtonPressed = .maleButton
                     user.gender = .male
@@ -42,6 +42,7 @@ struct GenderView: View {
                     .font(.system(size: 30, weight: .heavy))
                     .foregroundColor(Color("Tipsy-white"))
                     .shadow(color: Color("Nina-dark"), radius: 5)
+                
                 Button(action: {
                     genderButtonPressed = .femaleButton
                     user.gender = .female
@@ -57,8 +58,8 @@ struct GenderView: View {
                         .cornerRadius(20)
                         .shadow(color: Color("Nina-dark"), radius: 5)
                 }
-                
             }
+            
             HStack {
                 Spacer()
                 Text("MAN")
@@ -77,9 +78,9 @@ struct GenderView: View {
                     .shadow(color: Color("Nina-dark"), radius: 5)
                 Spacer()
             }
-            Spacer()
-            Spacer()
             
+            Spacer()
+            Spacer()
         }
     }
 }

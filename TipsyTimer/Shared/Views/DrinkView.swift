@@ -40,6 +40,7 @@ struct DrinkView: View {
                 .frame(width: convertWidth(340), height: convertHeight(30))
                 .background(Color("Nina-lightpink"))
                 .cornerRadius(20)
+            
             HStack {
                 drinkImages[currentDrink]!
                     .renderingMode(.template)
@@ -48,6 +49,7 @@ struct DrinkView: View {
                     .padding(.all)
                     .frame(width: convertWidth(125), height: convertHeight(110))
                     .foregroundColor(Color("Tipsy-white"))
+                
                 TextField("0", text: drinkNames[currentDrink] == "BIER" ? $beers : drinkNames[currentDrink] == "WIJN" ? $wines : drinkNames[currentDrink] == "COCKTAILS" ? $cocktails : $liquors)
                     .padding(.horizontal)
                     .frame(width: convertWidth(75))
@@ -58,6 +60,7 @@ struct DrinkView: View {
                                                                           cocktails: cocktails,
                                                                           liquors: liquors)
                     }
+                
                 Text("standaard\nglazen")
                     .foregroundColor(Color("Tipsy-white"))
                     .fontWeight(.bold)
@@ -71,8 +74,10 @@ struct DrinkView: View {
         .shadow(color: Color("Nina-dark"), radius: 5)
     }
     
+    /*
+     Computes the total amount of grams of alcohol consumed - given that each standard glass contains 10g of alcohol - and stores this amount in current user's data struct.
+     */
     func totalAlcoholConsumption(beers: String, wines: String, cocktails: String, liquors: String) -> Double {
-        
         let beerAmount = amount(of: beers)
         let wineAmount = amount(of: wines)
         let cocktailAmount = amount(of: cocktails)
@@ -83,6 +88,9 @@ struct DrinkView: View {
         return totalAlcoholGrams
     }
     
+    /*
+     Converts number of drinks (string input) into a float, even if the user entered a comma instead of a point.
+     */
     func amount(of drink: String) -> Double {
         // error prevention in case someone enters a float with a comma
         if drink.contains(",") {
