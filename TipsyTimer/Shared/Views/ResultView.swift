@@ -202,8 +202,8 @@ struct ResultView: View {
                     guard let url = URL(string: "tel://" + taxiNumber) else { return }
                     UIApplication.shared.open(url)
                 },
-                    .default(Text("Nee hoor, ik wacht mijn timer af")) {},
-                    .default(Text("Nee, ik rijd met de BOB mee")) {}
+                .default(Text("Nee hoor, ik wacht mijn timer af")) {},
+                .default(Text("Nee, ik rijd met de BOB mee")) {}
             ]
         )
     }
