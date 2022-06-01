@@ -11,6 +11,7 @@
 * De timer loopt ook door wanneer je de app sluit en open laat staan op de achtergrond.
 * Wanneer de timer afgelopen is en het bierglas leeg is, verschijnt er een gifje van James Bond die autorijdt en verandert de tekst naar "JE KUNT WEER VEILIG DE WEG OP!". Hiermee wil ik de gebruiker belonen voor zijn geduld en hem een euforisch gevoel bezorgen.
 * Wanneer de timer is afgelopen en de gebruiker heeft de app open staan op de achtergrond, verschijnt er een push notificatie inclusief een geluidje. Jammer genoeg werken de notificaties alleen op de simulator - niet op echte iOS devices - omdat ik geen betalende ontwikkelaar ben.
+* Aan de mensen om mij heen merk ik dat mensen de app heel leuk vinden om te gebruiken. Vaak willen ze hem meer dan eens invullen om te kijken wat er voor resultaat uit komt wanneer ze andere gegevens invullen. Ook hoef ik hen nooit door de app heen te begeleiden; de user interface spreekt voor zichzelf en is dus erg gebruikersvriendelijk. Dankzij de grote knoppen is de app ook goed bruikbaar voor mensen met een (visuele) beperking. Op deze aspecten ben ik erg trots.
 
 # De grootste keuzes die ik heb gemaakt voor deze app
 * Ik heb de DisclaimerView als eerste scherm gekozen zodat gebruikers echt moesten aangeven dat ze de disclaimer hadden gelezen d.m.v. de "AKKOORD"-knop. Eerst had ik deze view alleen als knop op het home-scherm geplaatst met het risico dat gebruikers de disclaimers nooit zouden lezen.

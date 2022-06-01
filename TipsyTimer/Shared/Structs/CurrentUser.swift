@@ -9,6 +9,8 @@ import Foundation
 
 /*
  Stores the current user's data and computes their total body water volume and the amount of minutes they need to wait to reach the target BAC.
+ 
+ Equations are derived and algebraically rearranged from Brick, J. (2006). Standardization of alcohol calculations in research. Alcoholism: Clinical and experimental research, 30(8), 1276-1287.
  */
 struct CurrentUser {
     var gender: Gender = .female

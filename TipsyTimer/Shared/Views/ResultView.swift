@@ -12,7 +12,7 @@ struct ResultView: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding var user: CurrentUser
     
-    // timer related variables
+    // timer related variables (Swiftful Thinking, 2021)
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     var futureDate: Date = Date()
     @State private var timeRemaining = ""
@@ -33,8 +33,11 @@ struct ResultView: View {
     
     init(user: Binding<CurrentUser>) {
         self._user = user
+        
         waitingMinutes = self.user.waitingTime
         waitingSeconds = waitingMinutes * 60
+        
+        // determining date in the future at which timer should go off (Swiftful Thinking, 2021)
         futureDate = Calendar.current.date(byAdding: .minute, value: waitingMinutes, to: Date())!
         
         // don't compute the beer level delta when person doesn't have to wait; prevents fatal error
@@ -123,7 +126,7 @@ struct ResultView: View {
             }
             .frame(width: convertWidth(400), height: convertHeight(850))
             
-            // enable user notifications
+            // enable user notifications (Hudson, 2022)
             .onAppear() {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
                 }
@@ -133,7 +136,7 @@ struct ResultView: View {
                 }
             }
             
-            // enable timer updating
+            // enable timer updating (Swiftful Thinking, 2021)
             .onReceive(timer) { _ in
                 let dateDiff = futureDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate
                 
@@ -147,7 +150,9 @@ struct ResultView: View {
                     
                 } else {
                     timesUp = true
+                    
                     self.notify()
+                    
                     self.timer.upstream.connect().cancel()
                 }
             }
@@ -161,6 +166,8 @@ struct ResultView: View {
     
     /*
      Computes the amount of time remaining until target BAC is reached, stores the result in timer format, and updates the lowered beer level.
+     
+     Swiftful Thinking. (2021, April 27). How to use Timer and onReceive in SwiftUI | Continued Learning #24 [Video]. YouTube. https://www.youtube.com/watch?v=ymXRX6ZB-J0&list=WL&index=7&t=872s
      */
     func updateTimeRemaining() {
         let timerFormatter = DateComponentsFormatter()
@@ -176,6 +183,8 @@ struct ResultView: View {
     
     /*
      Enable user notifications.
+     
+     Hudson, P. (2022, January 2). Scheduling local notifications – Hot Prospects SwiftUI Tutorial 8/18 [Video]. YouTube. https://www.youtube.com/watch?v=XnnDHDlPwLw&t=296s
      */
     func notify() {
         let notificationContent = UNMutableNotificationContent()
@@ -191,6 +200,10 @@ struct ResultView: View {
     
     /*
      Enables "call a taxi" pop up that can actually call a taxi.
+     
+     Prezioso, T. (2021, January 3). How to Make a Phone Call using SwiftUI. Swift Tom. Retrieved June 1, 2022, from https://swifttom.com/2021/01/03/how-to-make-a-phone-call-using-swiftui/
+     
+     Hudson, P. (2021, September 3). How to show an action sheet. Hacking with Swift. Retrieved June 1, 2022, from https://www.hackingwithswift.com/quick-start/swiftui/how-to-show-an-action-sheet
      */
     func callTaxi() -> ActionSheet {
         let taxiNumber = "+31851301675"

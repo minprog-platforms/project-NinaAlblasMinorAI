@@ -10,6 +10,7 @@ import WebKit
 
 /*
  Makes it possible to display .gif images.
+ Swift and Tips. (2021, August 22). How to display a gif in SwiftUI? [Video]. YouTube. https://www.youtube.com/watch?v=9fz8EW-dX-I
  */
 struct GifImage: UIViewRepresentable {
     private let name: String

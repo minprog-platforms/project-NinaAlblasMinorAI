@@ -15,14 +15,16 @@ struct GenderView: View {
         
         VStack {
             Spacer()
+            
             Text("MET WELK GESLACHT IDENTIFICEER JE JE HET MEEST?")
                 .font(.system(size: 30, weight: .heavy))
                 .foregroundColor(Color("Tipsy-white"))
                 .multilineTextAlignment(.center)
                 .shadow(color: Color("Nina-dark"), radius: 5)
+            
             Spacer()
+            
             HStack {
-                
                 Button(action: {
                     genderButtonPressed = .maleButton
                     user.gender = .male
@@ -62,20 +64,24 @@ struct GenderView: View {
             
             HStack {
                 Spacer()
+                
                 Text("MAN")
                     .font(.system(size: 30, weight: .heavy))
                     .foregroundColor(Color("Tipsy-white"))
                     .multilineTextAlignment(.center)
                     .frame(width: convertWidth(150))
                     .shadow(color: Color("Nina-dark"), radius: 5)
+                
                 Spacer()
                 Spacer()
+                
                 Text("VROUW")
                     .font(.system(size: 30, weight: .heavy))
                     .foregroundColor(Color("Tipsy-white"))
                     .multilineTextAlignment(.center)
                     .frame(width: convertWidth(150))
                     .shadow(color: Color("Nina-dark"), radius: 5)
+                
                 Spacer()
             }
             

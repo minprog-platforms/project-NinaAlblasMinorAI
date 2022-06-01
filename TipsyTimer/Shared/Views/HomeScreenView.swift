@@ -15,8 +15,10 @@ struct HomeScreenView: View {
                            startPoint: .leading,
                            endPoint: .trailing)
             .edgesIgnoringSafeArea(.all)
+            
             Image("tipsytimerlogo")
                 .offset(x: convertWidth(-20))
+            
             VStack {
                 Spacer()
                 

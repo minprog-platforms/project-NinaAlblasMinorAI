@@ -62,6 +62,8 @@ struct AgeView: View {
     
     /*
      Computes and animates the circle slider, and stores age in current user's data struct.
+     
+     Kavsoft. (2020, September 3). SwiftUI 2.0 Apple Wallet Circular Slider - SwiftUI Circular Slider/Seeker - SwiftUI 2.0 Tutorials [Video]. YouTube. https://www.youtube.com/watch?v=80SHJeeiJ50&list=WL&index=5
      */
     func ageOnDrag(value: DragGesture.Value) {
         let vector = CGVector(dx: value.location.x, dy: value.location.y)
