@@ -9,8 +9,8 @@ De applicatie Tipsy Timer zal het aantal beschonken bestuurders helpen verminder
 * Timer blijft lopen ook als je app sluit
 * Geeft een notificatie als de timer afgelopen is
 
-<img src="doc/Home-Screen" alt="Screenshot van home-scherm" width="200"/>
-<img src="doc/Beer-Level" alt="Screenshot van scherm met resultaat en leeglopend biertje" width="200"/>
+<img src="doc/Home-Screen.png" alt="Screenshot van home-scherm" width="200"/>
+<img src="doc/Beer-Level.png" alt="Screenshot van scherm met resultaat en leeglopend biertje" width="200"/>
 
 ## Disclaimers
 * Geen 18, geen alchol
