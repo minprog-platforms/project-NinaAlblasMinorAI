@@ -23,17 +23,24 @@ De applicatie Tipsy Timer zal het aantal beschonken bestuurders helpen verminder
 
 *Slagzin: "Zie in één oogopslag wanneer je weer de weg op mag!"*
 
-# The README should also acknowledge sources of external code, images and other materials that are in the repository but not created by yourself. Make sure that it is clear which directories are copyrighted by different creators.
+### Acknowledgements
+* GifImage.swift -> Swift and Tips. (2021, August 22). How to display a gif in SwiftUI? [Video]. YouTube. https://www.youtube.com/watch?v=9fz8EW-dX-I
+* CurrentUser.swift -> Brick, J. (2006). Standardization of alcohol calculations in research. Alcoholism: Clinical and experimental research, 30(8), 1276-1287.
+* DrinkingTimeView.swift & AgeView.swift -> Kavsoft. (2020, September 3). SwiftUI 2.0 Apple Wallet Circular Slider - SwiftUI Circular Slider/Seeker - SwiftUI 2.0 Tutorials [Video]. YouTube. https://www.youtube.com/watch?v=80SHJeeiJ50&list=WL&index=5
+* ResultView.swift -> Hudson, P. (2021, September 3). How to show an action sheet. Hacking with Swift. Retrieved June 1, 2022, from https://www.hackingwithswift.com/quick-start/swiftui/how-to-show-an-action-sheet; Prezioso, T. (2021, January 3). How to Make a Phone Call using SwiftUI. Swift Tom. Retrieved June 1, 2022, from https://swifttom.com/2021/01/03/how-to-make-a-phone-call-using-swiftui/; Hudson, P. (2022, January 2). Scheduling local notifications – Hot Prospects SwiftUI Tutorial 8/18 [Video]. YouTube. https://www.youtube.com/watch?v=XnnDHDlPwLw&t=296s; Swiftful Thinking. (2021, April 27). How to use Timer and onReceive in SwiftUI | Continued Learning #24 [Video]. YouTube. https://www.youtube.com/watch?v=ymXRX6ZB-J0&list=WL&index=7&t=872s
 
-* Shared/Gif Image/DrivingJamesBond.gif - GIPHY. (n.d.). Driving Road Trip GIF By James Bond 007 [GIF]. https://giphy.com/gifs/007-UVeVBXJW2EEgMWU7kK
-* Swift and Tips. (2021, August 22). How to display a gif in SwiftUI? [Video]. YouTube. https://www.youtube.com/watch?v=9fz8EW-dX-I
-* Brick, J. (2006). Standardization of alcohol calculations in research. Alcoholism: Clinical and experimental research, 30(8), 1276-1287.
-* DrinkingTimeView en AgeView circular sliders - Kavsoft. (2020, September 3). SwiftUI 2.0 Apple Wallet Circular Slider - SwiftUI Circular Slider/Seeker - SwiftUI 2.0 Tutorials [Video]. YouTube. https://www.youtube.com/watch?v=80SHJeeiJ50&list=WL&index=5
-* ActionSheet in ResultView - Hudson, P. (2021, September 3). How to show an action sheet. Hacking with Swift. Retrieved June 1, 2022, from https://www.hackingwithswift.com/quick-start/swiftui/how-to-show-an-action-sheet
-* Taxi bellen - Prezioso, T. (2021, January 3). How to Make a Phone Call using SwiftUI. Swift Tom. Retrieved June 1, 2022, from https://swifttom.com/2021/01/03/how-to-make-a-phone-call-using-swiftui/
-* Notificaties - Hudson, P. (2022, January 2). Scheduling local notifications – Hot Prospects SwiftUI Tutorial 8/18 [Video]. YouTube. https://www.youtube.com/watch?v=XnnDHDlPwLw&t=296s
-* Timer - Swiftful Thinking. (2021, April 27). How to use Timer and onReceive in SwiftUI | Continued Learning #24 [Video]. YouTube. https://www.youtube.com/watch?v=ymXRX6ZB-J0&list=WL&index=7&t=872s
-
+* Shared/Gif Image/DrivingJamesBond.gif -> https://giphy.com/gifs/007-UVeVBXJW2EEgMWU7kK
+* Shared/Assets/Beer Timer Image/beer-1 -> https://www.pngwing.com/en/free-png-ppffp 
+* Shared/Assets/Drink Icons/beer -> https://www.pngwing.com/en/free-png-xqucm/download
+* Shared/Assets/Drink Icons/cocktail -> https://www.flaticon.com/free-icon/cocktail_38706
+* Shared/Assets/Drink Icons/liquor -> https://thenounproject.com/icon/shot-glass-591392/
+* Shared/Assets/Drink Icons/wine -> https://www.pngwing.com/en/free-png-nzylf/download
+* Shared/Assets/Experience Icons/confident -> https://www.pngwing.com/en/free-png-vrhra/download
+* Shared/Assets/Experience Icons/scared -> https://www.pngwing.com/en/free-png-pwkpy/download
+* Shared/Assets/Gender Icons/female -> https://en.m.wikipedia.org/wiki/File:Gender_symbols_side_by_side_solid.svg
+* Shared/Assets/Gender Icons/male -> https://en.m.wikipedia.org/wiki/File:Gender_symbols_side_by_side_solid.svg
+* Shared/Assets/tipsytimerlogo -> https://www.nicepng.com/downpng/u2e6y3y3e6u2i1i1_neon-drinks-ftestickers-stickers-autocollants-smile-neon-cocktail/
+* Shared/Assets/AppIcon -> https://www.nicepng.com/downpng/u2e6y3y3e6u2i1i1_neon-drinks-ftestickers-stickers-autocollants-smile-neon-cocktail/
 
 Alle rechten voorbehouden. 2022.
 
