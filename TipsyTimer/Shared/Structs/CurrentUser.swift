@@ -7,6 +7,9 @@
 
 import Foundation
 
+/*
+ Stores the current user's data and computes their total body water volume and the amount of minutes they need to wait to reach the target BAC.
+ */
 struct CurrentUser {
     var gender: Gender = .female
     var age: Double = 18.0
@@ -15,7 +18,6 @@ struct CurrentUser {
     var alcoholConsumption: Double = 0.0
     var drinkingTime: Double = 0.0
     var drivingExperience: DrivingExperience = .starting
-    
     
     var totalBodyWater: Double {
         if gender == .male {
@@ -26,22 +28,14 @@ struct CurrentUser {
     }
     
     var waitingTime: Int {
-        // returns waiting time in minutes to wait after last drink before BAC reaches target value
-        // IGNORES PASSED TIME (TIME TO REACH PEAK), SO IT'S THE WAITING TIME AFTER CONSUMING THE LAST DRINK!
-        
         let targetBAC = (drivingExperience == .starting) ? 20.0 : 50.0
-        
         let metabolicRate = 15.0
         let bloodWaterPercentage = 80.65
-        
-        
-        // waiting time in hours (1.89 hours)
+                
+        // calculate waiting time after last drink before target BAC is reached
         let waitingTimeInHours: Double = (((((alcoholConsumption / totalBodyWater) * bloodWaterPercentage) - targetBAC) / metabolicRate) - drinkingTime)
-        
-        // waiting time in minutes (1.89 hours * 60 mins = 113 mins)
         let waitingTimeInMinutes = Int(waitingTimeInHours * 60)
         
         return waitingTimeInMinutes
-        
     }
 }

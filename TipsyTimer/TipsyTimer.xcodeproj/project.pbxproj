@@ -157,6 +157,7 @@
 				740E966228153B860089D7E0 /* TipsyTimerApp.swift */,
 				74A201DF2832E9CD004D2D3B /* FrameConversion.swift */,
 				740E966428153B870089D7E0 /* Assets.xcassets */,
+				747187FE2847D8ED00C4BF95 /* Structs */,
 				747187F32847B0A800C4BF95 /* Enums */,
 				747187F42847B0B900C4BF95 /* Gif Image */,
 				747187F52847B0C400C4BF95 /* Views */,
@@ -204,7 +205,6 @@
 		747187F32847B0A800C4BF95 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				744FDCFF284631E3000752EF /* CurrentUser.swift */,
 				74D6165F28479C13004F2367 /* DrivingExperience.swift */,
 				74D6165C28479BF9004F2367 /* Gender.swift */,
 				747187F62847B15C00C4BF95 /* UserInputSteps.swift */,
@@ -241,6 +241,14 @@
 				74CB2D02281EDDA2001CC294 /* ResultView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		747187FE2847D8ED00C4BF95 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				744FDCFF284631E3000752EF /* CurrentUser.swift */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,13 +8,15 @@
 import SwiftUI
 import WebKit
 
+/*
+ Makes it possible to display .gif images.
+ */
 struct GifImage: UIViewRepresentable {
     private let name: String
     
     init(_ name: String) {
         self.name = name
     }
-    
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()

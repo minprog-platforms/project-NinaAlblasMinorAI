@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct TipsyTimerView: View {
+    @Environment(\.presentationMode) var presentationMode
+
     @State private var currentStep: UserInputSteps = .gender
     @State private var user = CurrentUser()
-    @Environment(\.presentationMode) var presentationMode
-    
     @State private var stepsCompleted = false
     
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("Nina-dark"), Color("Nina-sky")]), startPoint: .leading, endPoint: .trailing)
                 .edgesIgnoringSafeArea(.all)
+            
             VStack {
                 HStack {
+                    
+                    // go back to home screen
                     Button(action: {
                         presentationMode.wrappedValue.dismiss()
                     }) {
@@ -28,8 +31,10 @@ struct TipsyTimerView: View {
                             .foregroundColor(Color("Tipsy-white"))
                     }
                     .padding(.leading)
+                    
                     Spacer()
                 }
+                
                 ProgressView(value: currentStep.rawValue, total: 6)
                     .padding(.horizontal)
                     .accentColor(Color("Nina-pinkpurple"))
@@ -51,10 +56,9 @@ struct TipsyTimerView: View {
                 
                 HStack {
                     
-                    // een stapje terug
+                    // go a step back
                     Button(action: {
                         let newStepValue = currentStep.rawValue - 1
-                        
                         currentStep = UserInputSteps(rawValue: newStepValue) ?? .gender
                     }) {
                         Label("", systemImage: "arrow.left")
@@ -64,12 +68,11 @@ struct TipsyTimerView: View {
                             .labelStyle(.iconOnly)
                             .frame(width: convertWidth(125), height: convertHeight(100))
                     }
-
                     
+                    // go to the next step
                     Button(action: {
                         let newStepValue = currentStep.rawValue + 1
                         
-                        // als de eerstvolgende slide 6 zou zijn (die bestaat niet)
                         if newStepValue == 6 {
                             self.stepsCompleted = true
                         }
@@ -88,18 +91,12 @@ struct TipsyTimerView: View {
                                 .frame(width: convertWidth(125), height: convertHeight(100))
                         }
                     }
-                                        
+                    
                     NavigationLink("", destination: ResultView(user: $user)
                         .navigationBarTitle("")
                         .navigationBarHidden(true), isActive: $stepsCompleted)
                 }
             }
         }
-    }
-}
-
-struct TipsyTimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        TipsyTimerView()
     }
 }

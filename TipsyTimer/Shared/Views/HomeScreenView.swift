@@ -14,12 +14,12 @@ struct HomeScreenView: View {
                                                        Color("Nina-sky")]),
                            startPoint: .leading,
                            endPoint: .trailing)
-                .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.all)
             Image("tipsytimerlogo")
                 .offset(x: convertWidth(-20))
             VStack {
                 Spacer()
-
+                
                 Text("TIPSY TIMER")
                     .font(Font.system(size: 60, weight: .black))
                     .overlay {
@@ -37,7 +37,6 @@ struct HomeScreenView: View {
                         )
                     }
                 
-
                 Text("Zie in één oogopslag\nwanneer je weer de weg op mag!")
                     .font(.system(size: 25, weight: .medium, design: .rounded))
                     .foregroundColor(Color("Nina-prettypink"))
@@ -46,28 +45,27 @@ struct HomeScreenView: View {
                 
                 Spacer()
                 Spacer()
-
+                
                 NavigationLink(destination: TipsyTimerView()
                     .navigationBarTitle("")
                     .navigationBarHidden(true)) {
-                    Text("CHECK JE TIMER")
-                        .font(.system(size: 55, weight: .black))
-                        .foregroundColor(Color("Tipsy-white"))
-                        // square dus 2x width
-                        .frame(width: convertWidth(300), height: convertWidth(300))
-                        .background(Color("Nina-hotpink"))
-                        .cornerRadius(25.0)
-                        .shadow(color: Color("Nina-dark"), radius: 5)
-                    
-                }
-                .frame(width: convertWidth(300), height: convertWidth(300))
+                        Text("CHECK JE TIMER")
+                            .font(.system(size: 55, weight: .black))
+                            .foregroundColor(Color("Tipsy-white"))
+                            .frame(width: convertWidth(300), height: convertWidth(300))
+                            .background(Color("Nina-hotpink"))
+                            .cornerRadius(25.0)
+                            .shadow(color: Color("Nina-dark"), radius: 5)
+                        
+                    }
+                    .frame(width: convertWidth(300), height: convertWidth(300))
                 
                 Spacer()
                 Spacer()
                 NavigationLink(
                     destination: DisclaimerView()
-                    .navigationBarTitle("")
-                    .navigationBarHidden(true)
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true)
                 ) {
                     Label("DISCLAIMER", systemImage: "exclamationmark.circle")
                         .frame(width: convertWidth(350), height: convertHeight(50))
@@ -76,11 +74,11 @@ struct HomeScreenView: View {
                         .background(Color("Nina-sky"))
                         .cornerRadius(6.0)
                         .shadow(color: Color("Nina-dark"), radius: 1)
-
-                    }
+                }
+                
                 Spacer()
             }
-
+            
         }
     }
 }
