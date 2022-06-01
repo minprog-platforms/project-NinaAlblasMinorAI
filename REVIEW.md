@@ -1,4 +1,5 @@
-Gereviewd door Moussa & Nienke
+# Review
+### Gereviewd door Moussa & Nienke
 
 1. Ik sla mijn data niet permanent op. Dit betekent dat de app de gegevens niet opslaat wanneer de app (geforceerd) wordt afgesloten. Hierdoor loopt mijn timer ook niet door wanneer de app (geforceerd) wordt afgesloten. Dit zou ik graag anders hebben gezien, bijv. door gebruik te maken van persistent data.
 3. Mijn TipsyTimerApp-View en ContentView voelen een beetje als dubbelop, aangezien ik in TipsyTimerApp niets anders doe dan ContentView aanroepen, en ik in ContentView niets anders doe dan DisclaimerView aanroepen. Toch zei Merijn dat dit de netste manier was om het aan te pakken, omdat de NavigationView die eromheen zit anders voor problemen zou zorgen. Toch denk ik dat het netter had gekund door de TipsyTimerApp-View meteen te laten verwijzen naar de DisclaimerView, of door de TipsyTimerApp-View te verwijderen.
