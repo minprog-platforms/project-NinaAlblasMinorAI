@@ -18,6 +18,8 @@
 		740E968D28153B870089D7E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E966328153B860089D7E0 /* ContentView.swift */; };
 		740E968E28153B870089D7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E966428153B870089D7E0 /* Assets.xcassets */; };
 		740E968F28153B870089D7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E966428153B870089D7E0 /* Assets.xcassets */; };
+		747187F12847B03C00C4BF95 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDCFF284631E3000752EF /* CurrentUser.swift */; };
+		747187F22847B06F00C4BF95 /* FrameConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A201DF2832E9CD004D2D3B /* FrameConversion.swift */; };
 		747C7624281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
 		747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C7623281731F300852DFB /* TipsyTimerView.swift */; };
 		747C76272817367500852DFB /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747C76262817367500852DFB /* HomeScreenView.swift */; };
@@ -42,12 +44,9 @@
 		74CCAFFF282EF4F200C28F25 /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCAFFD282EF4F200C28F25 /* DrinkView.swift */; };
 		74D6165728478E4A004F2367 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6165628478E4A004F2367 /* GifImage.swift */; };
 		74D6165828478E4A004F2367 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6165628478E4A004F2367 /* GifImage.swift */; };
-		74D6165928479B56004F2367 /* CurrentUserEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744FDCFF284631E3000752EF /* CurrentUserEnum.swift */; };
-		74D6165A28479B56004F2367 /* FrameConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A201DF2832E9CD004D2D3B /* FrameConversion.swift */; };
-		74D6165D28479BF9004F2367 /* GenderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6165C28479BF9004F2367 /* GenderEnum.swift */; };
-		74D6165E28479BF9004F2367 /* GenderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6165C28479BF9004F2367 /* GenderEnum.swift */; };
-		74D6166028479C13004F2367 /* DrivingExperienceEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6165F28479C13004F2367 /* DrivingExperienceEnum.swift */; };
-		74D6166128479C13004F2367 /* DrivingExperienceEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6165F28479C13004F2367 /* DrivingExperienceEnum.swift */; };
+		74D6165D28479BF9004F2367 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6165C28479BF9004F2367 /* Gender.swift */; };
+		74D6165E28479BF9004F2367 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6165C28479BF9004F2367 /* Gender.swift */; };
+		74D6166028479C13004F2367 /* DrivingExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6165F28479C13004F2367 /* DrivingExperience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +81,7 @@
 		740E968228153B870089D7E0 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		740E968628153B870089D7E0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		740E968828153B870089D7E0 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		744FDCFF284631E3000752EF /* CurrentUserEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserEnum.swift; sourceTree = "<group>"; };
+		744FDCFF284631E3000752EF /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		747C7623281731F300852DFB /* TipsyTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTimerView.swift; sourceTree = "<group>"; };
 		747C76262817367500852DFB /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		747C7629281738A300852DFB /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
@@ -96,8 +95,8 @@
 		74CCAFFA282EA26D00C28F25 /* DrivingJamesBond.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = DrivingJamesBond.gif; sourceTree = "<group>"; };
 		74CCAFFD282EF4F200C28F25 /* DrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
 		74D6165628478E4A004F2367 /* GifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
-		74D6165C28479BF9004F2367 /* GenderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderEnum.swift; sourceTree = "<group>"; };
-		74D6165F28479C13004F2367 /* DrivingExperienceEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingExperienceEnum.swift; sourceTree = "<group>"; };
+		74D6165C28479BF9004F2367 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		74D6165F28479C13004F2367 /* DrivingExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingExperience.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,9 +149,9 @@
 				740E966228153B860089D7E0 /* TipsyTimerApp.swift */,
 				74A201DF2832E9CD004D2D3B /* FrameConversion.swift */,
 				740E966428153B870089D7E0 /* Assets.xcassets */,
-				744FDCFF284631E3000752EF /* CurrentUserEnum.swift */,
-				74D6165F28479C13004F2367 /* DrivingExperienceEnum.swift */,
-				74D6165C28479BF9004F2367 /* GenderEnum.swift */,
+				744FDCFF284631E3000752EF /* CurrentUser.swift */,
+				74D6165F28479C13004F2367 /* DrivingExperience.swift */,
+				74D6165C28479BF9004F2367 /* Gender.swift */,
 				74CCAFFA282EA26D00C28F25 /* DrivingJamesBond.gif */,
 				74D6165628478E4A004F2367 /* GifImage.swift */,
 				740E966328153B860089D7E0 /* ContentView.swift */,
@@ -374,14 +373,16 @@
 				747C76272817367500852DFB /* HomeScreenView.swift in Sources */,
 				747C763028180DDA00852DFB /* WeightAndHeightView.swift in Sources */,
 				740892062815E6A7002BFD03 /* DisclaimerView.swift in Sources */,
-				74D6165D28479BF9004F2367 /* GenderEnum.swift in Sources */,
+				74D6165D28479BF9004F2367 /* Gender.swift in Sources */,
 				74CB2D03281EDDA2001CC294 /* ResultView.swift in Sources */,
 				747C762A281738A300852DFB /* GenderView.swift in Sources */,
 				740E968A28153B870089D7E0 /* TipsyTimerApp.swift in Sources */,
 				747C762D2817F5B700852DFB /* AgeView.swift in Sources */,
+				747187F12847B03C00C4BF95 /* CurrentUser.swift in Sources */,
 				74D6165728478E4A004F2367 /* GifImage.swift in Sources */,
+				747187F22847B06F00C4BF95 /* FrameConversion.swift in Sources */,
 				747C763328180E1B00852DFB /* ConsumedDrinksView.swift in Sources */,
-				74D6166028479C13004F2367 /* DrivingExperienceEnum.swift in Sources */,
+				74D6166028479C13004F2367 /* DrivingExperience.swift in Sources */,
 				74CCAFFE282EF4F200C28F25 /* DrinkView.swift in Sources */,
 				747C763928180E4F00852DFB /* DrivingExperienceView.swift in Sources */,
 			);
@@ -395,10 +396,9 @@
 				740E968D28153B870089D7E0 /* ContentView.swift in Sources */,
 				74D6165828478E4A004F2367 /* GifImage.swift in Sources */,
 				74CCAFFF282EF4F200C28F25 /* DrinkView.swift in Sources */,
-				74D6166128479C13004F2367 /* DrivingExperienceEnum.swift in Sources */,
 				747C762B281738A300852DFB /* GenderView.swift in Sources */,
 				747C763128180DDA00852DFB /* WeightAndHeightView.swift in Sources */,
-				74D6165E28479BF9004F2367 /* GenderEnum.swift in Sources */,
+				74D6165E28479BF9004F2367 /* Gender.swift in Sources */,
 				74CB2D04281EDDA2001CC294 /* ResultView.swift in Sources */,
 				747C762E2817F5B700852DFB /* AgeView.swift in Sources */,
 				747C7625281731F300852DFB /* TipsyTimerView.swift in Sources */,
@@ -423,8 +423,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				740E968928153B870089D7E0 /* Tests_macOSLaunchTests.swift in Sources */,
-				74D6165928479B56004F2367 /* CurrentUserEnum.swift in Sources */,
-				74D6165A28479B56004F2367 /* FrameConversion.swift in Sources */,
 				740E968728153B870089D7E0 /* Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
