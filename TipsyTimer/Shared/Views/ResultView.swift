@@ -12,8 +12,6 @@ struct ResultView: View {
     @Binding var user: CurrentUser
     @Environment(\.presentationMode) var presentationMode
     
-//    let taxiNumber = "+31851301675"
-
     @State private var showingAlert = false
         
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
