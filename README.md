@@ -1,4 +1,4 @@
-# Nuchter op de weg
+# Tipsy Timer
 ## Nina Alblas
 Ieder jaar stijgt het aantal ongelukken waarbij alcohol in het spel is ([NOS, 2019](https://nos.nl/artikel/2308458-zorgwekkende-toename-aantal-verkeersdoden-door-alcohol-meer-dan-verdubbeld)) en uit zeer recent onderzoek ([SWOV, 2022](https://swov.nl/nl/nieuws/nederlandse-weggebruikers-europees-perspectief-resultaten-van-het-esra2-onderzoek)) blijkt dat 9,1% van de Nederlandse automobilisten met te veel alcohol op achter het stuur stapt. Mensen gaan er vaak onjuist vanuit dat 'die paar drankjes' niet uitmaken, dat de alcohol in hun bloed inmiddels wel afgebroken zal zijn, of dat een kopje koffie ontnuchtert. Deze foutieve aannames kunnen fatale gevolgen hebben.
 
@@ -9,29 +9,10 @@ De applicatie Tipsy Timer zal het aantal beschonken bestuurders helpen verminder
 * Timer blijft lopen ook als je app sluit
 * Geeft een notificatie als de timer afgelopen is
 
-## Schetsen
-![Schetsen van alle 8 views van de applicatie](doc/TIPSY-TIMER.png)
-
-1. Scherm met disclaimers dat opent als je de app opent. Dit scherm wordt gesloten door op het kruisje rechtsboven te klikken. Dit scherm kan weer opnieuw geopend worden door in het homescherm (2) op de 'DISCLAIMER' knop te klikken.
-2. Homescherm met een grote knop waarmee je een nieuwe Tipsy Timer start.
-3. Scherm 1 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **geslacht**. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt.
-4. Scherm 2 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **leeftijd**. Dit wordt aangegeven met een cirkelvormige slider. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt.
-5. Scherm 3 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **lengte en gewicht**. Dit wordt aangegeven met twee sliders. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt.
-6. Scherm 4 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **genuttigde drankjes**. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt.
-7. Scherm 5 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **tijdspanne**. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt. (Deze staat niet op de schets, maar zal dezelfde vormgeving hebben als scherm 2; leeftijd)
-8. Scherm 6 waarin de gebruiker de gegevens invult waarmee de wachttijd berekend wordt; **rij-ervaring**. Bovenaan het scherm staat de progressiebalk van de user input windows. Onderaan het scherm wordt uitgelegd hoe deze factor de alcoholabsorptie en/of -afbraak beïnvloedt.
-9. Het resultaat van de Tipsy Timer; de hoeveelheid uren die de gebruiker moet wachten voordat hij de BAC-limiet bereikt. De timer wordt gevisualiseerd door een glas dat langzaam leegdrinkt. Onderaan het scherm staat een knop waarmee de Tipsy Timer opnieuw gestart kan worden. Linksonderin kan worden teruggekeerd naar het homescherm.
-
-
-## Factoren die meegenomen worden bij de berekening van de wachttijd (in uren)
-* Leeftijd (in jaren)
-* Lengte (in cm)
-* Gewicht (in kg)
-* Geslacht (man vs. vrouw) - mogelijk voeg ik hier nog iets aan toe betreffende een derde optie
-* Alcohol percentage van de genuttigde drankjes
-* Hoeveelheid standaardglazen **of** hoeveelheid milliliters
-* De tijdspanne waarin de drankjes genuttigd werden (in uren)
-* Rij-ervaring (beginnend vs. ervaren)
+## Screenshots
+![Screenshot van ...](...)
+![Screenshot van ...](...)
+resized
 
 ## Disclaimers
 * Geen 18, geen alchol
@@ -41,34 +22,4 @@ De applicatie Tipsy Timer zal het aantal beschonken bestuurders helpen verminder
 * Rijden onder invloed kan fatale gevolgen hebben; breng jezelf en anderen niet in gevaar
 * De Tipsy Timer geeft alleen een schatting van de wachttijd en mag niet worden gebruikt om te bepalen of je nog mag autorijden
 
-## Benodigdheden
-### Databronnen
-Er zijn geen databronnen nodig voor deze applicatie. De wachttijd wordt berekend aan de hand van user input. Deze input moet natuurlijk wel vertaald worden in de cijfers die nodig zijn voor de berekening. Zo is de target Blood Alcohol Concentration (BAC) van een beginnend bestuurder 0.02 BAC en die van een ervaren bestuurder is 0.05.
-
-Misschien voeg ik uiteindelijk wel een keuzemenu toe waarin gebruikers hun genuttigde drankjes kunnen selecteren. Hiervoor zou ik dus een dataset nodig hebben waarin (vrijwel) alle alcoholische consumpties ter wereld staan.
-
-### Externe componenten
-Ik zou eerlijk gezegd nog niet weten welke libraries ik nodig zal hebben. Tot nu toe lijkt het erop dat SwiftUI voldoende mogelijkheden biedt om deze app te maken.
-
-### Review van vergelijkbare web apps
-Er zijn veel websites te vinden die je alcoholpromillage kunnen berekenen aan de hand van een aantal gegevens, maar er zijn er niet veel die je vertellen of je nog / wanneer je weer mag rijden.
-
-Op de website [kaniknogrijden.nl](https://kaniknogrijden.nl/berekenen) vul je eigenlijk vergelijkbare persoonlijke gegevens in als in de Tipsy Timer, op lengte en leeftijd na - terwijl deze factoren de absorptie en afbraak van alcohol toch echt beïnvloeden. Vervolgens vul je het aantal drankjes in dat je genuttigd hebt en wat voor soort drankje het is. Hierbij is er zelfs een dropdown menu waarbij de gebruiker - zo het lijkt - alle alcoholische consumpties ter wereld kan selecteren. Ik moet eerlijk zeggen dat ik dit laatste wel een gebruiksvriendelijk idee vind, dus wellicht dat ik dit ook kan implementeren als ik een dataset kan vinden met zoveel alcoholische drankjes.
-
-De app [What's Your Buzz?](https://apps.apple.com/nl/app/whats-your-buzz/id930934750?l=en) heeft ook een vergelijkbaar concept. Deze app vraagt naar je geslacht en gewicht en registreert vervolgens de genuttigde alcoholische drankjes. Hierbij werken ze ook met een soort keuzemenu waarin je de precieze soort wijn, bier of mixdrank kunt selecteren. Bovenaan is er een balk die de BAC aangeeft en oploopt met ieder drankje dat je selecteert. Ik vind het een vrij onoverzichtelijke app. Ik ben van plan de Tipsy Timer een stuk cleaner te maken. Ik ben wel onder de indruk van de pop-up die verschijnt wanneer je de maximaal toegestane BAC bereikt, waarmee je een taxi kunt bellen om je naar huis te brengen. Verder heeft de app een profielsectie waarin enkel het opgegeven geslacht en gewicht staan, en een lijst met drankjes die je tot nu toe geselecteerd hebt.
-
-### Beren op de weg
-Eerlijk gezegd denk ik dat ik een applicatie heb ontworpen die ik goed zou kunnen programmeren. Toch maak ik me wel een beetje zorgen om het algehele werken met SwiftUI. Hierbij gaat het dan vooral om het efficiënt kunnen inzetten van enumerations, structs, classes en closures. Aangezien deze taal natuurlijk nieuw voor me is, vraag ik me af of dit meteen goed zal gaan. Ik had ook al veel moeite met de calculator en ik had veel YouTube filmpjes nodig om enigszins te begrijpen hoe ik het best kon beginnen en welke datastructuren ik het best kon gebruiken. Hopelijk zal YouTube (en de rest van het internet) mij weer uit de brand kunnen helpen als ik vastloop tijdens het maken van de Tipsy Timer.
-
 *Slagzin: "Zie in één oogopslag wanneer je weer de weg op mag!"*
-
-Dingen die ik heb gedaan die niet per se nodig waren
-- notificaties: werken alleen in simulator. Push notifications (iOS) doen het alleen op je device voor betalende gebruikers... https://help.apple.com/developer-account/#/dev21218dfd6
-- alle screen sizes
-- gifje
-- zorg dat je akkoord moet geven bij de disclaimer
-- switch elke 10 seconden de message
-- bierglas loopt leeg
-- werkt ook op de achtergrond
-- Uber pop up die belt
-- iOS 13, 14, 15
