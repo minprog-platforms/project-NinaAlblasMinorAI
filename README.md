@@ -22,7 +22,7 @@ De applicatie Tipsy Timer zal het aantal beschonken bestuurders helpen verminder
 * De Tipsy Timer geeft alleen een schatting van de wachttijd en mag niet worden gebruikt om te bepalen of je nog mag autorijden
 
 ## Screencast
-[My screencast](https://youtu.be/QKopLzpWFM8)
+[Klik hier](https://youtu.be/QKopLzpWFM8) om mijn Screencast te bekijken.
 
 *Slagzin: "Zie in één oogopslag wanneer je weer de weg op mag!"*
 
