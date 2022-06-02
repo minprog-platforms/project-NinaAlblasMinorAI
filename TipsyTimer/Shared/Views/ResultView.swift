@@ -126,18 +126,21 @@ struct ResultView: View {
             }
             .frame(width: convertWidth(400), height: convertHeight(850))
             
-            // enable user notifications (Hudson, 2022)
             .onAppear() {
+                
+                // enable user notifications (Hudson, 2022)
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
                 }
                 
+                // if the waiting time exceeds 2 hours, show alert
                 if waitingMinutes > (60 * 2) {
                     showingAlert = true
                 }
             }
             
-            // enable timer updating (Swiftful Thinking, 2021)
             .onReceive(timer) { _ in
+                
+                // enable timer updating (Swiftful Thinking, 2021)
                 let dateDiff = futureDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate
                 
                 if dateDiff > 1 {
@@ -151,8 +154,10 @@ struct ResultView: View {
                 } else {
                     timesUp = true
                     
+                    // send push notification
                     self.notify()
                     
+                    // stop the timer
                     self.timer.upstream.connect().cancel()
                 }
             }

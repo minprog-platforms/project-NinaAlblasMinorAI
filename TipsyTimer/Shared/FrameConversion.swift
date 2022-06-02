@@ -17,10 +17,16 @@ import SwiftUI
 let originalScreenWidth: Double = 414
 let originalScreenHeight: Double = 896
 
+/*
+ Converts view width on iPhone 11 Pro Max to view width for current screen.
+ */
 func convertWidth(_ width: Double) -> CGFloat {
     return Double(width / originalScreenWidth) * UIScreen.main.bounds.width
 }
 
+/*
+ Converts view height on iPhone 11 Pro Max to view height for current screen.
+ */
 func convertHeight(_ height: Double) -> CGFloat {
     return Double(height / originalScreenHeight) * UIScreen.main.bounds.height
 }
